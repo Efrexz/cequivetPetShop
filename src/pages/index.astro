@@ -1,5 +1,6 @@
 ---
 import { Heart, Stethoscope, ShoppingBag } from "lucide-react";
+import CarouselProducts from "@components/Carousel.astro";
 import Layout from "@layouts/Layout.astro";
 ---
 
@@ -14,7 +15,7 @@ import Layout from "@layouts/Layout.astro";
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 animate-fade-in">
           <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800"
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[#007872]"
           >
             Cuidado <span class="text-orange-600">Premium</span> para tus Mascotas
           </h1>
@@ -26,13 +27,13 @@ import Layout from "@layouts/Layout.astro";
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="/pharmacy"
-              class="px-8 py-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30"
+              class="px-8 py-3 rounded-xl bg-[#008D87] text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30 hover:scale-105"
             >
               Seccion de Farmacia
             </a>
             <a
               href="/food"
-              class="px-8 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30"
+              class="px-8 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30 hover:scale-105"
             >
               Seccion de Comida
             </a>
@@ -43,7 +44,7 @@ import Layout from "@layouts/Layout.astro";
           <img
             src="https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
             alt="Veterinarian caring for a pet"
-            class="max-w-md w-full h-[380px] object-cover rounded-bl-[60px] rounded-tr-[60px] rounded-tl-xl rounded-br-xl shadow-2xl border-4 border-green-600/50"
+            class="max-w-md w-full h-[380px] object-cover rounded-bl-[60px] rounded-tr-[60px] rounded-tl-xl rounded-br-xl shadow-2xl border-4 border-[#008D87]"
           />
         </div>
       </div>
@@ -54,7 +55,7 @@ import Layout from "@layouts/Layout.astro";
   <section class="py-20 lg:py-32 bg-green-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-800">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#007872]">
           <span class="text-orange-600">Comprometidos</span> con el Bienestar de
           tu Mascota
         </h2>
@@ -68,14 +69,14 @@ import Layout from "@layouts/Layout.astro";
       {/* Services Grid */}
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          class="p-8 rounded-xl bg-white shadow-xl shadow-green-600/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-green-600"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-[#01827b]/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-[#01827b]"
         >
           <div
-            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-600 mb-4 shadow-md"
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#01827b] mb-4 shadow-md"
           >
             <Stethoscope className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-bold mb-3 text-green-600">
+          <h3 class="text-xl font-bold mb-3 text-[#01827b]">
             Atención Veterinaria Profesional
           </h3>
           <p class="text-gray-600">
@@ -120,4 +121,7 @@ import Layout from "@layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  {/* Products Carousel Section */}
+  <CarouselProducts />
 </Layout>

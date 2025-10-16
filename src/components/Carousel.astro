@@ -1,0 +1,149 @@
+---
+import { featuredProducts } from "@data/productsData";
+import CardProduct from "@components/CardProduct.astro";
+import ArrowLeft from "@assets/icons/arrowLeft.svg";
+import ArrowRight from "@assets/icons/arrowRight.svg";
+---
+
+<section
+  id="products-carousel-section"
+  aria-labelledby="products-title"
+  class="py-20 lg:py-26 bg-[#E0F2F1] opacity-0 translate-y-8 transition-all duration-700 ease-out"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center mb-12">
+      <div class="max-w-xl">
+        <h2
+          id="products-title"
+          class="text-4xl sm:text-5xl font-extrabold text-[#007872]"
+        >
+          Productos para un <span class="text-orange-600">Vida Plena</span>
+        </h2>
+        <p class="text-lg text-gray-700 mt-2">
+          Todo lo que tu mascota necesita para crecer sana y feliz, con la
+          máxima calidad y seguridad.
+        </p>
+      </div>
+
+      <a
+        href="/productos"
+        class="hidden md:inline-block px-8 py-3 rounded-xl bg-orange-600 text-white font-bold text-md shadow-lg hover:opacity-90 transition transform hover:scale-[1.03] whitespace-nowrap shadow-orange-500/30"
+      >
+        Explorar Productos
+      </a>
+    </div>
+
+    <div class="embla-products relative mt-10">
+      <div class="embla-products__viewport overflow-hidden">
+        <div class="embla-products__container flex">
+          {
+            featuredProducts.map((product) => (
+              <div class="embla-products__slide flex-[0_0_70%] sm:flex-[0_0_30%] lg:flex-[0_0_20%] pl-4">
+                <div class="product-slide-content opacity-0 translate-y-4 transition-all duration-500 ease-out p-6 bg-white rounded-2xl shadow-xl border-t-4 border-[#007872] hover:shadow-2xl hover:scale-[1.01]">
+                  <CardProduct product={product} />
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <button
+        class="embla-products__prev absolute top-1/2 -translate-y-1/2 left-[-1rem] md:left-[-2rem] bg-white rounded-full p-2.5 shadow-xl border border-orange-100 disabled:opacity-30 hover:bg-[#007872] transition"
+      >
+        <ArrowLeft class="w-6 h-6 text-orange-500 group-hover:text-white" />
+      </button>
+      <button
+        class="embla-products__next absolute top-1/2 -translate-y-1/2 right-[-1rem] md:right-[-2rem] bg-white rounded-full p-2.5 shadow-xl border border-orange-100 disabled:opacity-30 hover:bg-[#007872] transition"
+      >
+        <ArrowRight class="w-6 h-6 text-orange-500 group-hover:text-white" />
+      </button>
+    </div>
+
+    <div class="md:hidden text-center mt-8">
+      <a
+        href="/productos"
+        class="inline-block px-8 py-3 rounded-xl bg-orange-600 text-white font-bold text-md shadow-lg hover:opacity-90 transition shadow-orange-500/30"
+      >
+        Explorar Productos
+      </a>
+    </div>
+  </div>
+</section>
+<script>
+  import EmblaCarousel from "embla-carousel";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const productsSection = document.getElementById(
+      "products-carousel-section"
+    );
+    if (!productsSection) return;
+
+    // Observer para la animación de entrada de la sección completa
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+
+            const slidesContent = entry.target.querySelectorAll(
+              ".product-slide-content"
+            );
+            slidesContent.forEach((slide, index) => {
+              setTimeout(() => {
+                slide.classList.remove("opacity-0", "translate-y-4");
+              }, 150 * index); // Retraso escalonado para las tarjetas de producto
+            });
+
+            sectionObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 } // Ajusta este umbral según cuándo quieras que se active la animación
+    );
+
+    sectionObserver.observe(productsSection);
+
+    // Inicialización del carrusel Embla
+    const emblaNode = productsSection.querySelector(".embla-products");
+
+    if (emblaNode) {
+      const viewportNode = emblaNode.querySelector(
+        ".embla-products__viewport"
+      ) as HTMLElement;
+      const prevBtn = emblaNode.querySelector(
+        ".embla-products__prev"
+      ) as HTMLButtonElement;
+      const nextBtn = emblaNode.querySelector(
+        ".embla-products__next"
+      ) as HTMLButtonElement;
+
+      if (viewportNode && prevBtn && nextBtn) {
+        const emblaApi = EmblaCarousel(viewportNode, {
+          loop: false,
+          align: "start",
+          // breakpoints: {
+          //   '(min-width: 640px)': { slidesToScroll: 2 }, // sm
+          //   '(min-width: 1024px)': { slidesToScroll: 4 } // lg
+          // }
+          // Si quieres que se desplace más de una diapositiva a la vez en ciertos breakpoints,
+          // puedes agregar un plugin como 'embla-carousel-autoplay' o 'embla-carousel-breakpoints'
+          // y configurarlo aquí. Por ahora, el desplazamiento es de una diapositiva.
+        });
+
+        const updateButtons = () => {
+          prevBtn.disabled = !emblaApi.canScrollPrev();
+          nextBtn.disabled = !emblaApi.canScrollNext();
+        };
+
+        prevBtn.addEventListener("click", () => emblaApi.scrollPrev(), false);
+        nextBtn.addEventListener("click", () => emblaApi.scrollNext(), false);
+
+        emblaApi.on("select", updateButtons);
+        emblaApi.on("init", updateButtons);
+        // También es buena práctica actualizar los botones si se redimensiona la ventana
+        emblaApi.on("resize", updateButtons);
+      }
+    }
+  });
+</script>
