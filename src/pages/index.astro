@@ -16,24 +16,25 @@ import Layout from "@layouts/Layout.astro";
           <h1
             class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800"
           >
-            <span class="text-orange-600">Premium</span> Care for All Your Pets
+            Cuidado <span class="text-orange-600">Premium</span> para tus Mascotas
           </h1>
           <p class="text-lg sm:text-xl opacity-90 text-gray-700">
-            Professional veterinary services, quality medicines, and premium pet
-            food — all in one place.
+            Encuentra todo lo que tu mascota necesita: medicamentos, alimentos y
+            asesoría veterinaria. Haz tus pedidos fácilmente por WhatsApp y
+            coordina el delivery o recojo en tienda.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="/pharmacy"
-              class="px-8 py-3 rounded-xl bg-green-600 text-white font-bold text-lg shadow-lg hover:bg-green-700 transition"
+              class="px-8 py-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30"
             >
-              Browse Pharmacy
+              Seccion de Farmacia
             </a>
             <a
               href="/food"
-              class="px-8 py-3 rounded-xl border-2 border-orange-600 text-black text-lg font-semibold bg-transparent hover:bg-orange-600 hover:text-white transition"
+              class="px-8 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30"
             >
-              Shop Pet Food
+              Seccion de Comida
             </a>
           </div>
         </div>
@@ -50,69 +51,70 @@ import Layout from "@layouts/Layout.astro";
   </section>
 
   {/* About Section */}
-  <section class="py-16 lg:py-24 bg-background">
+  <section class="py-20 lg:py-32 bg-green-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
-          Welcome to PetCare Veterinary Clinic
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-800">
+          <span class="text-orange-600">Comprometidos</span> con el Bienestar de
+          tu Mascota
         </h2>
-        <p class="text-lg text-muted-foreground">
-          With over 15 years of experience, we provide comprehensive veterinary
-          care and high-quality pet products to keep your furry friends healthy
-          and happy.
+        <p class="text-lg text-gray-700">
+          Porque sabemos cuánto significan para ti, ofrecemos atención
+          profesional, alimentos premium y productos pensados para su bienestar
+          y alegría diaria.
         </p>
       </div>
 
       {/* Services Grid */}
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          class="p-6 rounded-xl bg-card shadow-card text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-green-600/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-green-600"
         >
           <div
-            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-hero mb-4"
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-600 mb-4 shadow-md"
           >
             <Stethoscope className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-foreground">
-            Expert Veterinary Care
+          <h3 class="text-xl font-bold mb-3 text-green-600">
+            Atención Veterinaria Profesional
           </h3>
-          <p class="text-muted-foreground">
-            Professional medical services by experienced veterinarians who truly
-            care about your pets.
+          <p class="text-gray-600">
+            Cuidado médico especializado brindado por veterinarios con
+            experiencia, comprometidos con la salud y bienestar de tus mascotas.
           </p>
         </div>
 
         <div
-          class="p-6 rounded-xl bg-card shadow-card text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-orange-600/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-orange-600"
         >
           <div
-            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-4"
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-600 mb-4 shadow-md"
           >
-            <Heart className="h-8 w-8 text-red-500" />
+            <Heart className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-foreground">
-            Quality Medicines
+          <h3 class="text-xl font-bold mb-3 text-orange-600">
+            Medicamentos y Suplementos de Calidad
           </h3>
-          <p class="text-muted-foreground">
-            Certified veterinary medicines and supplements to ensure your pet's
-            optimal health.
+          <p class="text-gray-600">
+            Productos veterinarios certificados que garantizan la salud y
+            recuperación de tus mascotas con total confianza.
           </p>
         </div>
 
         <div
-          class="p-6 rounded-xl bg-card shadow-card text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-gray-700/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-gray-700"
         >
           <div
-            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-4"
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 mb-4 shadow-md"
           >
             <ShoppingBag className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-foreground">
-            Premium Pet Food
+          <h3 class="text-xl font-bold mb-3 text-gray-800">
+            Alimentos Premium para Mascotas
           </h3>
-          <p class="text-muted-foreground">
-            Nutritious and delicious food options for dogs, cats, and other pets
-            of all ages and breeds.
+          <p class="text-gray-600">
+            Variedad de alimentos nutritivos y deliciosos para perros, gatos y
+            otras mascotas, según su edad y necesidades.
           </p>
         </div>
       </div>
