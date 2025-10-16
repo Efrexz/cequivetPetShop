@@ -1,11 +1,121 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Heart, Stethoscope, ShoppingBag } from "lucide-react";
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  {/* Hero Section */}
+  <section class="relative overflow-hidden bg-orange-50 text-gray-900">
+    <div
+      class="absolute inset-0 bg-gradient-to-tr from-orange-50 via-green-50 to-orange-100 opacity-90"
+    >
+    </div>
+    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6 animate-fade-in">
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800"
+          >
+            <span class="text-orange-600">Premium</span> Care for All Your Pets
+          </h1>
+          <p class="text-lg sm:text-xl opacity-90 text-gray-700">
+            Professional veterinary services, quality medicines, and premium pet
+            food — all in one place.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a
+              href="/pharmacy"
+              class="px-8 py-3 rounded-xl bg-green-600 text-white font-bold text-lg shadow-lg hover:bg-green-700 transition"
+            >
+              Browse Pharmacy
+            </a>
+            <a
+              href="/food"
+              class="px-8 py-3 rounded-xl border-2 border-orange-600 text-black text-lg font-semibold bg-transparent hover:bg-orange-600 hover:text-white transition"
+            >
+              Shop Pet Food
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:flex justify-center animate-scale-in">
+          <img
+            src="https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+            alt="Veterinarian caring for a pet"
+            class="max-w-md w-full h-[380px] object-cover rounded-bl-[60px] rounded-tr-[60px] rounded-tl-xl rounded-br-xl shadow-2xl border-4 border-green-600/50"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* About Section */}
+  <section class="py-16 lg:py-24 bg-background">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
+          Welcome to PetCare Veterinary Clinic
+        </h2>
+        <p class="text-lg text-muted-foreground">
+          With over 15 years of experience, we provide comprehensive veterinary
+          care and high-quality pet products to keep your furry friends healthy
+          and happy.
+        </p>
+      </div>
+
+      {/* Services Grid */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="p-6 rounded-xl bg-card shadow-card text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
+        >
+          <div
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-hero mb-4"
+          >
+            <Stethoscope className="h-8 w-8 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-foreground">
+            Expert Veterinary Care
+          </h3>
+          <p class="text-muted-foreground">
+            Professional medical services by experienced veterinarians who truly
+            care about your pets.
+          </p>
+        </div>
+
+        <div
+          class="p-6 rounded-xl bg-card shadow-card text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
+        >
+          <div
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-4"
+          >
+            <Heart className="h-8 w-8 text-red-500" />
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-foreground">
+            Quality Medicines
+          </h3>
+          <p class="text-muted-foreground">
+            Certified veterinary medicines and supplements to ensure your pet's
+            optimal health.
+          </p>
+        </div>
+
+        <div
+          class="p-6 rounded-xl bg-card shadow-card text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
+        >
+          <div
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-4"
+          >
+            <ShoppingBag className="h-8 w-8 text-white" />
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-foreground">
+            Premium Pet Food
+          </h3>
+          <p class="text-muted-foreground">
+            Nutritious and delicious food options for dogs, cats, and other pets
+            of all ages and breeds.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
