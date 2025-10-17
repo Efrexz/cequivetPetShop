@@ -15,9 +15,9 @@ import Layout from "@layouts/Layout.astro";
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 animate-fade-in">
           <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[#007872]"
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[#02ad91] drop-shadow-sm"
           >
-            Cuidado <span class="text-orange-600">Premium</span> para tus Mascotas
+            Cuidado <span class="text-[#FF7F11]">Premium</span> para tus Mascotas
           </h1>
           <p class="text-lg sm:text-xl opacity-90 text-gray-700">
             Encuentra todo lo que tu mascota necesita: medicamentos, alimentos y
@@ -26,14 +26,14 @@ import Layout from "@layouts/Layout.astro";
           </p>
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <a
-              href="/pharmacy"
-              class="px-8 py-3 rounded-xl bg-[#008D87] text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30 hover:scale-105"
+              href="/products"
+              class="px-8 py-3 rounded-xl bg-[#02ad91] text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30 hover:scale-105"
             >
               Seccion de Farmacia
             </a>
             <a
-              href="/food"
-              class="px-8 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30 hover:scale-105"
+              href="/products"
+              class="px-8 py-3 rounded-xl bg-gradient-to-r from-[#FF7F11] to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30 hover:scale-105"
             >
               Seccion de Comida
             </a>
@@ -55,9 +55,11 @@ import Layout from "@layouts/Layout.astro";
   <section class="py-20 lg:py-32 bg-green-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-4 text-[#007872]">
-          <span class="text-orange-600">Comprometidos</span> con el Bienestar de
-          tu Mascota
+        <h2
+          class="text-4xl sm:text-5xl font-bold mb-4 text-[#02ad91] drop-shadow-sm"
+        >
+          <span class="text-[#FF7F11]">Comprometidos</span> con el Bienestar de tu
+          Mascota
         </h2>
         <p class="text-lg text-gray-700">
           Porque sabemos cuánto significan para ti, ofrecemos atención
@@ -72,11 +74,11 @@ import Layout from "@layouts/Layout.astro";
           class="p-8 rounded-xl bg-white shadow-xl shadow-[#01827b]/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-[#01827b]"
         >
           <div
-            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#01827b] mb-4 shadow-md"
+            class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#02ad91] mb-4 shadow-md"
           >
             <Stethoscope className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-bold mb-3 text-[#01827b]">
+          <h3 class="text-xl font-bold mb-3 text-[#02ad91]">
             Atención Veterinaria Profesional
           </h3>
           <p class="text-gray-600">
@@ -93,7 +95,7 @@ import Layout from "@layouts/Layout.astro";
           >
             <Heart className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-bold mb-3 text-orange-600">
+          <h3 class="text-xl font-bold mb-3 text-[#FF7F11]">
             Medicamentos y Suplementos de Calidad
           </h3>
           <p class="text-gray-600">
@@ -103,14 +105,14 @@ import Layout from "@layouts/Layout.astro";
         </div>
 
         <div
-          class="p-8 rounded-xl bg-white shadow-xl shadow-gray-700/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-gray-700"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-gray-700/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-gray-600"
         >
           <div
             class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 mb-4 shadow-md"
           >
             <ShoppingBag className="h-8 w-8 text-white" />
           </div>
-          <h3 class="text-xl font-bold mb-3 text-gray-800">
+          <h3 class="text-xl font-bold mb-3 text-gray-700">
             Alimentos Premium para Mascotas
           </h3>
           <p class="text-gray-600">

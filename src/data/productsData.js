@@ -62,6 +62,24 @@ const featuredProducts = [
       "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     color: "green-700",
   },
+  {
+    id: 8,
+    name: "Feline Vitamins (30 tabs)",
+    description: "Essential multivitamins for coat health.",
+    price: "$18.50",
+    image:
+      "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    color: "green-700",
+  },
+  {
+    id: 9,
+    name: "Feline Vitamins (30 tabs)",
+    description: "Essential multivitamins for coat health.",
+    price: "$18.50",
+    image:
+      "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    color: "green-700",
+  },
 ];
 
 export { featuredProducts };
