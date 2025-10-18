@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) translateX(0) !important;
+}
+
+/* Tipos de animaciones */
+.fade-in-up {
+  transform: translateY(30px);
+}
+
+.fade-in-down {
+  transform: translateY(-30px);
+}
+
+.fade-in-left {
+  transform: translateX(-30px);
+}
+
+.fade-in-right {
+  transform: translateX(30px);
+}
+
+.zoom-in {
+  transform: scale(0.95);
+}
+
+/* --- Efectos de Hover --- */
+
+/* Efecto de hover para botones estándar */
+.button-hover-effect {
+  transition: all 0.3s ease-in-out;
+}
+.button-hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de hover para cards de producto/servicio */
+.card-hover-effect {
+  transition: all 0.4s ease-in-out;
+}
+.card-hover-effect:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 141, 135, 0.2); /* Sombra más pronunciada en hover */
+}

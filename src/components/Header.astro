@@ -1,12 +1,16 @@
 ---
-import { PawPrint, Menu, X } from "lucide-react";
+import { PawPrint, Menu } from "lucide-react";
 import Logo from "@assets/images/logo.webp";
+
+const whatsappMessage =
+  "Hola, me gustaría saber más sobre los servicios y productos de la veterinaria. Gracias.";
+const whatsappLink = `https://wa.me/+51932095750?text=${encodeURIComponent(whatsappMessage)}`;
 
 const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/products", label: "Farmacia" },
   { href: "/products", label: "Comida" },
-  { href: "/contact", label: "Contacto" },
+  { href: whatsappLink, label: "Contacto", isWhatsapp: true },
 ];
 ---
 
@@ -28,14 +32,19 @@ const navLinks = [
           navLinks.map((link, index) => (
             <a
               href={link.href}
+              target={link.isWhatsapp ? "_blank" : "_self"}
+              rel={link.isWhatsapp ? "noopener noreferrer" : undefined}
               class={`px-4 py-2 text-sm font-medium transition-all duration-300
                     ${
                       index === navLinks.length - 1
-                        ? "bg-orange-600 text-white rounded-full hover:bg-orange-700 ml-4 shadow-lg shadow-orange-600/30"
+                        ? "bg-orange-500 text-white rounded-full hover:bg-orange-600 hover:scale-105 ml-4 shadow-lg shadow-orange-600/30"
                         : "text-gray-700 rounded-md hover:bg-green-100 hover:text-green-700"
                     }`}
             >
-              {link.label}
+              <div class="flex items-center gap-2">
+                {link.isWhatsapp && <PawPrint className="h-4 w-4" />}
+                {link.label}
+              </div>
             </a>
           ))
         }

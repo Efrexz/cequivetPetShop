@@ -5,7 +5,6 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-  {/* Hero Section */}
   <section class="relative overflow-hidden bg-orange-50 text-gray-900">
     <div
       class="absolute inset-0 bg-gradient-to-tr from-orange-50 via-green-50 to-orange-100 opacity-90"
@@ -13,7 +12,7 @@ import Layout from "@layouts/Layout.astro";
     </div>
     <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6 animate-fade-in">
+        <div class="space-y-6 hero-content fade-in-left" data-animate>
           <h1
             class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[#02ad91] drop-shadow-sm"
           >
@@ -27,20 +26,23 @@ import Layout from "@layouts/Layout.astro";
           <div class="flex flex-col sm:flex-row gap-4 pt-4">
             <a
               href="/products"
-              class="px-8 py-3 rounded-xl bg-[#02ad91] text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30 hover:scale-105"
+              class="px-8 py-3 rounded-xl bg-[#02ad91] text-white font-bold hover:opacity-90 transition shadow-lg shadow-green-500/30 hover:scale-105 button-hover-effect"
             >
               Seccion de Farmacia
             </a>
             <a
               href="/products"
-              class="px-8 py-3 rounded-xl bg-gradient-to-r from-[#FF7F11] to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30 hover:scale-105"
+              class="px-8 py-3 rounded-xl bg-gradient-to-r from-[#FF7F11] to-red-500 text-white font-bold hover:opacity-90 transition shadow-lg shadow-orange-500/30 hover:scale-105 button-hover-effect"
             >
               Seccion de Comida
             </a>
           </div>
         </div>
 
-        <div class="hidden lg:flex justify-center animate-scale-in">
+        <div
+          class="hidden lg:flex justify-center hero-image fade-in-right"
+          data-animate
+        >
           <img
             src="https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
             alt="Veterinarian caring for a pet"
@@ -54,7 +56,7 @@ import Layout from "@layouts/Layout.astro";
   {/* About Section */}
   <section class="py-20 lg:py-32 bg-green-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up" data-animate>
         <h2
           class="text-4xl sm:text-5xl font-bold mb-4 text-[#02ad91] drop-shadow-sm"
         >
@@ -71,7 +73,9 @@ import Layout from "@layouts/Layout.astro";
       {/* Services Grid */}
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          class="p-8 rounded-xl bg-white shadow-xl shadow-[#01827b]/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-[#01827b]"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-[#01827b]/30 text-center service-card border-t-8 border-[#01827b] zoom-in"
+          data-animate
+          style="transition-delay: 0.1s;"
         >
           <div
             class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#02ad91] mb-4 shadow-md"
@@ -88,7 +92,9 @@ import Layout from "@layouts/Layout.astro";
         </div>
 
         <div
-          class="p-8 rounded-xl bg-white shadow-xl shadow-orange-600/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-orange-600"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-orange-600/30 text-center service-card border-t-8 border-orange-600 zoom-in"
+          data-animate
+          style="transition-delay: 0.3s;"
         >
           <div
             class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-600 mb-4 shadow-md"
@@ -105,7 +111,9 @@ import Layout from "@layouts/Layout.astro";
         </div>
 
         <div
-          class="p-8 rounded-xl bg-white shadow-xl shadow-gray-700/30 text-center transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] border-t-8 border-gray-600"
+          class="p-8 rounded-xl bg-white shadow-xl shadow-gray-700/30 text-center service-card border-t-8 border-gray-600 zoom-in"
+          data-animate
+          style="transition-delay: 0.5s;"
         >
           <div
             class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 mb-4 shadow-md"
@@ -123,7 +131,6 @@ import Layout from "@layouts/Layout.astro";
       </div>
     </div>
   </section>
-
   {/* Products Carousel Section */}
   <CarouselProducts />
 </Layout>

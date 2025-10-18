@@ -39,7 +39,7 @@ import ArrowRight from "@assets/icons/arrowRight.svg";
           {
             featuredProducts.map((product) => (
               <div class="embla-products__slide flex-[0_0_70%] sm:flex-[0_0_30%] lg:flex-[0_0_20%] pl-4">
-                <div class="product-slide-content opacity-0 translate-y-4 transition-all duration-500 ease-out p-6 bg-white rounded-2xl shadow-xl border-t-4 border-[#02ad91] hover:shadow-2xl hover:scale-[1.01]">
+                <div class="product-slide-content">
                   <CardProduct product={product} />
                 </div>
               </div>
@@ -49,14 +49,14 @@ import ArrowRight from "@assets/icons/arrowRight.svg";
       </div>
 
       <button
-        class="embla-products__prev absolute top-1/2 -translate-y-1/2 left-[-1rem] md:left-[-2rem] bg-white rounded-full p-2.5 shadow-xl border border-orange-100 disabled:opacity-30 hover:bg-[#007872] transition"
+        class="group embla-products__prev absolute top-1/2 -translate-y-1/2 left-[-1rem] md:left-[-2rem] p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-md button-hover-effect"
       >
-        <ArrowLeft class="w-6 h-6 text-orange-500 group-hover:text-white" />
+        <ArrowLeft class="w-5 h-5 text-[#FF7F11] group-hover:text-white" />
       </button>
       <button
-        class="embla-products__next absolute top-1/2 -translate-y-1/2 right-[-1rem] md:right-[-2rem] bg-white rounded-full p-2.5 shadow-xl border border-orange-100 disabled:opacity-30 hover:bg-[#007872] transition"
+        class="group embla-products__next absolute top-1/2 -translate-y-1/2 right-[-1rem] md:right-[-2rem] p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-md button-hover-effect"
       >
-        <ArrowRight class="w-6 h-6 text-orange-500 group-hover:text-white" />
+        <ArrowRight class="w-5 h-5 text-[#FF7F11] group-hover:text-white" />
       </button>
     </div>
 

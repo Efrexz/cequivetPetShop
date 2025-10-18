@@ -1,7 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { featuredProducts } from "@data/productsData";
-import CardProduct from "@components/CardProduct.astro";
+import { featuredProducts } from "@data/productsData"; // Asegúrate de que esta ruta sea correcta
+import CardProduct from "@components/CardProduct.astro"; // Asegúrate de que esta ruta sea correcta
 import SearchIcon from "@assets/icons/search.svg";
 import ArrowLeft from "@assets/icons/arrowLeft.svg";
 import ArrowRight from "@assets/icons/arrowRight.svg";
@@ -17,12 +17,12 @@ const filterOptions = [
 ];
 ---
 
-<Layout>
+<Layout title="Catálogo de Productos">
   <section
     class="bg-gradient-to-br from-emerald-50 to-orange-50 py-12 lg:py-16"
   >
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
+      <div class="text-center max-w-3xl mx-auto mb-12 fade-in-up" data-animate>
         <h1
           class="text-4xl sm:text-5xl font-extrabold text-[#00BD9D] mb-4 drop-shadow-sm"
         >
@@ -36,7 +36,9 @@ const filterOptions = [
 
       <!-- Filtros y Búsqueda -->
       <div
-        class="bg-white p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 border-b-4 border-[#00BD9D]/60"
+        class="bg-white p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 border-b-4 border-[#00BD9D]/60 fade-in-up"
+        data-animate
+        style="transition-delay: 0.2s;"
       >
         <div class="relative w-full lg:w-1/3">
           <input
@@ -53,8 +55,12 @@ const filterOptions = [
           class="flex flex-wrap items-center gap-3 w-full lg:w-2/3 justify-center lg:justify-end"
         >
           {
-            filterOptions.map((option) => (
-              <button class="px-6 py-2 rounded-full bg-emerald-50 text-[#00BD9D] text-sm font-semibold border border-emerald-200 shadow-sm hover:bg-[#FF7F11] hover:text-white hover:border-[#FF7F11] transition-all duration-200 ease-in-out transform hover:-translate-y-0.5 flex ">
+            filterOptions.map((option, index) => (
+              <button
+                class="px-6 py-2 rounded-full bg-emerald-50 text-[#00BD9D] text-sm font-semibold border border-emerald-200 shadow-sm hover:bg-[#FF7F11] hover:text-white hover:border-[#FF7F11] transition-all duration-200 ease-in-out transform hover:-translate-y-0.5 flex fade-in-up cursor-pointer "
+                data-animate
+                style={`transition-delay: ${0.3 + index * 0.1}s;`}
+              >
                 <option.icon class="w-5 h-5 mr-1" />
                 {option.name}
               </button>
@@ -68,23 +74,28 @@ const filterOptions = [
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         {
-          featuredProducts.map((product) => {
+          featuredProducts.map((product, index) => {
             return (
-              <div class=" p-6 bg-white rounded-2xl shadow-xl border-t-4 border-[#02ad91] hover:shadow-2xl hover:scale-[1.01] flex justify-center items-center w-78">
+              <div
+                class="flex justify-center items-center zoom-in"
+                data-animate
+                style={`transition-delay: ${0.1 + index * 0.08}s;`}
+              >
                 <CardProduct product={product} />
               </div>
             );
           })
         }
       </div>
-
       <!-- Paginación -->
       <nav
         class="flex justify-center items-center gap-3 mt-16"
         aria-label="Paginación de productos"
+        data-animate
+        style="transition-delay: 0.5s;"
       >
         <button
-          class="group p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-md"
+          class="group p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-md button-hover-effect"
           aria-label="Página anterior"
           disabled
         >
@@ -92,27 +103,27 @@ const filterOptions = [
         </button>
         <a
           href="#"
-          class="px-5 py-2 rounded-full bg-[#00BD9D] text-white font-extrabold shadow-lg shadow-emerald-400/50 hover:bg-[#00A38B] transition-all duration-200 scale-105"
+          class="px-5 py-2 rounded-full bg-[#00BD9D] text-white font-extrabold shadow-lg shadow-emerald-400/50 hover:bg-[#00A38B] transition-all duration-200 scale-105 button-hover-effect"
           aria-current="page">1</a
         >
         <a
           href="#"
-          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm"
+          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm button-hover-effect"
           >2</a
         >
         <a
           href="#"
-          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm"
+          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm button-hover-effect"
           >3</a
         >
         <span class="text-gray-500 font-medium">...</span>
         <a
           href="#"
-          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm"
+          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm button-hover-effect"
           >8</a
         >
         <button
-          class="group p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 shadow-md"
+          class="group p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 shadow-md button-hover-effect"
           aria-label="Siguiente página"
         >
           <ArrowRight class="w-5 h-5 text-[#FF7F11] group-hover:text-white" />

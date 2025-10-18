@@ -7,28 +7,39 @@ const whatsappLink = `https://wa.me/+51932095750?text=${encodeURIComponent(whats
 ---
 
 <div
-  class="w-64 flex-shrink-0 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden"
+  class="w-full h-full flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100"
 >
   <img
     src={product.image}
     alt={`Imagen de ${product.name}`}
     class="w-full h-40 object-cover rounded-t-xl"
   />
-  <div class="p-4 space-y-3">
-    <h4 class={`font-bold text-lg text-[#007872]`}>{product.name}</h4>
-    <p class="text-sm text-gray-600 h-10 overflow-hidden">
-      {product.description}
-    </p>
+  <div class="p-4 flex flex-col flex-grow text-center">
+    <div class="flex-none h-14 overflow-hidden mb-1">
+      <h4 class="font-bold text-lg text-[#007872] leading-tight line-clamp-2">
+        {product.name}
+      </h4>
+    </div>
+
+    <div class="flex-none h-12 overflow-hidden mb-3">
+      <p class="text-sm text-gray-600 line-clamp-2">
+        {product.description}
+      </p>
+    </div>
+
     <div
-      class="flex justify-between items-center pt-2 border-t border-gray-100"
+      class="mt-auto pt-3 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3"
     >
-      <span class="text-xl font-extrabold text-orange-500">{product.price}</span
+      <span
+        class="text-2xl font-extrabold text-orange-500 order-2 sm:order-1 w-full sm:w-auto"
       >
+        {product.price}
+      </span>
       <a
         href={whatsappLink}
         target="_blank"
         rel="noopener noreferrer"
-        class="flex items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white font-semibold text-sm shadow-lg shadow-green-600/30 hover:bg-[#1DA851] transition transform hover:scale-105"
+        class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white font-semibold text-sm shadow-lg shadow-green-600/30 hover:bg-[#1DA851] transition transform hover:scale-105 w-full sm:w-auto order-1 sm:order-2 button-hover-effect"
         aria-label={`Pedir ${product.name} por WhatsApp`}
       >
         <WhatsAppIcon class="w-5 h-5" />
