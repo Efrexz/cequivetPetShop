@@ -1,0 +1,56 @@
+---
+import Layout from "@layouts/Layout.astro";
+import ProductsSection from "@components/ProductsSection.astro";
+import { foodProducts } from "@data/productsData";
+import BoxesIcon from "@assets/icons/boxes.svg";
+import HillsLogo from "@assets/brands/hills.png";
+import PurinaLogo from "@assets/brands/purina.png";
+// import CanboLogo from "@assets/brands/canbo.png";
+import BritLogo from "@assets/brands/brit.png";
+import RicocanLogo from "@assets/brands/ricocan.png";
+
+const generalFilterOptions = [
+  { name: "Todo", value: "all", icon: BoxesIcon, isImage: false },
+  {
+    name: "Hills",
+    value: "Hills",
+    imageSrc: HillsLogo,
+    isImage: true,
+  },
+  {
+    name: "Purina",
+    value: "Purina",
+    imageSrc: PurinaLogo,
+    isImage: true,
+  },
+  // {
+  //   name: "Canbo",
+  //   value: "canbo",
+  //   imageSrc: CanboLogo,
+  //   isImage: true,
+  // },
+  {
+    name: "Brit",
+    value: "Brit",
+    imageSrc: BritLogo,
+    isImage: true,
+  },
+  {
+    name: "Ricocan",
+    value: "Ricocan",
+    imageSrc: RicocanLogo,
+    isImage: true,
+  },
+  { name: "Otros", value: "Otros", icon: BoxesIcon },
+];
+---
+
+<Layout title="Catálogo General de Productos">
+  <ProductsSection
+    title="Nutrición Esencial para"
+    titleHighlight="Su Bienestar"
+    description="Proporciona a tu mejor amigo la nutrición que merece. Explora una variedad de dietas especializadas, alimentos secos y húmedos, y opciones naturales para mantener su vitalidad, energía y salud óptima."
+    filterOptions={generalFilterOptions}
+    products={foodProducts}
+  />
+</Layout>

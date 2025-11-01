@@ -839,8 +839,6 @@ export const PharmacyData = [
     description:
       "Inmunol es un inmunoestimulante para mascotas, que ayuda a fortalecer el sistema inmunitario, aumentando la resistencia a infecciones y mejorando la vitalidad general, especialmente en periodos de convalecencia.",
     price: "S/ 53.50",
-    image:
-      "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     category: "Suplementos",
   },
   {
@@ -1312,16 +1310,16 @@ export const PharmacyData = [
       "https://doctoravanevet.com/wp-content/uploads/2021/02/fripets-tabletas.png",
     category: "Antipulgas",
   },
-  {
-    id: 760,
-    name: "Sucralmax (Sucralfato) 1G/ 5Ml",
-    description:
-      "Sucralmax (Sucralfato) 1G/5ml es un protector gástrico para mascotas, ideal para el tratamiento y prevención de úlceras estomacales e intestinales. Ayuda a revestir y proteger la mucosa digestiva.",
-    price: "S/ 31.90",
-    image:
-      "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    category: "Medicamentos",
-  },
+  // {
+  //   id: 760,
+  //   name: "Sucralmax (Sucralfato) 1G/ 5Ml",
+  //   description:
+  //     "Sucralmax (Sucralfato) 1G/5ml es un protector gástrico para mascotas, ideal para el tratamiento y prevención de úlceras estomacales e intestinales. Ayuda a revestir y proteger la mucosa digestiva.",
+  //   price: "S/ 31.90",
+  //   image:
+  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+  //   category: "Medicamentos",
+  // },
   {
     id: 761,
     name: "Broncopet Jarabe 100Ml",

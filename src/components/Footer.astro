@@ -7,14 +7,14 @@ import TiktokIcon from "@assets/icons/tiktok.svg";
 
 const servicesList = [
   { name: "Inicio", href: "/" },
-  { name: "Farmacia", href: "/products" },
-  { name: "Contacto", href: "#" },
+  { name: "Farmacia", href: "/pharmacy" },
+  { name: "Comida", href: "/food" },
 ];
 
 const companyList = [
   { name: "Sobre nosotros", href: "/" },
-  { name: "Nuestro equipo", href: "/" },
-  { name: "FAQ", href: "/" },
+  { name: "Nuestro equipo", href: "#" },
+  { name: "FAQ", href: "#" },
 ];
 
 const socialMediaList = [
@@ -82,12 +82,9 @@ const socialMediaList = [
           {
             companyList.map((company) => (
               <li>
-                <a
-                  class="text-gray-400 hover:text-white transition"
-                  href={company.href}
-                >
+                <span class="text-gray-400 hover:text-white transition">
                   {company.name}
-                </a>
+                </span>
               </li>
             ))
           }

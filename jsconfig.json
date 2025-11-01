@@ -8,9 +8,5 @@
       "@assets/*": ["src/assets/*"],
       "@data/*": ["src/data/*"]
     },
-    "jsx": "react",
-    "allowJs": true,
-    "checkJs": false
   },
-  "exclude": ["node_modules", "dist"]
 }

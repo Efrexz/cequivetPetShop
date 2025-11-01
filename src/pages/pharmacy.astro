@@ -1,18 +1,14 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { PharmacyData } from "@data/pharmacyData";
-import CardProduct from "@components/CardProduct.astro";
-import SearchIcon from "@assets/icons/search.svg";
-// import ArrowLeft from "@assets/icons/arrowLeft.svg";
-// import ArrowRight from "@assets/icons/arrowRight.svg";
+import ProductsSection from "@components/ProductsSection.astro";
 import VirusIcon from "@assets/icons/virus.svg";
 import PillsIcon from "@assets/icons/pills.svg";
 import Pills2Icon from "@assets/icons/pills2.svg";
 import BugsIcon from "@assets/icons/bugs.svg";
 import BoxesIcon from "@assets/icons/boxes.svg";
-import CookieIcon from "@assets/icons/cookie.svg";
 
-const filterOptions = [
+const pharmacyFilterOptions = [
   { name: "Todo", value: "all", icon: BoxesIcon },
   { name: "Medicamentos", value: "Medicamentos", icon: PillsIcon },
   { name: "Suplementos", value: "Suplementos", icon: Pills2Icon },
@@ -21,200 +17,12 @@ const filterOptions = [
 ];
 ---
 
-<Layout title="Catálogo de Productos">
-  <section
-    class="bg-gradient-to-br from-emerald-50 to-orange-50 py-12 lg:py-16"
-  >
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12 fade-in-up" data-animate>
-        <h1
-          class="text-4xl sm:text-5xl font-extrabold text-[#00BD9D] mb-4 drop-shadow-sm"
-        >
-          Cuidamos <span class="text-[#FF7F11]">Su Bienestar</span>
-        </h1>
-        <p class="text-lg text-gray-700 leading-relaxed">
-          Nos importa tanto la salud de tus mascotas como a ti. Descubre
-          nuestros productos farmacéuticos diseñados para aliviar, proteger y
-          mejorar la calidad de vida de tus mejores amigos.
-        </p>
-      </div>
-
-      <!-- Filtros y Búsqueda -->
-      <div
-        class="bg-white p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 border-b-4 border-[#00BD9D]/60 fade-in-up"
-        data-animate
-        style="transition-delay: 0.2s;"
-      >
-        <div class="relative w-full lg:w-1/3">
-          <input
-            type="text"
-            id="searchInput"
-            placeholder="Buscar productos..."
-            class="w-full pl-12 pr-4 py-3 rounded-full border-2 border-gray-200 focus:outline-none focus:ring-4 focus:ring-[#00BD9D]/20 focus:border-[#00BD9D] transition-all text-gray-700"
-          />
-          <SearchIcon
-            class="w-6 h-6 text-[#FF7F11] absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none"
-          />
-        </div>
-
-        <div
-          id="filterButtons"
-          class="flex flex-wrap items-center gap-3 w-full lg:w-2/3 justify-center lg:justify-end"
-        >
-          {
-            filterOptions.map((option, index) => (
-              <button
-                class="px-4 py-2 rounded-full bg-emerald-50 text-[#00BD9D] text-sm font-semibold border border-emerald-200 shadow-sm hover:bg-[#FF7F11] hover:text-white hover:border-[#FF7F11] transition-all duration-200 ease-in-out transform hover:-translate-y-0.5 flex fade-in-up cursor-pointer filter-button"
-                data-animate
-                style={`transition-delay: ${0.3 + index * 0.1}s;`}
-                data-category={option.value}
-              >
-                <option.icon class="w-5 h-5 mr-1" />
-                {option.name}
-              </button>
-            ))
-          }
-        </div>
-      </div>
-
-      <!-- Productos -->
-      <div
-        id="productsContainer"
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
-      >
-        {
-          PharmacyData.map((product, index) => {
-            return (
-              <div
-                class="flex justify-center items-center zoom-in product-item"
-                style={`transition-delay: ${0.1 + index * 0.08}s;`}
-                data-category={product.category}
-                data-name={product.name.toLowerCase()}
-              >
-                <CardProduct product={product} />
-              </div>
-            );
-          })
-        }
-      </div>
-      <!-- Paginación -->
-      <!-- <nav
-        class="flex justify-center items-center gap-3 mt-16"
-        aria-label="Paginación de productos"
-        data-animate
-        style="transition-delay: 0.5s;"
-      >
-        <button
-          class="group p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-md button-hover-effect"
-          aria-label="Página anterior"
-          disabled
-        >
-          <ArrowLeft class="w-5 h-5 text-[#FF7F11] group-hover:text-white" />
-        </button>
-        <a
-          href="#"
-          class="px-5 py-2 rounded-full bg-[#00BD9D] text-white font-extrabold shadow-lg shadow-emerald-400/50 hover:bg-[#00A38B] transition-all duration-200 scale-105 button-hover-effect"
-          aria-current="page">1</a
-        >
-        <a
-          href="#"
-          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm button-hover-effect"
-          >2</a
-        >
-        <a
-          href="#"
-          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm button-hover-effect"
-          >3</a
-        >
-        <span class="text-gray-500 font-medium">...</span>
-        <a
-          href="#"
-          class="px-5 py-2 rounded-full bg-white text-gray-700 font-semibold border border-gray-200 hover:bg-orange-50 hover:border-orange-200 transition-all duration-200 shadow-sm button-hover-effect"
-          >8</a
-        >
-        <button
-          class="group p-3 rounded-full bg-white text-gray-500 border border-gray-200 hover:bg-[#FF7F11] hover:border-[#FF7F11] transition-all duration-200 shadow-md button-hover-effect"
-          aria-label="Siguiente página"
-        >
-          <ArrowRight class="w-5 h-5 text-[#FF7F11] group-hover:text-white" />
-        </button>
-      </nav> -->
-    </div>
-  </section>
+<Layout title="Catálogo de Productos de Farmacia">
+  <ProductsSection
+    title="Cuidamos"
+    titleHighlight="Su Bienestar"
+    description="Nos importa tanto la salud de tus mascotas como a ti. Descubre nuestros productos farmacéuticos diseñados para aliviar, proteger y mejorar la calidad de vida de tus mejores amigos."
+    filterOptions={pharmacyFilterOptions}
+    products={PharmacyData}
+  />
 </Layout>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const searchInput = document.getElementById("searchInput");
-    const filterButtons = document.querySelectorAll(".filter-button");
-    const productItems = document.querySelectorAll(".product-item");
-
-    let currentSearchTerm = "";
-    let currentCategory = "all";
-
-    function filterProducts() {
-      productItems.forEach((item) => {
-        const productName = item.dataset.name;
-        const productCategory = item.dataset.category;
-
-        const matchesSearch = productName.includes(
-          currentSearchTerm.toLowerCase()
-        );
-        const matchesCategory =
-          currentCategory === "all" || productCategory === currentCategory;
-
-        if (matchesSearch && matchesCategory) {
-          item.style.display = "flex";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    }
-
-    searchInput.addEventListener("input", (event) => {
-      currentSearchTerm = event.target.value;
-      filterProducts();
-    });
-
-    // Eventos para los botones de categoría
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Limpia todos los botones: Desactiva el que estaba activo y activa el resto como inactivos.
-        filterButtons.forEach((btn) => {
-          btn.classList.remove(
-            "bg-[#FF7F11]",
-            "text-white",
-            "border-[#FF7F11]"
-          ); // Quita activo
-          btn.classList.add(
-            "bg-emerald-50",
-            "text-[#00BD9D]",
-            "border-emerald-200"
-          ); // Añade inactivo
-        });
-
-        // Activa el botón clickeado:
-        button.classList.remove(
-          "bg-emerald-50",
-          "text-[#00BD9D]",
-          "border-emerald-200"
-        );
-        button.classList.add("bg-[#FF7F11]", "text-white", "border-[#FF7F11]");
-
-        filterProducts();
-      });
-    });
-
-    // siempre que se cargue la página, se activa el filtro "Todo" por defecto
-    const allButton = document.querySelector('[data-category="all"]');
-    if (allButton) {
-      // quitamos las clases de inactivo por si acaso
-      allButton.classList.remove(
-        "bg-emerald-50",
-        "text-[#00BD9D]",
-        "border-emerald-200"
-      );
-      allButton.classList.add("bg-[#FF7F11]", "text-white", "border-[#FF7F11]");
-    }
-  });
-</script>
