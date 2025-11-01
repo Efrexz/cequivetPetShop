@@ -1,10 +1,10 @@
 ---
-import { PawPrint, Menu } from "lucide-react";
+import { PawPrint, Menu, X } from "lucide-react";
 import Logo from "@assets/images/logo.webp";
 
 const whatsappMessage =
   "Hola, me gustaría saber más sobre los servicios y productos de la veterinaria. Gracias.";
-const whatsappLink = `https://wa.me/+51932095750?text=${encodeURIComponent(whatsappMessage)}`;
+const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
 
 const navLinks = [
   { href: "/", label: "Inicio" },
@@ -50,13 +50,98 @@ const navLinks = [
         }
       </div>
 
+      <!-- Botón para Mobile (Menú de Hamburguesa / Cerrar) -->
       <button
         id="mobile-menu-toggle"
-        class="md:hidden p-2 rounded-full text-gray-900 border border-green-500 hover:bg-green-100 transition-colors"
+        class="md:hidden p-2 rounded-full text-gray-900 border border-emerald-400 hover:bg-green-100 transition-colors"
         aria-label="Toggle menu"
       >
-        <Menu className="h-6 w-6" />
+        <Menu id="menu-icon-open" className="h-6 w-6 text-emerald-500" />
+        <X id="menu-icon-close" className="h-6 w-6 hidden text-emerald-500" />
       </button>
     </div>
   </nav>
+
+  <!-- Menú Desplegable para Mobile -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg py-4 border-b border-green-500/30 transition-all duration-300 ease-in-out transform -translate-y-full opacity-0"
+  >
+    <div class="flex flex-col items-center space-y-4 px-4 sm:px-6 lg:px-8">
+      {
+        navLinks.map((link, index) => (
+          <a
+            href={link.href}
+            target={link.isWhatsapp ? "_blank" : "_self"}
+            rel={link.isWhatsapp ? "noopener noreferrer" : undefined}
+            class={`w-full text-center py-3 text-lg font-medium transition-all duration-300 rounded-lg
+            ${
+              index === navLinks.length - 1
+                ? "bg-orange-500 text-white hover:bg-orange-600 shadow-lg shadow-orange-600/30"
+                : "text-green-800 bg-gradient-to-r from-green-50 to-emerald-100 shadow-sm active:shadow-md active:bg-gradient-to-r active:from-green-100 active:to-emerald-200"
+            }`}
+          >
+            <div class="flex items-center justify-center gap-2">
+              {link.isWhatsapp && <PawPrint className="h-5 w-5" />}
+              {link.label}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIconOpen = document.getElementById("menu-icon-open");
+    const menuIconClose = document.getElementById("menu-icon-close");
+
+    if (toggleButton && mobileMenu && menuIconOpen && menuIconClose) {
+      toggleButton.addEventListener("click", () => {
+        const isMenuOpen = !mobileMenu.classList.contains("hidden");
+
+        if (isMenuOpen) {
+          // Cerrar menú
+          mobileMenu.classList.add("opacity-0", "-translate-y-full");
+          mobileMenu.addEventListener(
+            "transitionend",
+            () => {
+              mobileMenu.classList.add("hidden");
+            },
+            { once: true }
+          ); // Eliminar hidden después de la transición
+          menuIconOpen.classList.remove("hidden");
+          menuIconClose.classList.add("hidden");
+        } else {
+          // Abrir menú
+          mobileMenu.classList.remove("hidden");
+          setTimeout(() => {
+            // Pequeño retardo para asegurar que la clase hidden se haya quitado antes de la transición
+            mobileMenu.classList.remove("opacity-0", "-translate-y-full");
+          }, 10);
+          menuIconOpen.classList.add("hidden");
+          menuIconClose.classList.remove("hidden");
+        }
+      });
+
+      // Cerrar el menú si se redimensiona la ventana a desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          // 768px es el breakpoint por defecto de Tailwind para 'md'
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add(
+              "hidden",
+              "opacity-0",
+              "-translate-y-full"
+            );
+            menuIconOpen.classList.remove("hidden");
+            menuIconClose.classList.add("hidden");
+          }
+        }
+      });
+    }
+  });
+</script>
