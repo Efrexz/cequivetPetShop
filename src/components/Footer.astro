@@ -1,5 +1,5 @@
 ---
-import { Phone, PawPrint } from "lucide-react";
+import { Phone } from "lucide-react";
 import Logo from "@assets/images/logo.webp";
 import FacebookIcon from "@assets/icons/facebook.svg";
 import Instagramicon from "@assets/icons/instagram.svg";
@@ -18,9 +18,21 @@ const companyList = [
 ];
 
 const socialMediaList = [
-  { name: "Facebook", href: "#", icon: FacebookIcon, color: "blue-500" },
-  { name: "Instagram", href: "#", icon: Instagramicon, color: "orange-500" },
-  { name: "Tiktok", href: "#", icon: TiktokIcon, color: "white" },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/share/18yYAUWnLD/",
+    icon: FacebookIcon,
+  },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/ceqivet?igsh=MTVqOWlxN3pxbW5uYw==",
+    icon: Instagramicon,
+  },
+  {
+    name: "Tiktok",
+    href: "https://www.tiktok.com/@ceqivet?_t=ZS-90xZEgOzB2L&_r=1",
+    icon: TiktokIcon,
+  },
 ];
 ---
 
@@ -40,9 +52,9 @@ const socialMediaList = [
         <p class="text-sm text-gray-400">Siempre al cuidado de tu mascota.</p>
         <div class="space-y-2 text-sm">
           <p class="flex items-center text-orange-400">
-            <Phone className="w-4 h-4 mr-2" /> (555) 123-4567
+            <Phone className="w-4 h-4 mr-2 " />970 691 590
           </p>
-          <p class="text-gray-400">Av Alisos 581, Lima</p>
+          <p class="text-gray-400">Av Alisos 1539, Lima</p>
         </div>
       </div>
 
@@ -91,10 +103,18 @@ const socialMediaList = [
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                class={`p-2 rounded-full bg-gray-800  transition flex items-center justify-center`}
+                class={`p-2 rounded-full bg-gray-800 transition duration-300 ease-in-out transform hover:scale-110 flex items-center justify-center`}
                 aria-label={social.name}
               >
-                <social.icon class={`w-6 h-6 hover:text-${social.color}`} />
+                <social.icon
+                  class={`w-6 h-6 transition ${
+                    social.name === "Facebook"
+                      ? "hover:text-blue-500"
+                      : social.name === "Instagram"
+                        ? "hover:text-pink-500"
+                        : "hover:text-white"
+                  }`}
+                />
               </a>
             ))
           }
@@ -103,7 +123,7 @@ const socialMediaList = [
     </div>
 
     <div class="pt-8 text-center text-sm text-gray-500">
-      &copy; 2025 PetCare. All rights reserved. | <span class="text-orange-500"
+      &copy; 2025. All rights reserved. | <span class="text-orange-500"
         >Built with Love</span
       >
     </div>

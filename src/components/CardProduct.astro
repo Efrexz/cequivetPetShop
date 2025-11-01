@@ -1,5 +1,7 @@
 ---
 import WhatsAppIcon from "@assets/icons/whatsapp.svg";
+import Logo from "@assets/images/logo.webp";
+
 const { product } = Astro.props;
 
 const whatsappMessage = `Hola, me interesa el producto ${product.name} (${product.price}). ¿Podrías darme más información?`;
@@ -10,7 +12,7 @@ const whatsappLink = `https://wa.me/+51932095750?text=${encodeURIComponent(whats
   class="w-full h-full flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden border border-gray-100"
 >
   <img
-    src={product.image}
+    src={product.image ?? Logo.src}
     alt={`Imagen de ${product.name}`}
     class="w-full h-40 object-cover rounded-t-xl"
   />

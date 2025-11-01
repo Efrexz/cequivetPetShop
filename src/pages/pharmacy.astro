@@ -1,19 +1,23 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { featuredProducts } from "@data/productsData"; // Asegúrate de que esta ruta sea correcta
-import CardProduct from "@components/CardProduct.astro"; // Asegúrate de que esta ruta sea correcta
+import { PharmacyData } from "@data/pharmacyData";
+import CardProduct from "@components/CardProduct.astro";
 import SearchIcon from "@assets/icons/search.svg";
-import ArrowLeft from "@assets/icons/arrowLeft.svg";
-import ArrowRight from "@assets/icons/arrowRight.svg";
+// import ArrowLeft from "@assets/icons/arrowLeft.svg";
+// import ArrowRight from "@assets/icons/arrowRight.svg";
+import VirusIcon from "@assets/icons/virus.svg";
 import PillsIcon from "@assets/icons/pills.svg";
+import Pills2Icon from "@assets/icons/pills2.svg";
+import BugsIcon from "@assets/icons/bugs.svg";
 import BoxesIcon from "@assets/icons/boxes.svg";
 import CookieIcon from "@assets/icons/cookie.svg";
 
 const filterOptions = [
   { name: "Todo", value: "all", icon: BoxesIcon },
-  { name: "Medicinas", value: "medicines", icon: PillsIcon },
-  { name: "Alimentos", value: "food", icon: CookieIcon },
-  { name: "Accesorios", value: "accessories", icon: PillsIcon },
+  { name: "Medicamentos", value: "Medicamentos", icon: PillsIcon },
+  { name: "Suplementos", value: "Suplementos", icon: Pills2Icon },
+  { name: "Antibióticos", value: "Antibióticos", icon: VirusIcon },
+  { name: "Antipulgas", value: "Antipulgas", icon: BugsIcon },
 ];
 ---
 
@@ -26,11 +30,12 @@ const filterOptions = [
         <h1
           class="text-4xl sm:text-5xl font-extrabold text-[#00BD9D] mb-4 drop-shadow-sm"
         >
-          Nuestro <span class="text-[#FF7F11]">Catálogo</span>
+          Cuidamos <span class="text-[#FF7F11]">Su Bienestar</span>
         </h1>
         <p class="text-lg text-gray-700 leading-relaxed">
-          Explora una amplia variedad de productos seleccionados con amor para
-          la salud y felicidad de tus compañeros peludos.
+          Nos importa tanto la salud de tus mascotas como a ti. Descubre
+          nuestros productos farmacéuticos diseñados para aliviar, proteger y
+          mejorar la calidad de vida de tus mejores amigos.
         </p>
       </div>
 
@@ -43,6 +48,7 @@ const filterOptions = [
         <div class="relative w-full lg:w-1/3">
           <input
             type="text"
+            id="searchInput"
             placeholder="Buscar productos..."
             class="w-full pl-12 pr-4 py-3 rounded-full border-2 border-gray-200 focus:outline-none focus:ring-4 focus:ring-[#00BD9D]/20 focus:border-[#00BD9D] transition-all text-gray-700"
           />
@@ -52,14 +58,16 @@ const filterOptions = [
         </div>
 
         <div
+          id="filterButtons"
           class="flex flex-wrap items-center gap-3 w-full lg:w-2/3 justify-center lg:justify-end"
         >
           {
             filterOptions.map((option, index) => (
               <button
-                class="px-6 py-2 rounded-full bg-emerald-50 text-[#00BD9D] text-sm font-semibold border border-emerald-200 shadow-sm hover:bg-[#FF7F11] hover:text-white hover:border-[#FF7F11] transition-all duration-200 ease-in-out transform hover:-translate-y-0.5 flex fade-in-up cursor-pointer "
+                class="px-4 py-2 rounded-full bg-emerald-50 text-[#00BD9D] text-sm font-semibold border border-emerald-200 shadow-sm hover:bg-[#FF7F11] hover:text-white hover:border-[#FF7F11] transition-all duration-200 ease-in-out transform hover:-translate-y-0.5 flex fade-in-up cursor-pointer filter-button"
                 data-animate
                 style={`transition-delay: ${0.3 + index * 0.1}s;`}
+                data-category={option.value}
               >
                 <option.icon class="w-5 h-5 mr-1" />
                 {option.name}
@@ -71,15 +79,17 @@ const filterOptions = [
 
       <!-- Productos -->
       <div
+        id="productsContainer"
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         {
-          featuredProducts.map((product, index) => {
+          PharmacyData.map((product, index) => {
             return (
               <div
-                class="flex justify-center items-center zoom-in"
-                data-animate
+                class="flex justify-center items-center zoom-in product-item"
                 style={`transition-delay: ${0.1 + index * 0.08}s;`}
+                data-category={product.category}
+                data-name={product.name.toLowerCase()}
               >
                 <CardProduct product={product} />
               </div>
@@ -88,7 +98,7 @@ const filterOptions = [
         }
       </div>
       <!-- Paginación -->
-      <nav
+      <!-- <nav
         class="flex justify-center items-center gap-3 mt-16"
         aria-label="Paginación de productos"
         data-animate
@@ -128,7 +138,83 @@ const filterOptions = [
         >
           <ArrowRight class="w-5 h-5 text-[#FF7F11] group-hover:text-white" />
         </button>
-      </nav>
+      </nav> -->
     </div>
   </section>
 </Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const productItems = document.querySelectorAll(".product-item");
+
+    let currentSearchTerm = "";
+    let currentCategory = "all";
+
+    function filterProducts() {
+      productItems.forEach((item) => {
+        const productName = item.dataset.name;
+        const productCategory = item.dataset.category;
+
+        const matchesSearch = productName.includes(
+          currentSearchTerm.toLowerCase()
+        );
+        const matchesCategory =
+          currentCategory === "all" || productCategory === currentCategory;
+
+        if (matchesSearch && matchesCategory) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    searchInput.addEventListener("input", (event) => {
+      currentSearchTerm = event.target.value;
+      filterProducts();
+    });
+
+    // Eventos para los botones de categoría
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Limpia todos los botones: Desactiva el que estaba activo y activa el resto como inactivos.
+        filterButtons.forEach((btn) => {
+          btn.classList.remove(
+            "bg-[#FF7F11]",
+            "text-white",
+            "border-[#FF7F11]"
+          ); // Quita activo
+          btn.classList.add(
+            "bg-emerald-50",
+            "text-[#00BD9D]",
+            "border-emerald-200"
+          ); // Añade inactivo
+        });
+
+        // Activa el botón clickeado:
+        button.classList.remove(
+          "bg-emerald-50",
+          "text-[#00BD9D]",
+          "border-emerald-200"
+        );
+        button.classList.add("bg-[#FF7F11]", "text-white", "border-[#FF7F11]");
+
+        filterProducts();
+      });
+    });
+
+    // siempre que se cargue la página, se activa el filtro "Todo" por defecto
+    const allButton = document.querySelector('[data-category="all"]');
+    if (allButton) {
+      // quitamos las clases de inactivo por si acaso
+      allButton.classList.remove(
+        "bg-emerald-50",
+        "text-[#00BD9D]",
+        "border-emerald-200"
+      );
+      allButton.classList.add("bg-[#FF7F11]", "text-white", "border-[#FF7F11]");
+    }
+  });
+</script>

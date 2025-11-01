@@ -1,5 +1,5 @@
 ---
-import { featuredProducts } from "@data/productsData";
+import { PharmacyData } from "@data/pharmacyData";
 import CardProduct from "@components/CardProduct.astro";
 import ArrowLeft from "@assets/icons/arrowLeft.svg";
 import ArrowRight from "@assets/icons/arrowRight.svg";
@@ -37,7 +37,7 @@ import ArrowRight from "@assets/icons/arrowRight.svg";
       <div class="embla-products__viewport overflow-hidden">
         <div class="embla-products__container flex">
           {
-            featuredProducts.map((product) => (
+            PharmacyData.map((product) => (
               <div class="embla-products__slide flex-[0_0_70%] sm:flex-[0_0_30%] lg:flex-[0_0_20%] pl-4">
                 <div class="product-slide-content">
                   <CardProduct product={product} />
