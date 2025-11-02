@@ -1,0 +1,103 @@
+---
+import Layout from "@layouts/Layout.astro";
+import CarouselProducts from "@components/Carousel.astro";
+import WhatsappIcon from "@assets/icons/whatsapp.svg";
+---
+
+<Layout>
+  <section class="overflow-hidden bg-white text-gray-900 py-16 relative">
+    <!-- Fondo geométrico con gradiente -->
+    <div class="absolute inset-0 z-0 opacity-40">
+      <svg
+        class="w-full h-full"
+        viewBox="0 0 1440 800"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0H1440V400C1440 620.914 1260.91 800 1040 800H400C179.086 800 0 620.914 0 400V0Z"
+          fill="url(#paint0_linear)"></path>
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="720"
+            y1="0"
+            x2="720"
+            y2="800"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#E0F7FA"></stop>
+            <stop offset="1" stop-color="#E8F5E9"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative flex justify-center fade-in-left" data-animate>
+          <div
+            class="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-2"
+            style="background-color: #E0F2F7;"
+          >
+            {/* Círculo punteado exterior más grande */}
+            <div
+              class="absolute inset-[-10px] sm:inset-[-12px] md:inset-[-15px] rounded-full border-4 border-dashed border-[#4DB6AC] opacity-80"
+            >
+            </div>
+
+            {/* Contorno interior color esmeralda y la imagen */}
+            <div
+              class="relative w-full h-full rounded-full border-2 border-[#00BFA5] shadow-md flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src="https://perupets.com/998-large_default/doxitel-100-doxiciclina-100mg-x-32comp.jpg"
+                alt="Alimento Premium para Cachorros Vitality"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Detalles del Producto */}
+        <div class="space-y-6 fade-in-right" data-animate>
+          <h1
+            class="text-4xl sm:text-5xl font-extrabold leading-tight text-[#02ad91] drop-shadow-sm"
+          >
+            Alimento Premium para Cachorros <span class="text-[#FF7F11]"
+              >Vitality</span
+            >
+          </h1>
+          <p class="text-4xl font-extrabold text-[#FF7F11]">S/ 99.90</p>
+          <p class="text-lg sm:text-xl opacity-90 text-gray-700">
+            Alimento balanceado y nutritivo especialmente formulado para
+            cachorros en crecimiento. Contiene vitaminas esenciales, minerales y
+            proteínas de alta calidad para un desarrollo óptimo y un pelaje
+            brillante.
+          </p>
+
+          {/* Botón de Acción */}
+          <button
+            class="px-8 py-3 rounded-xl bg-gradient-to-r from-[#fbab3a] to-[#FF7F11] text-white font-bold hover:opacity-90 transition shadow-lg shadow-yellow-300/40 hover:scale-105 flex gap-2 justify-center items-center"
+          >
+            <WhatsappIcon class="w-6 h-6" />
+            Comprar por WhatsApp
+          </button>
+
+          <div class="text-sm text-gray-600 pt-4">
+            Categoría: <span class="font-semibold text-[#02ad91]"
+              >Comida para Perros</span
+            > | Marca:
+            <span class="font-semibold text-[#FF7F11]"> Vitality Pet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CarouselProducts
+    section="related"
+    title="Productos"
+    titleHighlight="Relacionados"
+    subtitle="Podrían interesarte otros productos para el cuidado de tu peludo."
+  />
+</Layout>

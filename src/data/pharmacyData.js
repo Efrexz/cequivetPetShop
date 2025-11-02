@@ -327,16 +327,6 @@ export const PharmacyData = [
     category: "Antibióticos",
   },
   {
-    id: 376,
-    name: "Prednisolona 20Mg",
-    description:
-      "Glucocorticoide sintético con efectos antiinflamatorio, antialérgico e inmunosupresor. Para procesos alérgicos, dermatológicos (prurito), autoinmunes y terapias oncológicas en perros y gatos.",
-    price: "S/ 3.50",
-    image:
-      "https://dojiw2m9tvv09.cloudfront.net/88487/product/prednisolona8270.jpg",
-    category: "Medicamentos",
-  },
-  {
     id: 377,
     name: "Doxitel 100 Mg",
     description:

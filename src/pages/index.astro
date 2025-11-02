@@ -53,7 +53,7 @@ import Layout from "@layouts/Layout.astro";
     </div>
   </section>
 
-  {/* About Section */}
+  {/* Sobre nosotros */}
   <section class="py-20 lg:py-32 bg-green-50">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up" data-animate>
@@ -70,7 +70,7 @@ import Layout from "@layouts/Layout.astro";
         </p>
       </div>
 
-      {/* Services Grid */}
+      {/* Servicios */}
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
           class="p-8 rounded-xl bg-white shadow-xl shadow-[#01827b]/30 text-center service-card border-t-8 border-[#01827b] zoom-in"
@@ -131,5 +131,10 @@ import Layout from "@layouts/Layout.astro";
       </div>
     </div>
   </section>
-  <CarouselProducts />
+  <CarouselProducts
+    section="main"
+    title="Productos para una"
+    titleHighlight="Vida Plena"
+    subtitle="Todo lo que tu mascota necesita para crecer sana y feliz, con la máxima calidad y seguridad."
+  />
 </Layout>

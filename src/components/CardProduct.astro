@@ -15,7 +15,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
     <img
       src={product.image ?? Logo.src}
       alt={`Imagen de ${product.name}`}
-      class="w-full h-40 object-cover rounded-t-xl transform transition-transform duration-300 ease-in-out hover:scale-110"
+      class="w-full h-40 object-contain rounded-t-xl transform transition-transform duration-300 ease-in-out hover:scale-120"
     />
   </div>
   <div class="p-4 flex flex-col flex-grow text-center">
@@ -35,7 +35,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
       class="mt-auto pt-3 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3"
     >
       <span
-        class="text-2xl font-extrabold text-orange-500 order-1 sm:order-1 w-full sm:w-auto"
+        class="text-2xl font-extrabold text-orange-500 order-1 sm:order-1 w-full sm:w-auto whitespace-nowrap"
       >
         {product.price}
       </span>
