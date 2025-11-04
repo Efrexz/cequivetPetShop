@@ -888,10 +888,40 @@ export const pharmacyData = [
     id: 548,
     name: "Shampoo Medicado Triple A",
     description:
-      "Shampoo Medicado Triple A es un champú dermatológico para mascotas con acción antibacteriana, antifúngica y antiparasitaria, ideal para tratar diversas afecciones de la piel y el pelaje.",
+      "Shampoo Medicado Triple A es un champú dermatológico completo para mascotas con una triple acción: antibacteriana, antifúngica y antiparasitaria. Formulado para tratar eficazmente diversas afecciones de la piel y el pelaje, aliviando irritaciones, picazón y ayudando a restaurar la salud dérmica de tu mascota. Ideal para condiciones cutáneas complejas.",
     price: "S/ 30.00",
     image:
       "https://dojiw2m9tvv09.cloudfront.net/27184/product/vetlinex-shampoo-triple-a-300-ml2170.png",
+    category: "Medicamentos",
+  },
+  {
+    id: 1456,
+    name: "Shampoo Antipulgas",
+    description:
+      "Shampoo Antipulgas está especialmente formulado para eliminar pulgas, garrapatas y otros parásitos externos de forma efectiva en perros y gatos. Su acción rápida ayuda a aliviar el picor y las molestias causadas por estos insectos, dejando el pelaje limpio, fresco y con una agradable fragancia. Es un aliado esencial en la prevención y control de infestaciones.",
+    price: "S/ 30.00",
+    image:
+      "https://promart.vteximg.com.br/arquivos/ids/7843016-1000-1000/image-5c5b41783a7a481885accf31fa6dcc43.jpg?v=638436242608630000",
+    category: "Medicamentos",
+  },
+  {
+    id: 1457,
+    name: "Shampoo + Acondicionador 2 en 1",
+    description:
+      "Este Shampoo + Acondicionador 2 en 1 ofrece una solución completa para el baño de tu mascota, limpiando y suavizando el pelaje en un solo paso. Su fórmula nutre la piel y el pelo, facilitando el desenredado, aportando brillo y dejando una sensación sedosa y un aroma fresco. Ideal para mantener un pelaje saludable y manejable sin esfuerzo adicional.",
+    price: "S/ 30.00",
+    image:
+      "https://oechsle.vteximg.com.br/arquivos/ids/17514609-1000-1000/imageUrl_1.jpg?v=638506142115670000",
+    category: "Medicamentos",
+  },
+  {
+    id: 1458,
+    name: "Shampoo Medicado con Clorhexidina",
+    description:
+      "Shampoo Medicado con Clorhexidina es un potente antiséptico y antibacteriano, ideal para el tratamiento de infecciones cutáneas causadas por bacterias en perros y gatos. Ayuda a controlar la proliferación de microorganismos, reduce la inflamación y favorece la cicatrización de la piel. Es comúnmente recomendado por veterinarios para dermatitis y heridas superficiales.",
+    price: "S/ 30.00",
+    image:
+      "https://dojiw2m9tvv09.cloudfront.net/27184/product/clorhexidina-cotrimezal-11445.jpg",
     category: "Medicamentos",
   },
   {
