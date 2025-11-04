@@ -1,6 +1,6 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { PharmacyData } from "@data/pharmacyData";
+import { pharmacyData } from "@data/pharmacyData";
 import ProductsSection from "@components/ProductsSection.astro";
 import VirusIcon from "@assets/icons/virus.svg";
 import PillsIcon from "@assets/icons/pills.svg";
@@ -23,6 +23,6 @@ const pharmacyFilterOptions = [
     titleHighlight="Su Bienestar"
     description="Nos importa tanto la salud de tus mascotas como a ti. Descubre nuestros productos farmacéuticos diseñados para aliviar, proteger y mejorar la calidad de vida de tus mejores amigos."
     filterOptions={pharmacyFilterOptions}
-    products={PharmacyData}
+    products={pharmacyData}
   />
 </Layout>

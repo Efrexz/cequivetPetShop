@@ -2,6 +2,30 @@
 import Layout from "@layouts/Layout.astro";
 import CarouselProducts from "@components/Carousel.astro";
 import WhatsappIcon from "@assets/icons/whatsapp.svg";
+import { foodProducts } from "@data/productsData";
+import { pharmacyData } from "@data/pharmacyData";
+
+// getStaticPaths es OBLIGATORIO para rutas dinámicas en SSG
+export async function getStaticPaths() {
+  // para solucionar el problema de allProducts undefined lo declaramos aca adentro
+  const allProducts = [...foodProducts, ...pharmacyData];
+
+  return allProducts.map((product) => ({
+    params: { id: product.id.toString() },
+  }));
+}
+
+const { id } = Astro.params;
+
+const allProducts = [...foodProducts, ...pharmacyData];
+const product = allProducts.find((p) => p.id.toString() === id);
+
+if (!product) {
+  return Astro.redirect("/404");
+}
+
+const whatsappMessage = `Hola, me interesa el producto ${product.name} (${product.price}). ¿Podrías darme más información?`;
+const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
 <Layout>
@@ -50,7 +74,7 @@ import WhatsappIcon from "@assets/icons/whatsapp.svg";
               class="relative w-full h-full rounded-full border-2 border-[#00BFA5] shadow-md flex items-center justify-center overflow-hidden"
             >
               <img
-                src="https://perupets.com/998-large_default/doxitel-100-doxiciclina-100mg-x-32comp.jpg"
+                src={product.image}
                 alt="Alimento Premium para Cachorros Vitality"
                 class="w-full h-full object-cover rounded-full"
               />
@@ -63,32 +87,25 @@ import WhatsappIcon from "@assets/icons/whatsapp.svg";
           <h1
             class="text-4xl sm:text-5xl font-extrabold leading-tight text-[#02ad91] drop-shadow-sm"
           >
-            Alimento Premium para Cachorros <span class="text-[#FF7F11]"
-              >Vitality</span
-            >
+            {product.name}
           </h1>
-          <p class="text-4xl font-extrabold text-[#FF7F11]">S/ 99.90</p>
+          <p class="text-4xl font-extrabold text-[#FF7F11]">{product.price}</p>
           <p class="text-lg sm:text-xl opacity-90 text-gray-700">
-            Alimento balanceado y nutritivo especialmente formulado para
-            cachorros en crecimiento. Contiene vitaminas esenciales, minerales y
-            proteínas de alta calidad para un desarrollo óptimo y un pelaje
-            brillante.
+            {product.description}
           </p>
 
           {/* Botón de Acción */}
-          <button
-            class="px-8 py-3 rounded-xl bg-gradient-to-r from-[#fbab3a] to-[#FF7F11] text-white font-bold hover:opacity-90 transition shadow-lg shadow-yellow-300/40 hover:scale-105 flex gap-2 justify-center items-center"
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-6 py-2 rounded-xl bg-gradient-to-r from-[#fbab3a] to-[#FF7F11] text-white font-bold hover:opacity-90 transition shadow-lg shadow-yellow-300/40 hover:scale-105 text-base whitespace-nowrap max-w-xs mx-auto lg:px-8 lg:py-3"
+            aria-label={`Pedir ${product.name} por WhatsApp`}
           >
-            <WhatsappIcon class="w-6 h-6" />
+            <WhatsappIcon class="w-5 h-5 lg:w-6 lg:h-6" />
+            <!-- Ajusta el tamaño del icono también si es necesario -->
             Comprar por WhatsApp
-          </button>
-
-          <div class="text-sm text-gray-600 pt-4">
-            Categoría: <span class="font-semibold text-[#02ad91]"
-              >Comida para Perros</span
-            > | Marca:
-            <span class="font-semibold text-[#FF7F11]"> Vitality Pet</span>
-          </div>
+          </a>
         </div>
       </div>
     </div>

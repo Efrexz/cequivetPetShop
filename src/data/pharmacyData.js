@@ -1,4 +1,4 @@
-export const PharmacyData = [
+export const pharmacyData = [
   {
     id: 325,
     name: "Proteggo 10 - 20 Kg",

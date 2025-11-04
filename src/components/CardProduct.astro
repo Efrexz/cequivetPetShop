@@ -4,12 +4,15 @@ import Logo from "@assets/images/logo.webp";
 
 const { product } = Astro.props;
 
+const productDetailUrl = `/products/${product.id}`;
+
 const whatsappMessage = `Hola, me interesa el producto ${product.name} (${product.price}). ¿Podrías darme más información?`;
 const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
 <div
-  class="w-full h-full flex flex-col bg-white rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-[#00BD9D]"
+  class="w-full h-full flex flex-col bg-white rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-[#00BD9D] cursor-pointer"
+  onclick={`window.location.href = '${productDetailUrl}';`}
 >
   <div class="overflow-hidden rounded-t-xl">
     <img
@@ -45,6 +48,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
         rel="noopener noreferrer"
         class="flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white font-semibold text-sm shadow-lg shadow-green-600/30 hover:bg-[#1DA851] transition transform hover:scale-105 w-full sm:w-auto order-2 sm:order-2 button-hover-effect"
         aria-label={`Pedir ${product.name} por WhatsApp`}
+        onclick="event.stopPropagation()"
       >
         <WhatsAppIcon class="w-5 h-5" />
         Pedir
