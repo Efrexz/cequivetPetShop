@@ -9,16 +9,6 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
-    id: 326,
-    name: "Salaris 180Ml",
-    description:
-      "Aceite de Salmón Noruego premium para perros y gatos. Rico en Omega 3, 6 y 9 para piel sana, pelaje brillante, inmunidad fuerte y desarrollo cerebral óptimo.",
-    price: "S/ 49.50",
-    image:
-      "https://www.totalpet.pe/archivos/producto/290-salaris-180-ml-principal.webp",
-    category: "Suplementos",
-  },
-  {
     id: 327,
     name: "Nutrical",
     description:
@@ -30,7 +20,7 @@ export const pharmacyData = [
   },
   {
     id: 328,
-    name: "Hepatin Capsula",
+    name: "Hepatin Capsula x Unidad",
     description:
       "Protector y regenerador hepático en cápsulas para perros y gatos. Con ingredientes naturales para cuidar el hígado, ofrecer soporte antioxidante y ayudar en tratamientos hepáticos.",
     price: "S/ 2.00",
@@ -79,16 +69,6 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
-    id: 339,
-    name: "Floraviva 12 Cepas",
-    description:
-      "Probiótico con 12 cepas beneficiosas para perros y gatos. Promueve la salud intestinal, fortalece el sistema inmunológico y ayuda en periodos de estrés o cambios dietéticos.",
-    price: "S/ 38.00",
-    image:
-      "https://www.agrovetmarket.com/uploads/producto_ficha_view/floraviva-12-cepas-pasta.jpg",
-    category: "Suplementos",
-  },
-  {
     id: 341,
     name: "Doxitel Flow 10 Ml",
     description:
@@ -110,7 +90,7 @@ export const pharmacyData = [
   },
   {
     id: 344,
-    name: "Gastropet (Omeprazol 10 Mg)",
+    name: "Gastropet x Unidad",
     description:
       "Protector gástrico con Omeprazol para perros y gatos. Trata gastritis, úlceras y esofagitis, reduciendo la producción de ácido estomacal.",
     price: "S/ 1.50",
@@ -168,16 +148,7 @@ export const pharmacyData = [
       "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_019769/tienda_019769_80a2e2b0c4ced69dc9da4fa723d10c1a9422439d_producto_large_90.jpg",
     category: "Antibióticos",
   },
-  {
-    id: 353,
-    name: "Clindavet Flow 10Ml",
-    description:
-      "Antibiótico inyectable (Clindamicina) para infecciones bacterianas severas: dentales, piel, óseas (osteomielitis) y respiratorias en perros y gatos.",
-    price: "S/ 32.00",
-    image:
-      "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_019769/tienda_019769_d93be1651a7c16d78aa73ece5a43325d3c1e5081_producto_large_90.jpg",
-    category: "Antibióticos",
-  },
+
   // {
   //   id: 354,
   //   name: "Coprocan 30Ml",
@@ -190,7 +161,7 @@ export const pharmacyData = [
   // },
   {
     id: 355,
-    name: "Higacure Tab",
+    name: "Higacure x Unidad",
     description:
       "Protector y regenerador hepático en tabletas (Silimarina, Metionina, Colina). Preserva la función del hígado en perros y gatos, ideal como soporte en tratamientos o disfunciones.",
     price: "S/ 3.00",
@@ -220,7 +191,7 @@ export const pharmacyData = [
   },
   {
     id: 358,
-    name: "Tryglyceride Omega Capsulas Peq",
+    name: "Tryglyceride Omega x Unidad",
     description:
       "Omega-3 (EPA/DHA) en cápsulas pequeñas. Soporta función renal y cardíaca, mejora piel y pelaje, y reduce inflamación en perros y gatos pequeños.",
     price: "S/ 3.00",
@@ -239,7 +210,7 @@ export const pharmacyData = [
   },
   {
     id: 367,
-    name: "Meloxivet 1Mg",
+    name: "Meloxivet 1Mg x Unidad",
     description:
       "AINE (Meloxicam) para control de dolor, inflamación y fiebre. Ideal para osteoartritis y afecciones musculoesqueléticas en perros y gatos.",
     price: "S/ 1.00",
@@ -249,9 +220,9 @@ export const pharmacyData = [
   },
   {
     id: 368,
-    name: "Meloxivet 4Mg",
+    name: "Meloxivet 4Mg x Unidad",
     description:
-      "AINE (Meloxicam) para dolor e inflamación agudos y crónicos. Eficaz en osteoartritis y afecciones musculoesqueléticas en perros.",
+      "(Meloxicam) para dolor e inflamación agudos y crónicos. Eficaz en osteoartritis y afecciones musculoesqueléticas en perros.",
     price: "S/ 3.00",
     image:
       "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw1cecc15c/images/meloxivet-analgesico-meloxicam-4mg-x-blister-10.jpg",
@@ -259,7 +230,7 @@ export const pharmacyData = [
   },
   {
     id: 369,
-    name: "Cefavet 300 Mg",
+    name: "Cefavet 300 Mg x Unidad",
     description:
       "Antibiótico de amplio espectro (Cefalexina). Trata infecciones bacterianas en piel (piodermas), tejidos blandos, tracto respiratorio, urinario y osteoarticulares en perros y gatos.",
     price: "S/ 2.50",
@@ -269,7 +240,7 @@ export const pharmacyData = [
   },
   {
     id: 370,
-    name: "Cefavet 600 Mg",
+    name: "Cefavet 600 Mg x Unidad",
     description:
       "Antibiótico (Cefalexina) para infecciones bacterianas en piel, tejidos blandos, sistema urinario y respiratorio en perros medianos/grandes y gatos.",
     price: "S/ 3.00",
@@ -299,7 +270,7 @@ export const pharmacyData = [
   },
   {
     id: 373,
-    name: "Histapet",
+    name: "Histapet x Unidad",
     description:
       "Antihistamínico (Cetirizina) para controlar síntomas alérgicos en perros y gatos. Reduce picazón, rascado excesivo, inflamación e irritación de la piel.",
     price: "S/ 2.00",
@@ -309,7 +280,7 @@ export const pharmacyData = [
   },
   {
     id: 374,
-    name: "Floxatel 50 Mg",
+    name: "Floxatel 50 Mg x Unidad",
     description:
       "Antibiótico (Enrofloxacina) bactericida para infecciones respiratorias, urinarias, digestivas, de oído y piel (Tos de las Perreras, Erliquiosis) en mascotas pequeñas.",
     price: "S/ 1.00",
@@ -318,7 +289,7 @@ export const pharmacyData = [
   },
   {
     id: 375,
-    name: "Floxatel 100 Mg",
+    name: "Floxatel 100 Mg x Unidad",
     description:
       "Antibiótico (Enrofloxacina) bactericida para infecciones bacterianas severas en sistemas respiratorio, digestivo y urinario, piodermas y problemas articulares en perros y gatos.",
     price: "S/ 1.30",
@@ -328,7 +299,7 @@ export const pharmacyData = [
   },
   {
     id: 377,
-    name: "Doxitel 100 Mg",
+    name: "Doxitel 100 Mg x Unidad",
     description:
       "Doxitel 100 Mg es un antibiótico de amplio espectro para mascotas, eficaz en el tratamiento de infecciones bacterianas respiratorias, urinarias y dermatológicas.",
     price: "S/ 1.00",
@@ -338,7 +309,7 @@ export const pharmacyData = [
   },
   {
     id: 378,
-    name: "Doxitel 200 Mg",
+    name: "Doxitel 200 Mg x Unidad",
     description:
       "Doxitel 200 Mg es un potente antibiótico oral para mascotas, ideal para tratar infecciones severas en el tracto respiratorio, gastrointestinal y genitourinario.",
     price: "S/ 2.00",
@@ -348,7 +319,7 @@ export const pharmacyData = [
   },
   {
     id: 379,
-    name: "Clindavet 75 Mg",
+    name: "Clindavet 75 Mg x Unidad",
     description:
       "Clindavet 75 Mg es un antibiótico oral específico para mascotas, utilizado en el tratamiento de infecciones dentales, óseas y de tejidos blandos causadas por bacterias sensibles.",
     price: "S/ 2.50",
@@ -358,7 +329,7 @@ export const pharmacyData = [
   },
   {
     id: 380,
-    name: "Clindavet 150 Mg",
+    name: "Clindavet 150 Mg x Unidad",
     description:
       "Clindavet 150 Mg es un antibiótico de elección para infecciones bacterianas en mascotas, especialmente efectivo contra infecciones bucales, dérmicas y osteomielitis.",
     price: "S/ 3.00",
@@ -366,16 +337,7 @@ export const pharmacyData = [
       "https://mascota.pe/wp-content/uploads/2025/01/Clindavet-150-Blister.jpg",
     category: "Antibióticos",
   },
-  {
-    id: 381,
-    name: "Crema 6A 15Gr",
-    description:
-      "Crema 6A es un tratamiento tópico para mascotas, ideal para afecciones dermatológicas como inflamación, picazón y dermatitis, con acción antibacteriana y antimicótica.",
-    price: "S/ 36.50",
-    image:
-      "https://static.wixstatic.com/media/39d263_d53ad465a3cf4e6991993a4000d448a9~mv2.png/v1/fill/w_560,h_560,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/39d263_d53ad465a3cf4e6991993a4000d448a9~mv2.png",
-    category: "Medicamentos",
-  },
+
   {
     id: 382,
     name: "Crema Ultra 7",
@@ -408,7 +370,7 @@ export const pharmacyData = [
   },
   {
     id: 385,
-    name: "Apoquel 16Mg",
+    name: "Apoquel 16Mg x Unidad",
     description:
       "Apoquel 16Mg es un medicamento para perros que alivia rápidamente la picazón asociada con la dermatitis alérgica y atópica, actuando directamente sobre la causa del picor.",
     price: "S/ 1.00",
@@ -418,7 +380,7 @@ export const pharmacyData = [
   },
   {
     id: 386,
-    name: "Apoquel 5.4 Mg",
+    name: "Apoquel 5.4 Mg x Unidad",
     description:
       "Apoquel 5.4 Mg es un tratamiento eficaz para perros con dermatitis atópica y alérgica, reduciendo el picor y la inflamación de forma segura y rápida.",
     price: "S/ 1.00",
@@ -428,7 +390,7 @@ export const pharmacyData = [
   },
   {
     id: 387,
-    name: "Apoquel 3.6 Mg",
+    name: "Apoquel 3.6 Mg x Unidad",
     description:
       "Apoquel 3.6 Mg es una solución innovadora para el manejo del picor en perros con afecciones alérgicas de la piel, proporcionando un alivio rápido y sostenido.",
     price: "S/ 1.00",
@@ -438,7 +400,7 @@ export const pharmacyData = [
   },
   {
     id: 388,
-    name: "Alerflam",
+    name: "Alerflam x Unidad",
     description:
       "Alerflam es un antiinflamatorio para mascotas, utilizado para reducir el dolor y la inflamación en casos de artritis, lesiones musculares y postoperatorios.",
     price: "S/ 2.00",
@@ -448,7 +410,7 @@ export const pharmacyData = [
   },
   {
     id: 389,
-    name: "Tramavet (Tramadol 75Mg)",
+    name: "Tramavet (Tramadol 75Mg) x Unidad",
     description:
       "Tramavet 75Mg es un analgésico potente para mascotas, indicado para el alivio del dolor moderado a severo, tanto agudo como crónico, en perros y gatos.",
     price: "S/ 5.00",
@@ -477,7 +439,7 @@ export const pharmacyData = [
   },
   {
     id: 397,
-    name: "Hepatiopet Tab",
+    name: "Hepatiopet x Unidad",
     description:
       "Hepatiopet Tab es un suplemento hepatoprotector para mascotas, diseñado para apoyar la función hepática, desintoxicar el hígado y mejorar la salud digestiva general.",
     price: "S/ 1.80",
@@ -487,7 +449,7 @@ export const pharmacyData = [
   },
   {
     id: 398,
-    name: "Ohm (Tabletas)",
+    name: "Ohm (Tabletas) x Unidad",
     description:
       "Ohm (Tabletas) es un medicamento homeopático para mascotas, que ayuda a calmar el estrés, la ansiedad y los comportamientos nerviosos en situaciones como viajes o visitas al veterinario.",
     price: "S/ 4.30",
@@ -515,22 +477,6 @@ export const pharmacyData = [
   //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
   //   category: "Suplementos",
   // },
-  {
-    id: 402,
-    name: "Flores De Bach (Miedo)",
-    description:
-      "Flores de Bach (Miedo) es una solución natural para mascotas que sufren de miedo, ansiedad o fobias, ayudando a restaurar la calma y el equilibrio emocional.",
-    price: "S/ 40.50",
-    category: "Medicamentos",
-  },
-  {
-    id: 403,
-    name: "Florales (Senior)",
-    description:
-      "Florales (Senior) es un remedio natural para mascotas mayores, diseñado para apoyar su bienestar general, vitalidad y equilibrio emocional durante la etapa de envejecimiento.",
-    price: "S/ 1.00",
-    category: "Medicamentos",
-  },
   {
     id: 404,
     name: "Collar Yoos T - M / T - L",
@@ -583,7 +529,7 @@ export const pharmacyData = [
   // },
   {
     id: 409,
-    name: "Pet Tabs Plus",
+    name: "Pet Tabs Plus x Unidad",
     description:
       "Pet Tabs Plus es un suplemento multivitamínico y multimineral avanzado para perros, que proporciona nutrientes esenciales para la vitalidad, el pelaje y el bienestar general.",
     price: "S/ 2.00",
@@ -793,29 +739,9 @@ export const pharmacyData = [
       "https://dojiw2m9tvv09.cloudfront.net/27184/product/rivolta-de-2-6-hasta-7-5-kg5211.jpg",
     category: "Antipulgas",
   },
-  // {
-  //   id: 469,
-  //   name: "Cefalexina 250Mg/5Ml Susp",
-  //   description:
-  //     "Cefalexina 250Mg/5Ml Suspensión es un antibiótico de amplio espectro para mascotas, utilizado en el tratamiento de infecciones bacterianas de la piel, tracto urinario y respiratorio.",
-  //   price: "S/ 9.50",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Antibióticos",
-  // },
-  // {
-  //   id: 472,
-  //   name: "Metoclopramida",
-  //   description:
-  //     "Metoclopramida es un antiemético y procinético para mascotas, indicado para el tratamiento de náuseas, vómitos y trastornos de la motilidad gastrointestinal.",
-  //   price: "S/ 1.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
   {
     id: 476,
-    name: "Clamovet (Amoxicilina - Acido Clavulanico)",
+    name: "Clamovet x Unidad",
     description:
       "Clamovet es un antibiótico de amplio espectro para mascotas, eficaz en el tratamiento de infecciones bacterianas, incluyendo aquellas resistentes a la amoxicilina sola, gracias al ácido clavulánico.",
     price: "S/ 2.50",
@@ -851,26 +777,6 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
-    id: 498,
-    name: "Labyderm Premiun Cover Spot On 4Ml",
-    description:
-      "Labyderm Premium Cover Spot On es una loción dérmica para mascotas que restaura la barrera cutánea, hidrata la piel y reduce la irritación, ideal para pieles sensibles o con problemas dermatológicos.",
-    price: "S/ 55.00",
-    image:
-      "https://petsplaceperu.com/wp-content/uploads/2021/07/LABYDERM-premiun-cover-scaled.jpg",
-    category: "Medicamentos",
-  },
-  {
-    id: 501,
-    name: "Felovite Ii 2.5 Oz",
-    description:
-      "Felovite II es un suplemento vitamínico y mineral en pasta para gatos, que proporciona nutrientes esenciales para la energía, el apetito y un pelaje saludable, ideal para gatos exigentes o convalecientes.",
-    price: "S/ 55.00",
-    image:
-      "https://petsplaceperu.com/wp-content/uploads/2021/07/FELOVITE-scaled.jpg",
-    category: "Suplementos",
-  },
-  {
     id: 502,
     name: "Dipramida 0.5 % 20Ml",
     description:
@@ -880,16 +786,6 @@ export const pharmacyData = [
       "https://dojiw2m9tvv09.cloudfront.net/88487/product/78000060055725298.jpg",
     category: "Medicamentos",
   },
-  // {
-  //   id: 503,
-  //   name: "Metronidazol 250Mg/5Ml 60Ml",
-  //   description:
-  //     "Metronidazol 250Mg/5Ml 60Ml es un antibiótico y antiparasitario para mascotas, usado para tratar infecciones gastrointestinales, giardiasis y otras infecciones bacterianas y protozoarias.",
-  //   price: "S/ 10.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Antibióticos",
-  // },
   {
     id: 504,
     name: "Proteggo 4.5 - 10 Kg",
@@ -909,9 +805,10 @@ export const pharmacyData = [
     image: "https://www.petsland.pe/assets/img/store/623.webp",
     category: "Antipulgas",
   },
+
   {
     id: 509,
-    name: "Micopet Tab (Ketoconazol) 200 Gr",
+    name: "Micopet (Ketoconazol) 200 Gr x Unidad",
     description:
       "Micopet Tab (Ketoconazol) 200 Gr es un antifúngico oral para mascotas, eficaz en el tratamiento de infecciones fúngicas de la piel, pelo y uñas, así como sistémicas causadas por hongos sensibles.",
     price: "S/ 2.00",
@@ -959,7 +856,7 @@ export const pharmacyData = [
   },
   {
     id: 533,
-    name: "Bactrina Tab",
+    name: "Bactrina x Unidad",
     description:
       "Bactrina Tab es un antibiótico de amplio espectro en tabletas para mascotas, eficaz en el tratamiento de diversas infecciones bacterianas en el tracto respiratorio, urinario y gastrointestinal.",
     price: "S/ 2.50",
@@ -977,36 +874,16 @@ export const pharmacyData = [
       "https://www.miau.pe/cdn/shop/files/ameriton_1200x1200.jpg?v=1706221986",
     category: "Medicamentos",
   },
-  // {
-  //   id: 544,
-  //   name: "Gabapentina 15 Mg Tab",
-  //   description:
-  //     "Gabapentina 15 mg en tabletas es un medicamento para mascotas utilizado para el manejo del dolor crónico, neuropático y como ansiolítico, mejorando la calidad de vida en perros y gatos.",
-  //   price: "S/ 2.50",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
-  // {
-  //   id: 545,
-  //   name: "Gabapentina 30 Mg Tab",
-  //   description:
-  //     "Gabapentina 30 mg en tabletas es un coadyuvante en el tratamiento del dolor neuropático, ansiedad y convulsiones en mascotas, proporcionando un control efectivo de los síntomas.",
-  //   price: "S/ 3.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
-  // {
-  //   id: 546,
-  //   name: "Mirtazapina 3.75 Mg Tab",
-  //   description:
-  //     "Mirtazapina 3.75 mg en tabletas es un estimulante del apetito y antiemético para gatos, ideal para casos de anorexia, pérdida de peso o náuseas causadas por enfermedades crónicas.",
-  //   price: "S/ 4.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
+  {
+    id: 326,
+    name: "Salaris 180Ml",
+    description:
+      "Aceite de Salmón Noruego premium para perros y gatos. Rico en Omega 3, 6 y 9 para piel sana, pelaje brillante, inmunidad fuerte y desarrollo cerebral óptimo.",
+    price: "S/ 49.50",
+    image:
+      "https://www.totalpet.pe/archivos/producto/290-salaris-180-ml-principal.webp",
+    category: "Suplementos",
+  },
   {
     id: 548,
     name: "Shampoo Medicado Triple A",
@@ -1029,7 +906,7 @@ export const pharmacyData = [
   },
   {
     id: 550,
-    name: "Oxbow Multi Vitamin",
+    name: "Oxbow Multi Vitamin x Unidad",
     description:
       "Oxbow Multi Vitamin es un suplemento multivitamínico para pequeños animales (conejos, cobayas, etc.), que asegura el aporte de vitaminas esenciales para su salud general y bienestar.",
     price: "S/ 2.50",
@@ -1049,7 +926,7 @@ export const pharmacyData = [
   },
   {
     id: 554,
-    name: "Hemo-Stop",
+    name: "Hemo-Stop x Unidad",
     description:
       "Hemo-Stop es un suplemento esencial para mascotas diseñado para apoyar la coagulación sanguínea y prevenir hemorragias. Ideal para animales con deficiencias o en recuperación post-quirúrgica.",
     price: "S/ 3.00",
@@ -1067,14 +944,14 @@ export const pharmacyData = [
       "https://biomont.com.pe/wp-content/uploads/2024/10/tranquilissgotas15ml.webp",
     category: "Medicamentos",
   },
-  {
-    id: 576,
-    name: "Caopec-S Pharm",
-    description:
-      "Caopec-S Pharm es un antidiarreico y absorbente intestinal para mascotas, formulado para aliviar problemas digestivos y restaurar la salud gastrointestinal. Efectivo contra diarreas de diversas causas.",
-    price: "S/ 13.50",
-    category: "Medicamentos",
-  },
+  // {
+  //   id: 576,
+  //   name: "Caopec-S Pharm",
+  //   description:
+  //     "Caopec-S Pharm es un antidiarreico y absorbente intestinal para mascotas, formulado para aliviar problemas digestivos y restaurar la salud gastrointestinal. Efectivo contra diarreas de diversas causas.",
+  //   price: "S/ 13.50",
+  //   category: "Medicamentos",
+  // },
   {
     id: 579,
     name: "Ectolab 200",
@@ -1133,44 +1010,12 @@ export const pharmacyData = [
     category: "Medicamentos",
   },
   {
-    id: 607,
-    name: "Diarrevetxtra",
-    description:
-      "Diarrevetxtra es un potente antidiarreico para mascotas, formulado para un control rápido y efectivo de los episodios de diarrea. Ayuda a restablecer el equilibrio intestinal y la hidratación.",
-    price: "S/ 26.00",
-    category: "Medicamentos",
-  },
-  {
     id: 609,
     name: "Prednovet Comprimido",
     description:
       "Prednovet Comprimido es un antiinflamatorio esteroideo para mascotas, indicado para el tratamiento de diversas condiciones inflamatorias y alérgicas. Ayuda a reducir el dolor y la hinchazón.",
     price: "S/ 3.50",
     image: "https://www.petsland.pe/assets/img/store/149.webp",
-    category: "Medicamentos",
-  },
-  {
-    id: 615,
-    name: "Trilostano Frasco 30 Uni 30 Mg",
-    description:
-      "Trilostano es un medicamento esencial para el manejo del Síndrome de Cushing en mascotas, ayudando a controlar la producción excesiva de cortisol y mejorar la calidad de vida del animal.",
-    price: "S/ 205.00",
-    category: "Medicamentos",
-  },
-  {
-    id: 620,
-    name: "Simeticona 15 Ml",
-    description:
-      "Simeticona 15 Ml es un antiflatulento para mascotas, ideal para aliviar el exceso de gases y la hinchazón abdominal. Proporciona un alivio rápido y efectivo de las molestias digestivas.",
-    price: "S/ 11.50",
-    category: "Medicamentos",
-  },
-  {
-    id: 645,
-    name: "Bromuro De Potasio",
-    description:
-      "Bromuro de Potasio es un anticonvulsivante para mascotas, utilizado en el tratamiento de la epilepsia y otros trastornos convulsivos. Ayuda a controlar las crisis y mejorar el bienestar del animal.",
-    price: "S/ 65.00",
     category: "Medicamentos",
   },
   {
@@ -1182,14 +1027,6 @@ export const pharmacyData = [
     image:
       "https://gezanipe.vtexassets.com/arquivos/ids/160452/LUM000000000594.jpg?v=638452753411730000",
     category: "Suplementos",
-  },
-  {
-    id: 647,
-    name: "Pimobendan 5 Mg",
-    description:
-      "Pimobendan 5 mg es un medicamento vital para el tratamiento de enfermedades cardíacas en perros. Ayuda a mejorar la función del corazón y a aliviar los síntomas de insuficiencia cardíaca congestiva.",
-    price: "S/ 6.50",
-    category: "Medicamentos",
   },
   {
     id: 648,
@@ -1210,26 +1047,6 @@ export const pharmacyData = [
       "https://farmaciauniversalpe.vtexassets.com/arquivos/ids/160726-800-auto?v=638593117007800000&width=800&height=auto&aspect=true",
     category: "Medicamentos",
   },
-  // {
-  //   id: 653,
-  //   name: "Clorfenamina Maleato",
-  //   description:
-  //     "Clorfenamina Maleato es un antihistamínico eficaz para mascotas, utilizado para controlar reacciones alérgicas, picazón y otros síntomas de alergia, proporcionando alivio rápido a tu animal.",
-  //   price: "S/ 1.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
-  // {
-  //   id: 675,
-  //   name: "Metamizol Sodico 10 Ml (Portugal)",
-  //   description:
-  //     "Metamizol Sódico 10 ml (Portugal) es un analgésico, antipirético y antiinflamatorio de origen portugués, efectivo para el alivio del dolor y la fiebre en mascotas, con una acción rápida.",
-  //   price: "S/ 11.50",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
   {
     id: 689,
     name: "Nexgard 25 50Kg",
@@ -1249,6 +1066,16 @@ export const pharmacyData = [
     image:
       "https://mascotify.pe/wp-content/uploads/2021/05/Bayer-Seresto-Collar-antipulgas-antigarrapatas-perros-y-gatos-hasta-8kg.png",
     category: "Antipulgas",
+  },
+  {
+    id: 339,
+    name: "Floraviva 12 Cepas",
+    description:
+      "Probiótico con 12 cepas beneficiosas para perros y gatos. Promueve la salud intestinal, fortalece el sistema inmunológico y ayuda en periodos de estrés o cambios dietéticos.",
+    price: "S/ 38.00",
+    image:
+      "https://www.agrovetmarket.com/uploads/producto_ficha_view/floraviva-12-cepas-pasta.jpg",
+    category: "Suplementos",
   },
   {
     id: 697,
@@ -1330,6 +1157,16 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
+    id: 353,
+    name: "Clindavet Flow 10Ml",
+    description:
+      "Antibiótico inyectable (Clindamicina) para infecciones bacterianas severas: dentales, piel, óseas (osteomielitis) y respiratorias en perros y gatos.",
+    price: "S/ 32.00",
+    image:
+      "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_019769/tienda_019769_d93be1651a7c16d78aa73ece5a43325d3c1e5081_producto_large_90.jpg",
+    category: "Antibióticos",
+  },
+  {
     id: 763,
     name: "Atrevia Xr Mini",
     description:
@@ -1350,8 +1187,18 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
+    id: 381,
+    name: "Crema 6A 15Gr",
+    description:
+      "Crema 6A es un tratamiento tópico para mascotas, ideal para afecciones dermatológicas como inflamación, picazón y dermatitis, con acción antibacteriana y antimicótica.",
+    price: "S/ 36.50",
+    image:
+      "https://static.wixstatic.com/media/39d263_d53ad465a3cf4e6991993a4000d448a9~mv2.png/v1/fill/w_560,h_560,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/39d263_d53ad465a3cf4e6991993a4000d448a9~mv2.png",
+    category: "Medicamentos",
+  },
+  {
     id: 765,
-    name: "Ketovet 10Mg",
+    name: "Ketovet 10Mg x Unidad",
     description:
       "Ketovet 10mg es un antiinflamatorio no esteroideo (AINE) para mascotas, ideal para aliviar el dolor, la inflamación y la fiebre en diversas condiciones musculoesqueléticas y postoperatorias.",
     price: "S/ 1.50",
@@ -1361,7 +1208,7 @@ export const pharmacyData = [
   },
   {
     id: 766,
-    name: "Ketovet 20Mg",
+    name: "Ketovet 20Mg x Unidad",
     description:
       "Ketovet 20mg es un antiinflamatorio no esteroideo (AINE) de mayor concentración para mascotas, proporcionando un alivio eficaz del dolor y la inflamación en casos más severos o en animales de mayor tamaño.",
     price: "S/ 2.50",
@@ -1503,6 +1350,26 @@ export const pharmacyData = [
     price: "S/ 68.00",
     image:
       "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw0b36f08e/images/holliday-hepatoprotector-proteliv-15ml.jpg",
+    category: "Suplementos",
+  },
+  {
+    id: 498,
+    name: "Labyderm Premiun Cover Spot On 4Ml",
+    description:
+      "Labyderm Premium Cover Spot On es una loción dérmica para mascotas que restaura la barrera cutánea, hidrata la piel y reduce la irritación, ideal para pieles sensibles o con problemas dermatológicos.",
+    price: "S/ 55.00",
+    image:
+      "https://petsplaceperu.com/wp-content/uploads/2021/07/LABYDERM-premiun-cover-scaled.jpg",
+    category: "Medicamentos",
+  },
+  {
+    id: 501,
+    name: "Felovite Ii 2.5 Oz",
+    description:
+      "Felovite II es un suplemento vitamínico y mineral en pasta para gatos, que proporciona nutrientes esenciales para la energía, el apetito y un pelaje saludable, ideal para gatos exigentes o convalecientes.",
+    price: "S/ 55.00",
+    image:
+      "https://petsplaceperu.com/wp-content/uploads/2021/07/FELOVITE-scaled.jpg",
     category: "Suplementos",
   },
   {

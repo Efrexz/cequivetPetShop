@@ -1,5 +1,6 @@
 ---
 import { pharmacyData } from "@data/pharmacyData";
+import { foodProducts } from "@data/productsData";
 import CardProduct from "@components/CardProduct.astro";
 import ArrowLeft from "@assets/icons/arrowLeft.svg";
 import ArrowRight from "@assets/icons/arrowRight.svg";
@@ -9,10 +10,16 @@ const {
   title,
   titleHighlight,
   subtitle,
-  products = pharmacyData,
+  category,
 } = Astro.props;
 
 const isMain = section === "main";
+
+const allProducts = [...foodProducts, ...pharmacyData];
+const products = allProducts.filter((p) => p.category === category);
+
+let listProductsToShow =
+  section === "main" ? pharmacyData.slice(0, 10) : products;
 ---
 
 <section
@@ -59,7 +66,7 @@ const isMain = section === "main";
       <div class="embla-products__viewport overflow-hidden">
         <div class="embla-products__container flex">
           {
-            pharmacyData.map((product) => (
+            listProductsToShow.map((product) => (
               <div class="embla-products__slide flex-[0_0_70%] sm:flex-[0_0_30%] lg:flex-[0_0_20%] pl-4">
                 <div class="product-slide-content">
                   <CardProduct product={product} />

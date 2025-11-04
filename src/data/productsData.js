@@ -496,14 +496,14 @@ export const foodProducts = [
     image: "https://allju.pe/wp-content/uploads/2021/06/INVHILP101011882.jpg",
     category: "Hills",
   },
-  {
-    id: 560,
-    name: "Lt Felix",
-    description:
-      "Latita de alimento húmedo Felix para gatos, un delicioso complemento para su dieta diaria que les aporta variedad y una excelente hidratación.",
-    price: "S/ 6.00",
-    category: "Purina",
-  },
+  // {
+  //   id: 560,
+  //   name: "Lt Felix",
+  //   description:
+  //     "Latita de alimento húmedo Felix para gatos, un delicioso complemento para su dieta diaria que les aporta variedad y una excelente hidratación.",
+  //   price: "S/ 6.00",
+  //   category: "Purina",
+  // },
   {
     id: 573,
     name: "Barker Casquitos De Cerdo",
@@ -542,14 +542,14 @@ export const foodProducts = [
       "https://petsplaceperu.com/wp-content/uploads/2021/03/MKP-787-139-PP-FLAGSHIP-PERROS-PUPPY-PEQUENOS-POLLO_ESP_3KG_04_AF.png",
     category: "Purina",
   },
-  {
-    id: 650,
-    name: "Ricocan Lata Pate Estofado 230G",
-    description:
-      "Delicioso paté en lata sabor estofado para perros, una opción húmeda y sabrosa que aporta hidratación y nutrientes a su dieta.",
-    price: "S/ 5.50",
-    category: "Ricocan",
-  },
+  // {
+  //   id: 650,
+  //   name: "Ricocan Lata Pate Estofado 230G",
+  //   description:
+  //     "Delicioso paté en lata sabor estofado para perros, una opción húmeda y sabrosa que aporta hidratación y nutrientes a su dieta.",
+  //   price: "S/ 5.50",
+  //   category: "Ricocan",
+  // },
   {
     id: 659,
     name: "Ricocrak Original (Cachorros) 200 Gr",
@@ -574,6 +574,8 @@ export const foodProducts = [
     name: "Brit Premium Sensitive 3 Kg",
     description:
       "Alimento seco Brit Premium Sensitive de 3 kg, formulado para perros con digestión sensible, con ingredientes seleccionados para minimizar reacciones adversas.",
+    image:
+      "https://dojiw2m9tvv09.cloudfront.net/27184/product/sensitive3kg9896.jpg",
     price: "S/ 70.50",
     category: "Brit",
   },
