@@ -26,12 +26,15 @@ if (!product) {
   return Astro.redirect("/404");
 }
 
+// Inicializamos con la primera variante si existen, o el producto si no hay variantes
+let currentVariant = product.variants ? product.variants[0] : product;
+
 const whatsappMessage = `Hola, me interesa el producto ${product.name} (${product.price}). ¿Podrías darme más información?`;
 const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
 ---
 
 <Layout>
-  <section class="overflow-hidden bg-white text-gray-900 py-16 relative">
+  <section class="overflow-hidden bg-white text-gray-900 pb-16 py-8 relative">
     <!-- Fondo geométrico con gradiente -->
     <BackgroundPattern />
 
@@ -53,6 +56,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
               class="relative w-full h-full rounded-full border-2 border-[#00BFA5] shadow-md flex items-center justify-center overflow-hidden"
             >
               <img
+                id="product-image"
                 src={product.image ?? Logo.src}
                 alt="Alimento Premium para Cachorros Vitality"
                 class="w-full h-full object-contain rounded-full hover:scale-110 transition-transform duration-300 ease-in-out"
@@ -64,25 +68,113 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
         {/* Detalles del Producto */}
         <div class="space-y-6 fade-in-right" data-animate>
           <h1
-            class="text-4xl sm:text-5xl font-extrabold leading-tight text-[#02ad91] drop-shadow-sm"
+            id="product-name"
+            class="text-3xl sm:text-4xl font-extrabold leading-tight text-[#02ad91] drop-shadow-sm"
           >
-            {product.name}
+            {currentVariant.name || product.name}
           </h1>
-          <p class="text-4xl font-extrabold text-[#FF7F11]">{product.price}</p>
-          <p class="text-lg sm:text-xl opacity-90 text-gray-700">
-            {product.description}
+
+          {/* Información de la variante */}
+          {
+            product.variants && (
+              <p class="text-xl font-semibold text-gray-700 flex flex-wrap gap-x-3 gap-y-2">
+                {currentVariant.flavor && (
+                  <>
+                    Sabor:
+                    <span id="variant-flavor" class="font-bold text-[#FF7F11]">
+                      {currentVariant.flavor}
+                    </span>
+                  </>
+                )}
+                {currentVariant.type && (
+                  <>
+                    Tipo:
+                    <span id="variant-type" class="font-bold text-[#FF7F11]">
+                      {currentVariant.type}
+                    </span>
+                  </>
+                )}
+                {currentVariant.weight && (
+                  <>
+                    Peso:
+                    <span id="variant-weight" class="font-bold text-[#FF7F11]">
+                      {currentVariant.weight}
+                    </span>
+                  </>
+                )}
+                {currentVariant.volume && (
+                  <>
+                    Volumen:
+                    <span id="variant-volume" class="font-bold text-[#FF7F11]">
+                      {currentVariant.volume}
+                    </span>
+                  </>
+                )}
+                {currentVariant.weightRange && (
+                  <>
+                    Rango de peso:{" "}
+                    <span
+                      id="variant-weight-range"
+                      class="font-bold text-[#FF7F11]"
+                    >
+                      {currentVariant.weightRange}
+                    </span>
+                  </>
+                )}
+              </p>
+            )
+          }
+
+          <p id="product-price" class="text-4xl font-extrabold text-[#FF7F11]">
+            {currentVariant.price}
+          </p>
+          <p
+            id="product-description"
+            class="text-lg sm:text-xl opacity-90 text-gray-700"
+          >
+            {currentVariant.description}
           </p>
 
+          {/* Sección de Variantes */}
+          {
+            product.variants && (
+              <div class="space-y-4">
+                <h3 class="text-2xl font-bold text-[#FF7F11]">
+                  Otras presentaciones:
+                </h3>
+                <div class="flex flex-wrap gap-3" id="variants-container">
+                  {product.variants.map((variant, index) => (
+                    <button
+                      data-variant-id={variant.id}
+                      class={`px-5 py-2 rounded-xl text-lg font-semibold border-2 transition-all duration-200 ease-in-out ${
+                        variant.id === currentVariant.id
+                          ? "bg-[#00BFA5] text-white border-[#00BFA5] shadow-md"
+                          : "bg-white text-[#00BFA5] border-[#00BFA5] hover:bg-[#E0F2F7]"
+                      }`}
+                    >
+                      {/* Renderizado dinámico del texto del botón */}
+                      {variant.flavor && variant.flavor}
+                      {variant.type &&
+                        (variant.flavor ? ` (${variant.type})` : variant.type)}
+                      {variant.weight && ` - ${variant.weight}`}
+                      {variant.volume && ` - ${variant.volume}`}
+                      {variant.weightRange && ` ${variant.weightRange}`}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )
+          }
           {/* Botón de Acción */}
           <a
+            id="whatsapp-link"
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center gap-2 px-6 py-2 rounded-xl bg-gradient-to-r from-[#fbab3a] to-[#FF7F11] text-white font-bold hover:opacity-90 transition shadow-lg shadow-yellow-300/40 hover:scale-105 text-base whitespace-nowrap max-w-xs mx-auto lg:px-8 lg:py-3"
-            aria-label={`Pedir ${product.name} por WhatsApp`}
+            aria-label={`Pedir ${currentVariant.name || product.name} por WhatsApp`}
           >
             <WhatsappIcon class="w-5 h-5 lg:w-6 lg:h-6" />
-            <!-- Ajusta el tamaño del icono también si es necesario -->
             Comprar por WhatsApp
           </a>
         </div>
@@ -97,4 +189,118 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
     subtitle="Podrían interesarte otros productos para el cuidado de tu peludo."
     category={product.category}
   />
+
+  <script define:vars={{ product: product }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const variantsContainer = document.getElementById("variants-container");
+      const productName = document.getElementById("product-name");
+      const productPrice = document.getElementById("product-price");
+      const productDescription = document.getElementById("product-description");
+      const productImage = document.getElementById("product-image");
+      const whatsappLink = document.getElementById("whatsapp-link");
+      const variantFlavor = document.getElementById("variant-flavor");
+      const variantType = document.getElementById("variant-type");
+      const variantWeight = document.getElementById("variant-weight");
+      const variantVolume = document.getElementById("variant-volume");
+      const variantWeightRange = document.getElementById(
+        "variant-weight-range"
+      );
+
+      // Función para actualizar la UI con los datos de la variante seleccionada
+      function updateProductDisplay(variant) {
+        if (!variant) return;
+
+        let variantDisplayName = "";
+        if (variant.flavor) {
+          variantDisplayName = variant.flavor;
+        } else if (variant.type) {
+          variantDisplayName = variant.type;
+        } else if (variant.weightRange) {
+          variantDisplayName = variant.weightRange;
+        }
+
+        productName.textContent = `${product.name}${variantDisplayName ? ` (${variantDisplayName})` : ""}`;
+        productPrice.textContent = variant.price;
+        productDescription.textContent = variant.description;
+        productImage.src = variant.image || Logo;
+
+        if (variantFlavor) {
+          variantFlavor.textContent = variant.flavor;
+        }
+        if (variantType) {
+          variantType.textContent = variant.type;
+        }
+        if (variantWeight) {
+          variantWeight.textContent = variant.weight;
+        }
+        if (variantVolume) {
+          variantVolume.textContent = variant.volume;
+        }
+        if (variantWeightRange) {
+          variantWeightRange.textContent = variant.weightRange;
+        }
+
+        let whatsappVariantDetails = [];
+        if (variant.flavor) whatsappVariantDetails.push(variant.flavor);
+        if (variant.type) whatsappVariantDetails.push(variant.type);
+        if (variant.weight) whatsappVariantDetails.push(variant.weight);
+        if (variant.volume) whatsappVariantDetails.push(variant.volume);
+        if (variant.weightRange)
+          whatsappVariantDetails.push(variant.weightRange);
+
+        const whatsappMessage = `Hola, me interesa el producto ${product.name}${whatsappVariantDetails.length > 0 ? ` (${whatsappVariantDetails.join(" - ")})` : ""} (${variant.price}). ¿Podrías darme más información?`;
+        whatsappLink.href = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Actualizar el estilo del botón seleccionado
+        const buttons = variantsContainer.querySelectorAll("button");
+        buttons.forEach((btn) => {
+          if (btn.dataset.variantId === variant.id) {
+            btn.classList.add(
+              "bg-[#00BFA5]",
+              "text-white",
+              "border-[#00BFA5]",
+              "shadow-md"
+            );
+            btn.classList.remove(
+              "bg-white",
+              "text-[#00BFA5]",
+              "border-[#00BFA5]",
+              "hover:bg-[#E0F2F7]"
+            );
+            btn.setAttribute("aria-pressed", "true");
+          } else {
+            btn.classList.remove(
+              "bg-[#00BFA5]",
+              "text-white",
+              "border-[#00BFA5]",
+              "shadow-md"
+            );
+            btn.classList.add(
+              "bg-white",
+              "text-[#00BFA5]",
+              "border-[#00BFA5]",
+              "hover:bg-[#E0F2F7]"
+            );
+            btn.setAttribute("aria-pressed", "false");
+          }
+        });
+      }
+
+      if (variantsContainer) {
+        variantsContainer.addEventListener("click", (event) => {
+          const clickedButton = event.target.closest("button");
+          if (clickedButton && clickedButton.dataset.variantId) {
+            const selectedVariantId = clickedButton.dataset.variantId;
+            // Buscamos la variante en los datos del producto
+            const selectedVariant = product.variants.find(
+              (v) => v.id === selectedVariantId
+            );
+            updateProductDisplay(selectedVariant);
+          }
+        });
+        // Asegurarse de que el primer elemento esté seleccionado al cargar la página
+        updateProductDisplay(product.variants[0]);
+      }
+    });
+  </script>
 </Layout>

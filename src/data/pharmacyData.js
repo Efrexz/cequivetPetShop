@@ -1,14 +1,5 @@
 export const pharmacyData = [
   {
-    id: 325,
-    name: "Proteggo 10 - 20 Kg",
-    description:
-      "Protección completa para tu perro de 10-20 kg. Tableta masticable que elimina pulgas, garrapatas y ácaros, incluyendo sarna, con efecto prolongado.",
-    price: "S/ 125.00",
-    image: "https://www.petsland.pe/assets/img/store/597.webp?1729707480",
-    category: "Antipulgas",
-  },
-  {
     id: 327,
     name: "Nutrical",
     description:
@@ -30,43 +21,55 @@ export const pharmacyData = [
   },
   {
     id: 330,
-    name: "Vantaggio Perro 2 - 4 Kg",
+    name: "Pipeta Vantaggio",
     description:
-      "Pipeta antiparasitaria para perros de 2-4 kg. Elimina y repele pulgas, garrapatas, piojos, moscas y mosquitos, protegiendo contra enfermedades transmitidas por vectores.",
+      "Protege eficazmente a tu perro de pulgas, piojos y garrapatas con las pipetas Vantaggio. Además, actúa como repelente contra garrapatas, moscas, mosquitos y flebótomos, previniendo picaduras y las enfermedades que transmiten. Una solución completa para el control de parásitos externos y como apoyo en el tratamiento de la dermatitis alérgica por picadura de pulgas (DAPP). Disponible en presentaciones adecuadas al peso de tu mascota.",
     price: "S/ 18.00",
     image:
-      "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-2-a-4-kg-0-5ml-Pipeta-antipulgas-para-perros.jpg",
+      "https://www.agrovetmanantial.com/assets/images/productos-veterinaria/vantaggio.webp",
     category: "Antipulgas",
-  },
-  {
-    id: 331,
-    name: "Vantaggio Perro 4,1 - 10 Kg",
-    description:
-      "Pipeta antiparasitaria para perros de 4.1-10 kg. Eficaz contra pulgas, garrapatas, piojos, moscas y mosquitos, previniendo enfermedades y brindando protección.",
-    price: "S/ 21.00",
-    image:
-      "https://www.mayovet.com.pe/wp-content/uploads/2024/01/VANTAGGIO-4-10.gif",
-    category: "Antipulgas",
-  },
-  {
-    id: 332,
-    name: "Vantaggio Perro 10,1 - 20 Kg",
-    description:
-      "Pipeta antiparasitaria para perros de 10.1-20 kg. Protección externa contra pulgas, garrapatas, piojos, moscas y mosquitos, con acción repelente.",
-    price: "S/ 23.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-10-1-a-20-kg-2-5ml-Pipeta-antipulgas-para-perros.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 333,
-    name: "Vantaggio Perro 20,1 - 32 Kg",
-    description:
-      "Pipeta antiparasitaria para perros de 20.1-32 kg. Elimina y previene infestaciones de pulgas, garrapatas, piojos, moscas y mosquitos, protegiendo a tu mascota.",
-    price: "S/ 26.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-20-1-a-32-kg-4ml-Pipeta-antipulgas-para-perros.jpg",
-    category: "Antipulgas",
+    variants: [
+      {
+        id: "330-01",
+        weightRange: "2 - 4 Kg",
+        type: "Canino",
+        description:
+          "Pipeta antiparasitaria Vantaggio para perros de 2 a 4 kg. Proporciona un tratamiento y control efectivo de infestaciones por pulgas, piojos y garrapatas. Posee acción repelente contra garrapatas, moscas, mosquitos y flebótomos, ayudando a prevenir enfermedades transmitidas por vectores. Es también un componente útil en el manejo de la dermatitis alérgica por picadura de pulgas (DAPP).",
+        price: "S/ 18.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-2-a-4-kg-0-5ml-Pipeta-antipulgas-para-perros.jpg",
+      },
+      {
+        id: "330-02",
+        weightRange: "4.1 - 10 Kg",
+        type: "Canino",
+        description:
+          "Pipeta antiparasitaria Vantaggio para perros de 4.1 a 10 kg. Ofrece protección completa contra pulgas, piojos y garrapatas, controlando todos los estadios de estos parásitos. Su efecto repelente es clave para evitar las picaduras de garrapatas, moscas, mosquitos y flebótomos. Ideal para la prevención de enfermedades vectoriales y como parte del tratamiento para DAPP.",
+        price: "S/ 21.00",
+        image:
+          "https://www.mayovet.com.pe/wp-content/uploads/2024/01/VANTAGGIO-4-10.gif",
+      },
+      {
+        id: "330-03",
+        weightRange: "10.1 - 20 Kg",
+        type: "Canino",
+        description:
+          "Pipeta antiparasitaria Vantaggio para perros de 10.1 a 20 kg. Asegura el tratamiento y control de infestaciones por pulgas, piojos y garrapatas. Brinda una importante acción repelente contra garrapatas, moscas, mosquitos y flebótomos, reduciendo el riesgo de transmisión de enfermedades. Contribuye al manejo de la dermatitis alérgica por picadura de pulgas (DAPP).",
+        price: "S/ 23.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-10-1-a-20-kg-2-5ml-Pipeta-antipulgas-para-perros.jpg",
+      },
+      {
+        id: "330-04",
+        weightRange: "20.1 - 32 Kg",
+        type: "Canino",
+        description:
+          "Pipeta antiparasitaria Vantaggio para perros de 20.1 a 32 kg. Efectiva en el tratamiento y control de pulgas, piojos y garrapatas. Su acción repelente es fundamental contra garrapatas, moscas, mosquitos y flebótomos, ofreciendo una protección integral. Recomendado como parte de la estrategia para la dermatitis alérgica por picadura de pulgas (DAPP).",
+        price: "S/ 26.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-20-1-a-32-kg-4ml-Pipeta-antipulgas-para-perros.jpg",
+      },
+    ],
   },
   {
     id: 341,
@@ -662,44 +665,129 @@ export const pharmacyData = [
     category: "Medicamentos",
   },
   {
-    id: 451,
-    name: "Suralan 2.5 - 5Kg (Mini)",
+    id: 928,
+    name: "Proteggo Tabletas Antiparasitarias (3 Meses)",
     description:
-      "Suralan Mini es un antiparasitario interno de amplio espectro para perros de 2.5 a 5 kg, que protege contra gusanos redondos y planos, manteniendo a tu mascota sana y desparasitada.",
+      "Protección extendida por 3 meses contra pulgas, garrapatas. Las tabletas Proteggo de acción prolongada ofrecen una defensa eficaz y continua, asegurando la salud y el bienestar de tu mascota con una fácil administración.",
+    price: "S/ 115.00",
+    image:
+      "https://www.agrovetmanantial.com/assets/images/productos-veterinaria/proteggo-3m.webp",
+    category: "Antipulgas",
+    variants: [
+      {
+        id: "928-01",
+        weightRange: "2 - 4.5 Kg",
+        description:
+          "Tableta Proteggo de amplio espectro para perros de 2 a 4.5 kg, ofreciendo una protección eficaz y duradera por 3 meses contra pulgas, garrapatas y acaros.",
+        price: "S/ 115.00",
+        image:
+          "https://promart.vteximg.com.br/arquivos/ids/7934431-1000-1000/image-e5a6ffee62ca4696bebc77abfa97cc49.jpg?v=638491479544230000",
+      },
+      {
+        id: "928-02",
+        weightRange: "4.5 - 10 Kg",
+        description:
+          "Tableta Proteggo para perros de 4.5 a 10 kg, brindando 3 meses de protección contra pulgas, garrapatas y acaros. Su fórmula de amplio espectro asegura el bienestar y la salud de tu mascota a largo plazo.",
+        price: "S/ 120.00",
+        image:
+          "https://dojiw2m9tvv09.cloudfront.net/27184/product/4-5-10-kg8146.jpg",
+      },
+      {
+        id: "928-03",
+        weightRange: "10 - 20 Kg",
+        description:
+          "Protección completa por 3 meses para perros de 10 a 20 kg. Esta tableta masticable elimina pulgas, garrapatas y ácaros, con un efecto prolongado y seguro.",
+        price: "S/ 125.00",
+        image: "https://www.petsland.pe/assets/img/store/597.webp?1729707480",
+      },
+      {
+        id: "928-04",
+        weightRange: "20 - 40 Kg",
+        description:
+          "Tableta Proteggo de 3 meses para perros grandes de 20 a 40 kg, ofreciendo una protección eficaz y de larga duración contra pulgas, garrapatas y acaros.",
+        price: "S/ 160.00",
+        image: "https://www.petsland.pe/assets/img/store/623.webp",
+      },
+    ],
+  },
+  {
+    id: 922,
+    name: "Proteggo Tabletas Antiparasitarias (1 Mes)",
+    description:
+      "Protección mensual completa contra pulgas, garrapatas y parásitos internos. Las tabletas Proteggo de 1 mes son una solución palatable y de fácil administración para el bienestar continuo de tu perro.",
+    price: "S/ 55.00",
+    image:
+      "https://www.mayovet.com.pe/wp-content/uploads/2024/01/PROTEGGO-M-1.gif",
+    category: "Antipulgas",
+    variants: [
+      {
+        id: "922-01",
+        weightRange: "2 - 4.5 Kg",
+        description:
+          "Tableta Proteggo de 1 mes para perros pequeños de 2 a 4.5 kg. Brinda protección integral mensual contra pulgas, garrapatas y acaros. Es fácil de administrar y de sabor agradable para asegurar el cumplimiento.",
+        price: "S/ 55.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2024/01/Proteggo-M-Mini-2-a-4-5kg-45mg-Protege-1-mes-Antipulgas-para-perros.jpg",
+      },
+      {
+        id: "922-02",
+        weightRange: "4.5 - 10 Kg",
+        description:
+          "Tableta palatable Proteggo de 1 mes para perros de 4.5 a 10 kg. Ofrece protección mensual contra pulgas, garrapatas y acaros, contribuyendo a una salud óptima y protegida.",
+        price: "S/ 65.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2024/01/Proteggo-M-Small-4-5-a-10kg-100mg-Protege-1-mes-Antipulgas-para-perros.jpg",
+        duration: "1 Mes",
+      },
+    ],
+  },
+  {
+    id: 451,
+    name: "Suralan Desparasitante Interno para Perros",
+    description:
+      "Protege a tu perro de parásitos intestinales con las tabletas desparasitantes de amplio espectro Suralan. Efectivas contra gusanos redondos y planos, estas tabletas garantizan la salud digestiva y el bienestar general de tu mascota. Disponible en diferentes presentaciones según su peso.",
     price: "S/ 50.00",
     image:
       "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Mini-Antipulgas-para-Perros-de-2-5-a-5kg.jpg",
     category: "Antipulgas",
-  },
-  {
-    id: 452,
-    name: "Suralan 5 - 10 Kg (Small)",
-    description:
-      "Suralan Small es un desparasitante oral para perros de 5 a 10 kg, eficaz contra los principales parásitos intestinales, ayudando a mantener la salud digestiva de tu mascota.",
-    price: "S/ 54.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Small-Antipulgas-para-Perros-de-5-a-10kg.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 453,
-    name: "Suralan 10 - 20 Kg (Mediun)",
-    description:
-      "Suralan Medium es un antiparasitario interno para perros de 10 a 20 kg, que ofrece una protección completa contra nematodos y cestodos, previniendo enfermedades parasitarias.",
-    price: "S/ 65.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Medium-Antipulgas-para-Perros-de-10-a-20kg.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 454,
-    name: "Suralan 20 - 40 Kg (Large)",
-    description:
-      "Suralan Large es un desparasitante oral para perros grandes de 20 a 40 kg, diseñado para un control efectivo de parásitos gastrointestinales, contribuyendo al bienestar de tu mascota.",
-    price: "S/ 78.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Large-Antipulgas-para-Perros-de-20-a-40kg.jpg",
-    category: "Antipulgas",
+    variants: [
+      {
+        id: "451-01",
+        weightRange: "2.5 - 5 Kg (Mini)",
+        description:
+          "Suralan Mini es un desparasitante interno de amplio espectro para perros de 2.5 a 5 kg. Protege eficazmente contra gusanos redondos y planos, manteniendo a tu mascota sana y desparasitada con una sola tableta.",
+        price: "S/ 50.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Mini-Antipulgas-para-Perros-de-2-5-a-5kg.jpg",
+      },
+      {
+        id: "451-02",
+        weightRange: "5 - 10 Kg (Small)",
+        description:
+          "Suralan Small es un desparasitante oral para perros de 5 a 10 kg, eficaz contra los principales parásitos intestinales, incluyendo gusanos redondos y planos, ayudando a mantener la salud digestiva de tu mascota.",
+        price: "S/ 54.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Small-Antipulgas-para-Perros-de-5-a-10kg.jpg",
+      },
+      {
+        id: "451-03",
+        weightRange: "10 - 20 Kg (Medium)",
+        description:
+          "Suralan Medium es un desparasitante interno para perros de 10 a 20 kg, que ofrece una protección completa contra nematodos y cestodos (gusanos redondos y planos), previniendo eficazmente enfermedades parasitarias.",
+        price: "S/ 65.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Medium-Antipulgas-para-Perros-de-10-a-20kg.jpg",
+      },
+      {
+        id: "451-04",
+        weightRange: "20 - 40 Kg (Large)",
+        description:
+          "Suralan Large es un desparasitante oral de amplio espectro para perros grandes de 20 a 40 kg, diseñado para un control efectivo de parásitos gastrointestinales, contribuyendo al bienestar y la salud general de tu mascota.",
+        price: "S/ 78.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2025/02/SURALAN-Large-Antipulgas-para-Perros-de-20-a-40kg.jpg",
+      },
+    ],
   },
   {
     id: 460,
@@ -724,7 +812,7 @@ export const pharmacyData = [
     id: 467,
     name: "Rivolta Hasta 2.5 Kg",
     description:
-      "Rivolta Hasta 2.5 Kg es un antiparasitario externo en pipeta para perros muy pequeños, que protege contra pulgas, garrapatas y ácaros, ofreciendo una protección duradera.",
+      "Rivolta es una pipeta antiparasitaria de amplio espectro para cachorros y gatos de hasta 2.5 kg. Ofrece una protección eficaz y duradera contra pulgas, garrapatas y ácaros (incluyendo sarna), garantizando la salud cutánea de los más pequeños.",
     price: "S/ 38.00",
     image: "https://petfecto.pe/wp-content/uploads/2023/11/FAR0000228-1.jpg",
     category: "Antipulgas",
@@ -733,7 +821,7 @@ export const pharmacyData = [
     id: 468,
     name: "Rivolta 2.6 - 7.5Kg",
     description:
-      "Rivolta 2.6 - 7.5Kg es una pipeta antiparasitaria para perros pequeños, que controla eficazmente pulgas, garrapatas y piojos, manteniendo a tu mascota libre de parásitos externos.",
+      "Rivolta para gatos de 2.6 a 7.5 kg es una pipeta de amplio espectro que ofrece protección tanto externa como interna. Elimina pulgas, garrapatas y ácaros, y actúa contra parásitos intestinales como gusanos redondos y planos, asegurando la salud integral de tu felino.",
     price: "S/ 42.00",
     image:
       "https://dojiw2m9tvv09.cloudfront.net/27184/product/rivolta-de-2-6-hasta-7-5-kg5211.jpg",
@@ -785,25 +873,6 @@ export const pharmacyData = [
     image:
       "https://dojiw2m9tvv09.cloudfront.net/88487/product/78000060055725298.jpg",
     category: "Medicamentos",
-  },
-  {
-    id: 504,
-    name: "Proteggo 4.5 - 10 Kg",
-    description:
-      "Proteggo 4.5 - 10 Kg es un antiparasitario externo para perros de 4.5 a 10 kg, que proporciona protección duradera contra pulgas y garrapatas, previniendo enfermedades transmitidas por vectores.",
-    price: "S/ 120.00",
-    image:
-      "https://dojiw2m9tvv09.cloudfront.net/27184/product/4-5-10-kg8146.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 505,
-    name: "Proteggo 20 - 40 Kg",
-    description:
-      "Proteggo 20 - 40 Kg es un tratamiento antipulgas y antigarrapatas para perros grandes de 20 a 40 kg, ofreciendo una protección eficaz y de larga duración contra estos parásitos externos.",
-    price: "S/ 160.00",
-    image: "https://www.petsland.pe/assets/img/store/623.webp",
-    category: "Antipulgas",
   },
 
   {
@@ -886,43 +955,55 @@ export const pharmacyData = [
   },
   {
     id: 548,
-    name: "Shampoo Medicado Triple A",
+    name: "Shampoo para Mascotas",
     description:
-      "Shampoo Medicado Triple A es un champú dermatológico completo para mascotas con una triple acción: antibacteriana, antifúngica y antiparasitaria. Formulado para tratar eficazmente diversas afecciones de la piel y el pelaje, aliviando irritaciones, picazón y ayudando a restaurar la salud dérmica de tu mascota. Ideal para condiciones cutáneas complejas.",
-    price: "S/ 30.00",
+      "Explora nuestra línea de shampoos especializados para el cuidado de tu mascota. Desde fórmulas medicadas hasta opciones 2 en 1 y antipulgas, encuentra la solución perfecta para mantener la piel y el pelaje de tu compañero saludable y brillante.",
+    price: "S/ 30.00", // Puedes establecer un precio base o el de la variante más económica
     image:
-      "https://dojiw2m9tvv09.cloudfront.net/27184/product/vetlinex-shampoo-triple-a-300-ml2170.png",
+      "https://dojiw2m9tvv09.cloudfront.net/27184/product/vetlinex-shampoo-triple-a-300-ml2170.png", // Imagen representativa de la categoría o el primer shampoo
     category: "Medicamentos",
-  },
-  {
-    id: 1456,
-    name: "Shampoo Antipulgas",
-    description:
-      "Shampoo Antipulgas está especialmente formulado para eliminar pulgas, garrapatas y otros parásitos externos de forma efectiva en perros y gatos. Su acción rápida ayuda a aliviar el picor y las molestias causadas por estos insectos, dejando el pelaje limpio, fresco y con una agradable fragancia. Es un aliado esencial en la prevención y control de infestaciones.",
-    price: "S/ 30.00",
-    image:
-      "https://promart.vteximg.com.br/arquivos/ids/7843016-1000-1000/image-5c5b41783a7a481885accf31fa6dcc43.jpg?v=638436242608630000",
-    category: "Medicamentos",
-  },
-  {
-    id: 1457,
-    name: "Shampoo + Acondicionador 2 en 1",
-    description:
-      "Este Shampoo + Acondicionador 2 en 1 ofrece una solución completa para el baño de tu mascota, limpiando y suavizando el pelaje en un solo paso. Su fórmula nutre la piel y el pelo, facilitando el desenredado, aportando brillo y dejando una sensación sedosa y un aroma fresco. Ideal para mantener un pelaje saludable y manejable sin esfuerzo adicional.",
-    price: "S/ 30.00",
-    image:
-      "https://oechsle.vteximg.com.br/arquivos/ids/17514609-1000-1000/imageUrl_1.jpg?v=638506142115670000",
-    category: "Medicamentos",
-  },
-  {
-    id: 1458,
-    name: "Shampoo Medicado con Clorhexidina",
-    description:
-      "Shampoo Medicado con Clorhexidina es un potente antiséptico y antibacteriano, ideal para el tratamiento de infecciones cutáneas causadas por bacterias en perros y gatos. Ayuda a controlar la proliferación de microorganismos, reduce la inflamación y favorece la cicatrización de la piel. Es comúnmente recomendado por veterinarios para dermatitis y heridas superficiales.",
-    price: "S/ 30.00",
-    image:
-      "https://dojiw2m9tvv09.cloudfront.net/27184/product/clorhexidina-cotrimezal-11445.jpg",
-    category: "Medicamentos",
+    variants: [
+      {
+        id: "548-01",
+        type: "Medicado Triple A",
+        volume: "300 ml", // Agregué un campo para el volumen, si aplica
+        description:
+          "Shampoo Medicado Triple A es un champú dermatológico completo para mascotas con una triple acción: antibacteriana, antifúngica y antiparasitaria. Formulado para tratar eficazmente diversas afecciones de la piel y el pelaje, aliviando irritaciones, picazón y ayudando a restaurar la salud dérmica de tu mascota. Ideal para condiciones cutáneas complejas.",
+        price: "S/ 30.00",
+        image:
+          "https://dojiw2m9tvv09.cloudfront.net/27184/product/vetlinex-shampoo-triple-a-300-ml2170.png",
+      },
+      {
+        id: "548-02",
+        type: "Antipulgas",
+        volume: "300 ml",
+        description:
+          "Shampoo Antipulgas está especialmente formulado para eliminar pulgas, garrapatas y otros parásitos externos de forma efectiva en perros y gatos. Su acción rápida ayuda a aliviar el picor y las molestias causadas por estos insectos, dejando el pelaje limpio, fresco y con una agradable fragancia. Es un aliado esencial en la prevención y control de infestaciones.",
+        price: "S/ 30.00",
+        image:
+          "https://promart.vteximg.com.br/arquivos/ids/7843016-1000-1000/image-5c5b41783a7a481885accf31fa6dcc43.jpg?v=638436242608630000",
+      },
+      {
+        id: "548-03",
+        type: "2 en 1 (Shampoo + Acondicionador)",
+        volume: "300 ml",
+        description:
+          "Este Shampoo + Acondicionador 2 en 1 ofrece una solución completa para el baño de tu mascota, limpiando y suavizando el pelaje en un solo paso. Su fórmula nutre la piel y el pelo, facilitando el desenredado, aportando brillo y dejando una sensación sedosa y un aroma fresco. Ideal para mantener un pelaje saludable y manejable sin esfuerzo adicional.",
+        price: "S/ 30.00",
+        image:
+          "https://oechsle.vteximg.com.br/arquivos/ids/17514609-1000-1000/imageUrl_1.jpg?v=638506142115670000",
+      },
+      {
+        id: "548-04",
+        type: "Medicado con Clorhexidina",
+        volume: "300 ml",
+        description:
+          "Shampoo Medicado con Clorhexidina es un potente antiséptico y antibacteriano, ideal para el tratamiento de infecciones cutáneas causadas por bacterias en perros y gatos. Ayuda a controlar la proliferación de microorganismos, reduce la inflamación y favorece la cicatrización de la piel. Es comúnmente recomendado por veterinarios para dermatitis y heridas superficiales.",
+        price: "S/ 30.00",
+        image:
+          "https://dojiw2m9tvv09.cloudfront.net/27184/product/clorhexidina-cotrimezal-11445.jpg",
+      },
+    ],
   },
   {
     id: 549,
@@ -1078,8 +1159,17 @@ export const pharmacyData = [
     category: "Medicamentos",
   },
   {
+    id: 879,
+    name: "Nexgard 4kg-10Kg",
+    description:
+      "Nexgard para perros de 4 a 10 kg es una tableta masticable mensual deliciosa que elimina eficazmente pulgas y garrapatas, brindando protección externa.",
+    price: "S/ 70.00",
+    image: "https://dojiw2m9tvv09.cloudfront.net/27184/product/nepe022948.jpg",
+    category: "Antipulgas",
+  },
+  {
     id: 689,
-    name: "Nexgard 25 50Kg",
+    name: "Nexgard 25kg - 50Kg",
     description:
       "Nexgard para perros de 25 a 50 kg es una tableta masticable que ofrece protección mensual contra pulgas y garrapatas. Fácil de administrar y altamente efectiva para mantener a tu mascota protegida.",
     price: "S/ 85.00",
@@ -1118,23 +1208,23 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
-    id: 698,
-    name: "Credelio 2Kg - 8Kg",
-    description:
-      "Credelio para perros de 2 a 8 kg es una tableta masticable mensual de rápida acción que elimina pulgas y garrapatas, brindando una protección segura y efectiva para tu mascota pequeña a mediana.",
-    price: "S/ 50.00",
-    image:
-      "https://gezanipe.vtexassets.com/arquivos/ids/168814/76063731613198.jpg?v=638967487237300000",
-    category: "Antipulgas",
-  },
-  {
     id: 699,
     name: "Credelio 0,5 Kg - 2 Kg",
     description:
-      "Credelio para perros de 0,5 a 2 kg es una tableta masticable mensual que combate eficazmente pulgas y garrapatas en cachorros y perros muy pequeños, asegurando su bienestar y salud.",
+      "Credelio para gatos de 0,5 a 2 kg es una tableta masticable mensual que combate eficazmente pulgas y garrapatas, ofreciendo una protección confiable para gatitos y gatos pequeños.",
     price: "S/ 45.00",
     image:
       "https://www.provetsa.com/storage/media/2599/conversions/2798-detail.jpg",
+    category: "Antipulgas",
+  },
+  {
+    id: 698,
+    name: "Credelio 2Kg - 8Kg",
+    description:
+      "Credelio para gatos de 2 a 8 kg es una tableta masticable mensual que elimina pulgas y garrapatas de forma rápida y efectiva, brindando una protección segura y prolongada para tu felino de tamaño mediano a grande.",
+    price: "S/ 50.00",
+    image:
+      "https://gezanipe.vtexassets.com/arquivos/ids/168814/76063731613198.jpg?v=638967487237300000",
     category: "Antipulgas",
   },
   {
@@ -1303,15 +1393,7 @@ export const pharmacyData = [
       "https://shop.agrovetmarket.com/4824/atrevia-trio-cats-spot-on-medium.jpg",
     category: "Antipulgas",
   },
-  {
-    id: 879,
-    name: "Nexgard 28.30Mg 4-10Kg",
-    description:
-      "Nexgard 28.30mg para perros de 4 a 10 kg es una tableta masticable mensual deliciosa que elimina eficazmente pulgas y garrapatas, brindando protección interna y externa.",
-    price: "S/ 70.00",
-    image: "https://dojiw2m9tvv09.cloudfront.net/27184/product/nepe022948.jpg",
-    category: "Antipulgas",
-  },
+
   {
     id: 901,
     name: "Relay C Comprimido",
@@ -1331,36 +1413,6 @@ export const pharmacyData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOJNUThDjYXBLFIOvdEhj6uJW0_TT1FaOsg&s",
     category: "Suplementos",
-  },
-  {
-    id: 922,
-    name: "Proteggo 4.5 - 10Kg X1 Mes",
-    description:
-      "Proteggo 4.5 - 10Kg X1 Mes es una tableta palatable para perros de 4.5 a 10 kg que ofrece protección mensual contra pulgas, garrapatas y parásitos internos. Una solución completa para el bienestar de tu mascota.",
-    price: "S/ 65.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2024/01/Proteggo-M-Small-4-5-a-10kg-100mg-Protege-1-mes-Antipulgas-para-perros.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 923,
-    name: "Proteggo 2 - 4.5Kg X1 Mes",
-    description:
-      "Proteggo 2 - 4.5Kg X1 Mes es una tableta masticable mensual para perros pequeños (2 a 4.5 kg) que brinda protección integral contra pulgas, garrapatas y parásitos internos. Fácil de administrar y de sabor agradable.",
-    price: "S/ 55.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2024/01/Proteggo-M-Mini-2-a-4-5kg-45mg-Protege-1-mes-Antipulgas-para-perros.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 928,
-    name: "Proteggo 2 - 4.5Kg X3 Meses",
-    description:
-      "Proteggo 2 - 4.5Kg es un desparasitante de amplio espectro para perros de 2 a 4.5 kg, que protege eficazmente contra pulgas, garrapatas y los principales parásitos intestinales. Ofrece una protección duradera.",
-    price: "S/ 115.00",
-    image:
-      "https://promart.vteximg.com.br/arquivos/ids/7934431-1000-1000/image-e5a6ffee62ca4696bebc77abfa97cc49.jpg?v=638491479544230000",
-    category: "Antipulgas",
   },
   {
     id: 951,
