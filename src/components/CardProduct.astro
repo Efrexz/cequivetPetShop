@@ -1,6 +1,7 @@
 ---
 import WhatsAppIcon from "@assets/icons/whatsapp.svg";
 import Logo from "@assets/images/logo.webp";
+import TailwindSpinner from "@assets/icons/tailwindSpinner.svg";
 
 const { product } = Astro.props;
 
@@ -14,11 +15,25 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
   class="w-full h-full flex flex-col bg-white rounded-xl shadow-lg border border-gray-100 transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:border-[#00BD9D] cursor-pointer"
   onclick={`window.location.href = '${productDetailUrl}';`}
 >
-  <div class="overflow-hidden rounded-t-xl">
+  <div class="overflow-hidden rounded-t-xl relative h-40">
+    <!-- Skeleton para la imagen -->
+    <div
+      id={`image-skeleton-${product.id}`}
+      class="absolute inset-0 flex-col gap-4 w-full h-full flex items-center justify-center bg-gray-200 animate-pulse"
+    >
+      <div
+        class="w-16 h-16 border-8 text-[#FF7F11] text-4xl animate-spin border-gray-300 flex items-center justify-center border-t-[#FF7F11] rounded-full"
+      >
+        <TailwindSpinner />
+      </div>
+    </div>
+
     <img
+      id={`product-card-image-${product.id}`}
       src={product.image ?? Logo.src}
       alt={`Imagen de ${product.name}`}
-      class="w-full h-40 object-contain rounded-t-xl transform transition-transform duration-300 ease-in-out hover:scale-120"
+      class="w-full h-full object-contain rounded-t-xl transform transition-transform duration-300 ease-in-out hover:scale-120 absolute inset-0 opacity-0"
+      loading="lazy"
     />
   </div>
   <div class="p-4 flex flex-col flex-grow text-center">
@@ -56,3 +71,43 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
     </div>
   </div>
 </div>
+
+<script define:vars={{ product: product, Logo: Logo.src }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const productImage = document.getElementById(
+      `product-card-image-${product.id}`
+    );
+    const imageSkeleton = document.getElementById(
+      `image-skeleton-${product.id}`
+    );
+
+    function loadImage(src) {
+      if (!productImage || !imageSkeleton) return;
+
+      imageSkeleton.classList.remove("hidden");
+      productImage.classList.add("opacity-0");
+
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        productImage.src = src;
+        productImage.classList.remove("opacity-0");
+        productImage.classList.add("opacity-100");
+        imageSkeleton.classList.add("hidden");
+      };
+      img.onerror = () => {
+        productImage.src = Logo;
+        productImage.classList.remove("opacity-0");
+        productImage.classList.add("opacity-100");
+        imageSkeleton.classList.add("hidden");
+        console.error(
+          "Error al cargar la imagen del producto en la tarjeta:",
+          src
+        );
+      };
+    }
+
+    // Cargar la imagen cuando el DOM esté listo
+    loadImage(product.image || Logo);
+  });
+</script>

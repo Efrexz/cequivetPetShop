@@ -6,6 +6,7 @@ import { foodProducts } from "@data/productsData";
 import { pharmacyData } from "@data/pharmacyData";
 import Logo from "@assets/images/logo.webp";
 import BackgroundPattern from "@components/BackgroundPattern.astro";
+import TailwindSpinner from "@assets/icons/tailwindSpinner.svg";
 
 // getStaticPaths es OBLIGATORIO para rutas dinámicas en SSG
 export async function getStaticPaths() {
@@ -54,11 +55,25 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
             <div
               class="relative w-full h-full rounded-full border-2 border-[#00BFA5] shadow-md flex items-center justify-center overflow-hidden bg-white"
             >
+              <!-- Skeleton para la imagen -->
+              <!-- From Uiverse.io by TamaniPhiri -->
+              <div
+                id="image-skeleton"
+                class="flex-col gap-4 w-full h-full flex items-center justify-center bg-[#07f8d831] animate-pulse"
+              >
+                <div
+                  class="w-28 h-28 border-8 text-[#FF7F11] text-4xl animate-spin border-gray-300 flex items-center justify-center border-t-[#FF7F11] rounded-full"
+                >
+                  <TailwindSpinner />
+                </div>
+              </div>
+
               <img
                 id="product-image"
                 src={product.image ?? Logo.src}
                 alt="Alimento Premium para Cachorros Vitality"
-                class="w-full h-full object-contain rounded-full hover:scale-110 transition-transform duration-300 ease-in-out"
+                class="w-full h-full object-contain rounded-full hover:scale-110 transition-transform duration-300 ease-in-out absolute inset-0 opacity-0"
+                loading="lazy"
               />
             </div>
           </div>
@@ -197,126 +212,155 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
     subtitle="Podrían interesarte otros productos para el cuidado de tu peludo."
     category={product.category}
   />
-
-  <script define:vars={{ product: product }}>
-    document.addEventListener("DOMContentLoaded", () => {
-      const variantsContainer = document.getElementById("variants-container");
-      const productName = document.getElementById("product-name");
-      const productPrice = document.getElementById("product-price");
-      const productDescription = document.getElementById("product-description");
-      const productImage = document.getElementById("product-image");
-      const whatsappLink = document.getElementById("whatsapp-link");
-      const variantFlavor = document.getElementById("variant-flavor");
-      const variantType = document.getElementById("variant-type");
-      const variantWeight = document.getElementById("variant-weight");
-      const variantVolume = document.getElementById("variant-volume");
-      const variantWeightRange = document.getElementById(
-        "variant-weight-range"
-      );
-      const variantDose = document.getElementById("variant-dose");
-
-      // Función para actualizar la UI con los datos de la variante seleccionada
-      function updateProductDisplay(variant) {
-        if (!variant) return;
-
-        let variantDisplayName = "";
-        if (variant.flavor) {
-          variantDisplayName = variant.flavor;
-        } else if (variant.type) {
-          variantDisplayName = variant.type;
-        } else if (variant.weightRange) {
-          variantDisplayName = variant.weightRange;
-        }
-        if (variant.dose) {
-          variantDisplayName += ` ${variant.dose}`;
-        }
-
-        productName.textContent = `${product.name}${variantDisplayName ? ` (${variantDisplayName})` : ""}`;
-        productPrice.textContent = variant.price;
-        productDescription.textContent = variant.description;
-        productImage.src = variant.image || Logo;
-
-        if (variantFlavor) {
-          variantFlavor.textContent = variant.flavor;
-        }
-        if (variantType) {
-          variantType.textContent = variant.type;
-        }
-        if (variantWeight) {
-          variantWeight.textContent = variant.weight;
-        }
-        if (variantVolume) {
-          variantVolume.textContent = variant.volume;
-        }
-        if (variantWeightRange) {
-          variantWeightRange.textContent = variant.weightRange;
-        }
-        if (variantDose) {
-          variantDose.textContent = variant.dose;
-        }
-
-        let whatsappVariantDetails = [];
-        if (variant.flavor) whatsappVariantDetails.push(variant.flavor);
-        if (variant.type) whatsappVariantDetails.push(variant.type);
-        if (variant.weight) whatsappVariantDetails.push(variant.weight);
-        if (variant.volume) whatsappVariantDetails.push(variant.volume);
-        if (variant.weightRange)
-          whatsappVariantDetails.push(variant.weightRange);
-        if (variant.dose) whatsappVariantDetails.push(variant.dose);
-
-        const whatsappMessage = `Hola, me interesa el producto ${product.name}${whatsappVariantDetails.length > 0 ? ` (${whatsappVariantDetails.join(" - ")})` : ""} (${variant.price}). ¿Podrías darme más información?`;
-        whatsappLink.href = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
-
-        // Actualizar el estilo del botón seleccionado
-        const buttons = variantsContainer.querySelectorAll("button");
-        buttons.forEach((btn) => {
-          if (btn.dataset.variantId === variant.id) {
-            btn.classList.add(
-              "bg-[#00BFA5]",
-              "text-white",
-              "border-[#00BFA5]",
-              "shadow-md"
-            );
-            btn.classList.remove(
-              "bg-white",
-              "text-[#00BFA5]",
-              "border-[#00BFA5]",
-              "hover:bg-[#E0F2F7]"
-            );
-            btn.setAttribute("aria-pressed", "true");
-          } else {
-            btn.classList.remove(
-              "bg-[#00BFA5]",
-              "text-white",
-              "border-[#00BFA5]",
-              "shadow-md"
-            );
-            btn.classList.add(
-              "bg-white",
-              "text-[#00BFA5]",
-              "border-[#00BFA5]",
-              "hover:bg-[#E0F2F7]"
-            );
-            btn.setAttribute("aria-pressed", "false");
-          }
-        });
-      }
-
-      if (variantsContainer) {
-        variantsContainer.addEventListener("click", (event) => {
-          const clickedButton = event.target.closest("button");
-          if (clickedButton && clickedButton.dataset.variantId) {
-            const selectedVariantId = clickedButton.dataset.variantId;
-            // Buscamos la variante en los datos del producto
-            const selectedVariant = product.variants.find(
-              (v) => v.id === selectedVariantId
-            );
-            updateProductDisplay(selectedVariant);
-          }
-        });
-        // Asegurarse de que el primer elemento esté seleccionado al cargar la página
-        updateProductDisplay(product.variants[0]);
-      }
-    });
-  </script>
 </Layout>
+
+<script define:vars={{ product: product, Logo: Logo.src }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const variantsContainer = document.getElementById("variants-container");
+    const productName = document.getElementById("product-name");
+    const productPrice = document.getElementById("product-price");
+    const productDescription = document.getElementById("product-description");
+    const productImage = document.getElementById("product-image");
+    const imageSkeleton = document.getElementById("image-skeleton");
+    const whatsappLink = document.getElementById("whatsapp-link");
+    const variantFlavor = document.getElementById("variant-flavor");
+    const variantType = document.getElementById("variant-type");
+    const variantWeight = document.getElementById("variant-weight");
+    const variantVolume = document.getElementById("variant-volume");
+    const variantWeightRange = document.getElementById("variant-weight-range");
+    const variantDose = document.getElementById("variant-dose");
+
+    // Función para manejar la carga de la imagen
+    function loadImage(src) {
+      imageSkeleton.classList.remove("hidden");
+      productImage.classList.add("opacity-0");
+
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        productImage.src = src;
+        productImage.classList.remove("opacity-0");
+        productImage.classList.add("opacity-100");
+        imageSkeleton.classList.add("hidden");
+      };
+      img.onerror = () => {
+        productImage.src = Logo;
+        productImage.classList.remove("opacity-0");
+        productImage.classList.add("opacity-100");
+        imageSkeleton.classList.add("hidden");
+        console.error("Error al cargar la imagen del producto:", src);
+      };
+    }
+
+    // Función para actualizar la UI con los datos de la variante seleccionada
+    function updateProductDisplay(variant) {
+      if (!variant) return;
+
+      let variantDisplayName = "";
+      if (variant.flavor) {
+        variantDisplayName = variant.flavor;
+      } else if (variant.type) {
+        variantDisplayName = variant.type;
+      } else if (variant.weightRange) {
+        variantDisplayName = variant.weightRange;
+      }
+      if (variant.dose) {
+        variantDisplayName = ` ${variant.dose}`;
+      }
+
+      productName.textContent = `${product.name}${variantDisplayName ? ` (${variantDisplayName})` : ""}`;
+      productPrice.textContent = variant.price;
+      productDescription.textContent = variant.description;
+
+      // Cargar la nueva imagen y mostrar el skeleton
+      loadImage(variant.image || Logo);
+
+      if (variantFlavor) {
+        variantFlavor.textContent = variant.flavor;
+      }
+      if (variantType) {
+        variantType.textContent = variant.type;
+      }
+      if (variantWeight) {
+        variantWeight.textContent = variant.weight;
+      }
+      if (variantVolume) {
+        variantVolume.textContent = variant.volume;
+      }
+      if (variantWeightRange) {
+        variantWeightRange.textContent = variant.weightRange;
+      }
+      if (variantDose) {
+        variantDose.textContent = variant.dose;
+      }
+
+      let whatsappVariantDetails = [];
+      if (variant.flavor) whatsappVariantDetails.push(variant.flavor);
+      if (variant.type) whatsappVariantDetails.push(variant.type);
+      if (variant.weight) whatsappVariantDetails.push(variant.weight);
+      if (variant.volume) whatsappVariantDetails.push(variant.volume);
+      if (variant.weightRange) whatsappVariantDetails.push(variant.weightRange);
+      if (variant.dose) whatsappVariantDetails.push(variant.dose);
+
+      const whatsappMessage = `Hola, me interesa el producto ${product.name}${whatsappVariantDetails.length > 0 ? ` (${whatsappVariantDetails.join(" - ")})` : ""} (${variant.price}). ¿Podrías darme más información?`;
+      whatsappLink.href = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;
+
+      // Actualizar el estilo del botón seleccionado
+      const buttons = variantsContainer.querySelectorAll("button");
+      buttons.forEach((btn) => {
+        if (btn.dataset.variantId === variant.id) {
+          btn.classList.add(
+            "bg-[#00BFA5]",
+            "text-white",
+            "border-[#00BFA5]",
+            "shadow-md"
+          );
+          btn.classList.remove(
+            "bg-white",
+            "text-[#00BFA5]",
+            "border-[#00BFA5]",
+            "hover:bg-[#E0F2F7]"
+          );
+          btn.setAttribute("aria-pressed", "true");
+        } else {
+          btn.classList.remove(
+            "bg-[#00BFA5]",
+            "text-white",
+            "border-[#00BFA5]",
+            "shadow-md"
+          );
+          btn.classList.add(
+            "bg-white",
+            "text-[#00BFA5]",
+            "border-[#00BFA5]",
+            "hover:bg-[#E0F2F7]"
+          );
+          btn.setAttribute("aria-pressed", "false");
+        }
+      });
+    }
+
+    if (variantsContainer) {
+      variantsContainer.addEventListener("click", (event) => {
+        const clickedButton = event.target.closest("button");
+        if (clickedButton && clickedButton.dataset.variantId) {
+          const selectedVariantId = clickedButton.dataset.variantId;
+          const selectedVariant = product.variants.find(
+            (v) => v.id === selectedVariantId
+          );
+          updateProductDisplay(selectedVariant);
+        }
+      });
+      // Asegurarse de que el primer elemento esté seleccionado al cargar la página
+      if (product.variants && product.variants.length > 0) {
+        updateProductDisplay(product.variants[0]);
+      } else {
+        // Si no hay variantes, cargar la imagen del producto principal directamente
+        loadImage(product.image || Logo);
+      }
+    } else {
+      // Si no hay variantes container (producto sin variantes), cargar la imagen principal.
+      loadImage(product.image || Logo);
+    }
+  });
+</script>
