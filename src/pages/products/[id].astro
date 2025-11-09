@@ -42,8 +42,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div class="relative flex justify-center fade-in-left" data-animate>
           <div
-            class="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-2"
-            style="background-color: #E0F2F7;"
+            class="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] rounded-full flex items-center justify-center p-2 bg-[#E0F2F7]"
           >
             {/* Círculo punteado exterior más grande */}
             <div
@@ -121,6 +120,14 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
                     </span>
                   </>
                 )}
+                {currentVariant.dose && (
+                  <>
+                    Dosis:
+                    <span id="variant-dose" class="font-bold text-[#FF7F11]">
+                      {currentVariant.dose}
+                    </span>
+                  </>
+                )}
               </p>
             )
           }
@@ -159,6 +166,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
                       {variant.weight && ` - ${variant.weight}`}
                       {variant.volume && ` - ${variant.volume}`}
                       {variant.weightRange && ` ${variant.weightRange}`}
+                      {variant.dose && ` ${variant.dose}`}
                     </button>
                   ))}
                 </div>
@@ -205,6 +213,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
       const variantWeightRange = document.getElementById(
         "variant-weight-range"
       );
+      const variantDose = document.getElementById("variant-dose");
 
       // Función para actualizar la UI con los datos de la variante seleccionada
       function updateProductDisplay(variant) {
@@ -217,6 +226,9 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
           variantDisplayName = variant.type;
         } else if (variant.weightRange) {
           variantDisplayName = variant.weightRange;
+        }
+        if (variant.dose) {
+          variantDisplayName += ` ${variant.dose}`;
         }
 
         productName.textContent = `${product.name}${variantDisplayName ? ` (${variantDisplayName})` : ""}`;
@@ -239,6 +251,9 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
         if (variantWeightRange) {
           variantWeightRange.textContent = variant.weightRange;
         }
+        if (variantDose) {
+          variantDose.textContent = variant.dose;
+        }
 
         let whatsappVariantDetails = [];
         if (variant.flavor) whatsappVariantDetails.push(variant.flavor);
@@ -247,6 +262,7 @@ const whatsappLink = `https://wa.me/+51970691590?text=${encodeURIComponent(whats
         if (variant.volume) whatsappVariantDetails.push(variant.volume);
         if (variant.weightRange)
           whatsappVariantDetails.push(variant.weightRange);
+        if (variant.dose) whatsappVariantDetails.push(variant.dose);
 
         const whatsappMessage = `Hola, me interesa el producto ${product.name}${whatsappVariantDetails.length > 0 ? ` (${whatsappVariantDetails.join(" - ")})` : ""} (${variant.price}). ¿Podrías darme más información?`;
         whatsappLink.href = `https://wa.me/+51970691590?text=${encodeURIComponent(whatsappMessage)}`;

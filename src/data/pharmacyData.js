@@ -16,7 +16,7 @@ export const pharmacyData = [
       "Protector y regenerador hepático en cápsulas para perros y gatos. Con ingredientes naturales para cuidar el hígado, ofrecer soporte antioxidante y ayudar en tratamientos hepáticos.",
     price: "S/ 2.00",
     image:
-      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw8f2b8271/images/b-16041559435f9d7a27bce07.jpg",
+      "https://petsplaceperu.com/wp-content/uploads/2021/07/hepatin-caps.png",
     category: "Medicamentos",
   },
   {
@@ -97,8 +97,7 @@ export const pharmacyData = [
     description:
       "Protector gástrico con Omeprazol para perros y gatos. Trata gastritis, úlceras y esofagitis, reduciendo la producción de ácido estomacal.",
     price: "S/ 1.50",
-    image:
-      "https://www.miau.pe/cdn/shop/files/GASTROPETGATOS_grande.webp?v=1696980509",
+    image: "https://allju.pe/wp-content/uploads/2022/10/GASTROPET-v2.jpg",
     category: "Medicamentos",
   },
   {
@@ -117,8 +116,7 @@ export const pharmacyData = [
     description:
       "Solución oral con efecto anabólico, orexígeno y energético (Ciproheptadina, Estanozolol y DL Carnitina). Ideal para desnutrición, convalecencia y falta de crecimiento.",
     price: "S/ 75.00",
-    image:
-      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw570a4867/images/-perro-gato-holliday-apetil-10ml-11201005.jpg",
+    image: "https://perupets.com/1134-large_default/apetil-10ml-holliday-.jpg",
     category: "Suplementos",
   },
   {
@@ -138,7 +136,7 @@ export const pharmacyData = [
       "Solución oftálmica antibiótica sin esteroides para infecciones bacterianas oculares en perros y gatos, sin inflamación dominante o con riesgo de úlcera corneal.",
     price: "S/ 53.00",
     image:
-      "https://familypets.pe/wp-content/uploads/2023/10/hoUZpIHFMwdjlgkY5tiP-2023-10-13T131210.905.png",
+      "https://mascotify.pe/wp-content/uploads/2022/02/Ocubiotic-Colirio-antibiotico-sin-esteroides-para-perros-y-gatos.png",
     category: "Medicamentos",
   },
   {
@@ -213,43 +211,61 @@ export const pharmacyData = [
   },
   {
     id: 367,
-    name: "Meloxivet 1Mg x Unidad",
+    name: "Meloxivet (Meloxicam) x Unidad",
     description:
-      "AINE (Meloxicam) para control de dolor, inflamación y fiebre. Ideal para osteoartritis y afecciones musculoesqueléticas en perros y gatos.",
+      "Meloxivet es un potente AINE (Antiinflamatorio No Esteroideo) a base de Meloxicam, indicado para el control del dolor, la inflamación y la fiebre en perros y gatos. Es ideal para el tratamiento de la osteoartritis y otras afecciones musculoesqueléticas agudas o crónicas, mejorando significativamente el bienestar de tu mascota. Disponible en diferentes concentraciones para una dosificación precisa.",
     price: "S/ 1.00",
     image:
       "https://dojiw2m9tvv09.cloudfront.net/85502/product/2meloxivet-4mg4778.jpg",
     category: "Medicamentos",
-  },
-  {
-    id: 368,
-    name: "Meloxivet 4Mg x Unidad",
-    description:
-      "(Meloxicam) para dolor e inflamación agudos y crónicos. Eficaz en osteoartritis y afecciones musculoesqueléticas en perros.",
-    price: "S/ 3.00",
-    image:
-      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw1cecc15c/images/meloxivet-analgesico-meloxicam-4mg-x-blister-10.jpg",
-    category: "Medicamentos",
+    variants: [
+      {
+        id: "367-01",
+        dose: "1 Mg",
+        description:
+          "Meloxivet 1 Mg es un AINE (Meloxicam) indicado para el control de dolor, inflamación y fiebre en perros y gatos. Es ideal para el manejo de la osteoartritis, afecciones musculoesqueléticas y postoperatorios, ofreciendo alivio y mejorando la calidad de vida de tu mascota.",
+        price: "S/ 1.00",
+        image:
+          "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw4b40876f/images/meloxivet-meloxicam-1mg-analgesico-antiflamatorio-x-blister-10.jpg",
+      },
+      {
+        id: "367-02",
+        dose: "4 Mg",
+        description:
+          "Meloxivet 4 Mg (Meloxicam) es un potente AINE para el tratamiento de dolor e inflamación agudos y crónicos en perros. Especialmente eficaz en casos de osteoartritis, afecciones musculoesqueléticas y para el control del dolor postquirúrgico.",
+        price: "S/ 3.00",
+        image:
+          "https://mascota.pe/wp-content/uploads/2024/12/Meloxivet-4-caja.jpg",
+      },
+    ],
   },
   {
     id: 369,
-    name: "Cefavet 300 Mg x Unidad",
+    name: "Cefavet (Cefalexina) x Unidad",
     description:
-      "Antibiótico de amplio espectro (Cefalexina). Trata infecciones bacterianas en piel (piodermas), tejidos blandos, tracto respiratorio, urinario y osteoarticulares en perros y gatos.",
+      "Cefavet es un antibiótico de amplio espectro a base de Cefalexina, eficaz para tratar una variedad de infecciones bacterianas en perros y gatos. Es ideal para afecciones de piel (piodermas), tejidos blandos, tracto respiratorio, urinario y osteoarticulares, ofreciendo una solución confiable para la salud de tu mascota. Disponible en diferentes dosis para un tratamiento preciso.",
     price: "S/ 2.50",
-    image:
-      "https://animarket.net/wp-content/uploads/2019/11/cefavet-300-precio-lima-peru.jpeg",
+    image: "https://www.petsland.pe/assets/img/store/375.webp?1729705044",
     category: "Antibióticos",
-  },
-  {
-    id: 370,
-    name: "Cefavet 600 Mg x Unidad",
-    description:
-      "Antibiótico (Cefalexina) para infecciones bacterianas en piel, tejidos blandos, sistema urinario y respiratorio en perros medianos/grandes y gatos.",
-    price: "S/ 3.00",
-    image:
-      "https://naricitas.pet/wp-content/uploads/2024/04/naricitas-antibiotico-cefavet-cefalexina-600mg-1-tableta1.jpg",
-    category: "Antibióticos",
+    variants: [
+      {
+        id: "369-01",
+        dose: "300 Mg",
+        description:
+          "Antibiótico de amplio espectro (Cefalexina) Cefavet 300 Mg. Trata infecciones bacterianas en piel (piodermas), tejidos blandos, tracto respiratorio, urinario y osteoarticulares en perros y gatos, con una dosificación adecuada para casos específicos o según el peso de la mascota.",
+        price: "S/ 2.50",
+        image: "https://www.petsland.pe/assets/img/store/375.webp?1729705044",
+      },
+      {
+        id: "369-02",
+        dose: "600 Mg",
+        description:
+          "Antibiótico (Cefalexina) Cefavet 600 Mg para infecciones bacterianas en piel, tejidos blandos, sistema urinario y respiratorio en perros medianos/grandes y gatos. Ofrece una dosificación más alta para tratamientos que lo requieran o animales de mayor tamaño.",
+        price: "S/ 3.00",
+        image:
+          "https://naricitas.pet/wp-content/uploads/2024/04/naricitas-antibiotico-cefavet-cefalexina-600mg-1-tableta1.jpg",
+      },
+    ],
   },
   {
     id: 371,
@@ -278,69 +294,97 @@ export const pharmacyData = [
       "Antihistamínico (Cetirizina) para controlar síntomas alérgicos en perros y gatos. Reduce picazón, rascado excesivo, inflamación e irritación de la piel.",
     price: "S/ 2.00",
     image:
-      "https://animarket.net/wp-content/uploads/2020/06/HISTAPET-PRECIO-PERU%CC%81-1.jpg",
+      "https://naricitas.pet/wp-content/uploads/2023/07/naricitas-antihistaminico-histapet-1-tableta.jpg",
     category: "Medicamentos",
   },
   {
     id: 374,
-    name: "Floxatel 50 Mg x Unidad",
+    name: "Floxatel (Enrofloxacina) x Unidad",
     description:
-      "Antibiótico (Enrofloxacina) bactericida para infecciones respiratorias, urinarias, digestivas, de oído y piel (Tos de las Perreras, Erliquiosis) en mascotas pequeñas.",
+      "Floxatel es un antibiótico bactericida de amplio espectro a base de Enrofloxacina, eficaz para tratar diversas infecciones en perros y gatos. Actúa contra afecciones respiratorias, urinarias, digestivas, de oído y piel, incluyendo Tos de las Perreras y Erliquiosis. Consulta siempre a tu veterinario para su uso adecuado.",
     price: "S/ 1.00",
     image: "https://www.petsland.pe/assets/img/store/510.webp?1729705355",
     category: "Antibióticos",
-  },
-  {
-    id: 375,
-    name: "Floxatel 100 Mg x Unidad",
-    description:
-      "Antibiótico (Enrofloxacina) bactericida para infecciones bacterianas severas en sistemas respiratorio, digestivo y urinario, piodermas y problemas articulares en perros y gatos.",
-    price: "S/ 1.30",
-    image:
-      "https://www.totalpet.pe/archivos/producto/227-193-flaxatel-100-x-tableta-muestra.webp",
-    category: "Antibióticos",
+    variants: [
+      {
+        id: "374-01",
+        dose: "50 Mg",
+        description:
+          "Floxatel 50 Mg (Enrofloxacina) es un antibiótico bactericida indicado para infecciones respiratorias, urinarias, digestivas, de oído y piel (como Tos de las Perreras y Erliquiosis) en mascotas pequeñas. Es esencial seguir la prescripción y dosis indicada por un veterinario.",
+        price: "S/ 1.00",
+        image: "https://www.petsland.pe/assets/img/store/510.webp?1729705355",
+      },
+      {
+        id: "374-02",
+        dose: "100 Mg",
+        description:
+          "Floxatel 100 Mg (Enrofloxacina) es un potente antibiótico bactericida para el tratamiento de infecciones bacterianas severas en sistemas respiratorio, digestivo y urinario, piodermas y problemas articulares en perros y gatos. Su uso debe ser bajo estricta supervisión y prescripción veterinaria.",
+        price: "S/ 1.30",
+        image:
+          "https://www.totalpet.pe/archivos/producto/227-193-flaxatel-100-x-tableta-muestra.webp",
+      },
+    ],
   },
   {
     id: 377,
-    name: "Doxitel 100 Mg x Unidad",
+    name: "Doxitel (Doxiciclina) x Unidad",
     description:
-      "Doxitel 100 Mg es un antibiótico de amplio espectro para mascotas, eficaz en el tratamiento de infecciones bacterianas respiratorias, urinarias y dermatológicas.",
+      "Doxitel es un antibiótico de amplio espectro a base de Doxiciclina, altamente efectivo en el tratamiento de diversas infecciones bacterianas en perros y gatos. Es ideal para afecciones respiratorias, urinarias, dermatológicas y otras infecciones sensibles a la doxiciclina. Su uso requiere la prescripción y supervisión de un médico veterinario.",
     price: "S/ 1.00",
     image:
-      "https://perupets.com/998-large_default/doxitel-100-doxiciclina-100mg-x-32comp.jpg",
+      "https://gopet.vtexassets.com/arquivos/ids/163491/Doxitel-100-mg-go-pet.jpg?v=638436923863670000",
     category: "Antibióticos",
-  },
-  {
-    id: 378,
-    name: "Doxitel 200 Mg x Unidad",
-    description:
-      "Doxitel 200 Mg es un potente antibiótico oral para mascotas, ideal para tratar infecciones severas en el tracto respiratorio, gastrointestinal y genitourinario.",
-    price: "S/ 2.00",
-    image:
-      "https://www.totalpet.pe/archivos/producto/229-doxitel-200-x-tableta-principal.webp",
-    category: "Antibióticos",
+    variants: [
+      {
+        id: "377-01",
+        dose: "100 Mg",
+        description:
+          "Doxitel 100 Mg (Doxiciclina) es un antibiótico de amplio espectro para mascotas, eficaz en el tratamiento de infecciones bacterianas respiratorias, urinarias y dermatológicas. Actúa contra un gran número de bacterias. Siempre administre bajo indicación y dosis de su veterinario.",
+        price: "S/ 1.00",
+        image:
+          "https://gopet.vtexassets.com/arquivos/ids/163491/Doxitel-100-mg-go-pet.jpg?v=638436923863670000",
+      },
+      {
+        id: "377-02",
+        dose: "200 Mg",
+        description:
+          "Doxitel 200 Mg (Doxiciclina) es un potente antibiótico oral para mascotas, ideal para tratar infecciones bacterianas severas en el tracto respiratorio, gastrointestinal, genitourinario y otras afecciones. Su alta concentración permite un tratamiento efectivo, siempre siguiendo las indicaciones de su médico veterinario.",
+        price: "S/ 2.00",
+        image:
+          "https://www.totalpet.pe/archivos/producto/229-doxitel-200-x-tableta-principal.webp",
+      },
+    ],
   },
   {
     id: 379,
-    name: "Clindavet 75 Mg x Unidad",
+    name: "Clindavet (Clindamicina) x Unidad",
     description:
-      "Clindavet 75 Mg es un antibiótico oral específico para mascotas, utilizado en el tratamiento de infecciones dentales, óseas y de tejidos blandos causadas por bacterias sensibles.",
+      "Clindavet es un antibiótico a base de Clindamicina, especialmente formulado para mascotas. Es altamente efectivo en el tratamiento de infecciones bacterianas anaerobias y algunas aerobias, comúnmente utilizado en infecciones dentales, óseas, de piel y tejidos blandos. Siempre bajo prescripción y supervisión veterinaria.",
     price: "S/ 2.50",
     image:
-      "https://images.rappi.pe/products/43e8a026-4789-4ebe-bf16-1db7b543784a.png",
+      "https://farmaciaveterinaria.pe/wp-content/uploads/2024/04/disenosintitulo-172017.png",
     category: "Antibióticos",
+    variants: [
+      {
+        id: "379-01",
+        dose: "75 Mg",
+        description:
+          "Clindavet 75 Mg es un antibiótico oral específico para mascotas (perros y gatos), utilizado en el tratamiento de infecciones dentales, óseas y de tejidos blandos causadas por bacterias sensibles. Es crucial seguir la dosis y duración del tratamiento indicadas por tu veterinario.",
+        price: "S/ 2.50",
+        image:
+          "https://farmaciaveterinaria.pe/wp-content/uploads/2024/04/disenosintitulo-172017.png",
+      },
+      {
+        id: "379-02",
+        dose: "150 Mg",
+        description:
+          "Clindavet 150 Mg es un antibiótico de elección para infecciones bacterianas en mascotas (perros y gatos), especialmente efectivo contra infecciones bucales, dérmicas (piodermas) y osteomielitis. Su uso requiere prescripción y monitoreo veterinario.",
+        price: "S/ 3.00",
+        image:
+          "https://mascota.pe/wp-content/uploads/2025/01/Clindavet-150-Blister.jpg",
+      },
+    ],
   },
-  {
-    id: 380,
-    name: "Clindavet 150 Mg x Unidad",
-    description:
-      "Clindavet 150 Mg es un antibiótico de elección para infecciones bacterianas en mascotas, especialmente efectivo contra infecciones bucales, dérmicas y osteomielitis.",
-    price: "S/ 3.00",
-    image:
-      "https://mascota.pe/wp-content/uploads/2025/01/Clindavet-150-Blister.jpg",
-    category: "Antibióticos",
-  },
-
   {
     id: 382,
     name: "Crema Ultra 7",
@@ -373,33 +417,42 @@ export const pharmacyData = [
   },
   {
     id: 385,
-    name: "Apoquel 16Mg x Unidad",
+    name: "Apoquel (Oclacitinib) x Unidad",
     description:
-      "Apoquel 16Mg es un medicamento para perros que alivia rápidamente la picazón asociada con la dermatitis alérgica y atópica, actuando directamente sobre la causa del picor.",
+      "Apoquel es un innovador medicamento para perros que proporciona un alivio rápido y efectivo de la picazón asociada con la dermatitis alérgica y atópica. Actúa directamente sobre la causa del picor, mejorando significativamente la calidad de vida de tu mascota. Disponible en diferentes concentraciones para ajustarse al peso y necesidad de cada perro.",
     price: "S/ 1.00",
     image:
       "https://dojiw2m9tvv09.cloudfront.net/27184/product/apoquel-16-mg4324.jpg?76&time=1761183941",
     category: "Medicamentos",
-  },
-  {
-    id: 386,
-    name: "Apoquel 5.4 Mg x Unidad",
-    description:
-      "Apoquel 5.4 Mg es un tratamiento eficaz para perros con dermatitis atópica y alérgica, reduciendo el picor y la inflamación de forma segura y rápida.",
-    price: "S/ 1.00",
-    image:
-      "https://dojiw2m9tvv09.cloudfront.net/85502/product/apoquel-masticable-5-4mg1924.jpg",
-    category: "Medicamentos",
-  },
-  {
-    id: 387,
-    name: "Apoquel 3.6 Mg x Unidad",
-    description:
-      "Apoquel 3.6 Mg es una solución innovadora para el manejo del picor en perros con afecciones alérgicas de la piel, proporcionando un alivio rápido y sostenido.",
-    price: "S/ 1.00",
-    image:
-      "https://gopet.vtexassets.com/arquivos/ids/157527/apoquel-3.6mg.png?v=638726342788000000",
-    category: "Medicamentos",
+    variants: [
+      {
+        id: "385-03",
+        dose: "3.6 Mg",
+        description:
+          "Apoquel 3.6 Mg es una solución innovadora para el manejo del picor en perros con afecciones alérgicas de la piel, proporcionando un alivio rápido y sostenido. Adecuado para perros de menor peso o según indicación del veterinario.",
+        price: "S/ 1.00",
+        image:
+          "https://gopet.vtexassets.com/arquivos/ids/157527/apoquel-3.6mg.png?v=638726342788000000",
+      },
+      {
+        id: "385-02",
+        dose: "5.4 Mg",
+        description:
+          "Apoquel 5.4 Mg es un tratamiento eficaz para la dermatitis atópica y alérgica, reduciendo el picor y la inflamación de forma segura y rápida. Ideal para perros de peso mediano o según prescripción veterinaria.",
+        price: "S/ 1.00",
+        image:
+          "https://dojiw2m9tvv09.cloudfront.net/85502/product/apoquel-masticable-5-4mg1924.jpg",
+      },
+      {
+        id: "385-01",
+        dose: "16 Mg",
+        description:
+          "Apoquel 16 Mg es un medicamento que alivia rápidamente la picazón asociada con la dermatitis alérgica y atópica, actuando directamente sobre la causa del picor.",
+        price: "S/ 1.00",
+        image:
+          "https://dojiw2m9tvv09.cloudfront.net/27184/product/apoquel-16-mg4324.jpg?76&time=1761183941",
+      },
+    ],
   },
   {
     id: 388,
@@ -407,8 +460,7 @@ export const pharmacyData = [
     description:
       "Alerflam es un antiinflamatorio para mascotas, utilizado para reducir el dolor y la inflamación en casos de artritis, lesiones musculares y postoperatorios.",
     price: "S/ 2.00",
-    image:
-      "https://http2.mlstatic.com/D_NQ_NP_686077-MPE92974413695_092025-O.webp",
+    image: "https://mascota.pe/wp-content/uploads/2023/04/ALERFLAM1.jpg",
     category: "Medicamentos",
   },
   {
@@ -418,7 +470,7 @@ export const pharmacyData = [
       "Tramavet 75Mg es un analgésico potente para mascotas, indicado para el alivio del dolor moderado a severo, tanto agudo como crónico, en perros y gatos.",
     price: "S/ 5.00",
     image:
-      "https://images.rappi.pe/products/1687331756108_1687331565824_1687331559521.jpg",
+      "https://elpetshop.pe/wp-content/uploads/2023/09/Pack-TRAMADOL-comp-e1695681548537.jpg",
     category: "Medicamentos",
   },
   {
@@ -467,7 +519,7 @@ export const pharmacyData = [
       "Lax-Natur 22Gr es un laxante natural para mascotas, formulado para aliviar el estreñimiento y facilitar la eliminación de bolas de pelo, promoviendo un tránsito intestinal saludable.",
     price: "S/ 30.00",
     image:
-      "https://goodpet.pe/cdn/shop/products/LAXNATUR_73cfd34e-9b52-41a5-81d7-e14349e9b737.jpg?v=1616045023",
+      "https://gezanipe.vtexassets.com/arquivos/ids/161998-800-auto?v=638556344138870000&width=800&height=auto&aspect=true",
     category: "Suplementos",
   },
   // {
@@ -482,23 +534,33 @@ export const pharmacyData = [
   // },
   {
     id: 404,
-    name: "Collar Yoos T - M / T - L",
+    name: "Collar Antiestrés Yoos para Perros",
     description:
-      "Collar Yoos T - M / T - L es un collar calmante para perros de tamaño mediano a grande, que ayuda a reducir el estrés y la ansiedad en diversas situaciones.",
-    price: "S/ 95.00",
-    image:
-      "https://elpetshop.pe/wp-content/uploads/2023/09/71WmtpKcDHL-768x768.jpg",
-    category: "Medicamentos",
-  },
-  {
-    id: 405,
-    name: "Collar Yoos T - S",
-    description:
-      "Collar Yoos T - S es un collar antiestrés para perros pequeños, que libera feromonas para ayudar a calmar y tranquilizar a tu mascota en momentos de tensión o nerviosismo.",
+      "El Collar Antiestrés Yoos ayuda a tu perro a manejar situaciones de estrés y ansiedad, liberando feromonas que promueven una sensación de calma y seguridad. Ideal para viajes, visitas al veterinario, ruidos fuertes o cambios en el entorno. Disponible en diferentes tamaños para un ajuste perfecto.",
     price: "S/ 85.00",
     image:
-      "https://elpetshop.pe/wp-content/uploads/2023/09/Collar-Yoossmall.jpg",
+      "https://www.wohlpet.com/wp-content/uploads/2022/07/collar-YOOS.webp",
     category: "Medicamentos",
+    variants: [
+      {
+        id: "404-02",
+        type: "Pequeño",
+        description:
+          "Collar Antiestrés Yoos T-S, ideal para perros pequeños. Libera feromonas para ayudar a calmar y tranquilizar a tu mascota en momentos de tensión, nerviosismo o ansiedad por separación, promoviendo un ambiente de bienestar.",
+        price: "S/ 85.00",
+        image:
+          "https://elpetshop.pe/wp-content/uploads/2023/09/Collar-Yoossmall.jpg",
+      },
+      {
+        id: "404-01",
+        type: "Mediano a Grande",
+        description:
+          "Collar Antiestrés Yoos T-M / T-L, diseñado para perros de tamaño mediano a grande. Ayuda a reducir el estrés y la ansiedad en diversas situaciones gracias a la liberación de feromonas calmantes, favoreciendo un comportamiento más tranquilo.",
+        price: "S/ 95.00",
+        image:
+          "https://veterinaria.veterfarm.it/2877-thickbox_default/yoos-dog-collar-size-m-l.jpg",
+      },
+    ],
   },
   {
     id: 406,
@@ -506,8 +568,7 @@ export const pharmacyData = [
     description:
       "Cartilavet Frasco es un suplemento para la salud articular de mascotas, formulado para fortalecer cartílagos y ligamentos, aliviar el dolor y mejorar la movilidad, ideal para perros y gatos.",
     price: "S/ 17.00",
-    image:
-      "https://images.rappi.pe/products/1732051385792_d8f8efff-42d9-47fe-834c-6919d15d0cfd_F.jpg",
+    image: "https://pharmivet.pe/7858-large_default/cartilavet-x-90-tab.jpg",
     category: "Suplementos",
   },
   {
@@ -547,7 +608,7 @@ export const pharmacyData = [
       "Potenza Cat 70 Gr es un suplemento nutricional de alta energía para gatos, ideal para la recuperación de enfermedades, gatos convalecientes o aquellos que necesitan un aporte extra de vitalidad.",
     price: "S/ 54.00",
     image:
-      "https://www.miau.pe/cdn/shop/files/Potenza-Cats-Gel-Oral-Suplemento-energetico-nutricional-para-gatos-700x700_1200x1200.jpg?v=1696973463",
+      "https://pharmivet.pe/10735-large_default/potenza-cats-gel-oral-x-709-g.jpg",
     category: "Suplementos",
   },
   {
@@ -556,7 +617,7 @@ export const pharmacyData = [
     description:
       "Immunol 100 Ml es un inmunoestimulante natural para mascotas, que refuerza las defensas del organismo y mejora la resistencia a enfermedades, ideal para periodos de estrés o recuperación.",
     price: "S/ 53.50",
-    image: "https://farmaciaveterinaria.pe/wp-content/uploads/2024/08/cds.jpg",
+    image: "https://perupets.com/933-large_default/immunol-100-ml.jpg",
     category: "Suplementos",
   },
   {
@@ -566,7 +627,7 @@ export const pharmacyData = [
       "Genlidex Pets es una solución antiséptica y cicatrizante para el cuidado de heridas cutáneas en mascotas, promoviendo una rápida recuperación y previniendo infecciones.",
     price: "S/ 18.00",
     image:
-      "https://animarket.net/wp-content/uploads/2020/10/GENLIDEX-ANTES-OPTOPET-PERU1.jpg",
+      "https://farmaciaveterinaria.pe/wp-content/uploads/2023/10/genlidex.webp",
     category: "Medicamentos",
   },
   {
@@ -604,8 +665,7 @@ export const pharmacyData = [
     description:
       "Gentax Ótico es un tratamiento en gotas para mascotas con infecciones de oído, combinando antibiótico, antifúngico y antiinflamatorio para aliviar el dolor y combatir la causa de la otitis.",
     price: "S/ 36.50",
-    image:
-      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw034fa201/images/invet-gentax-otico-x-15ml.jpg",
+    image: "https://www.petsland.pe/assets/img/store/133.webp?1729704625",
     category: "Antibióticos",
   },
   {
@@ -804,8 +864,7 @@ export const pharmacyData = [
     description:
       "Ursovet es un hepatoprotector para mascotas, que ayuda a mejorar la función hepática, promueve la eliminación de toxinas y apoya la salud del hígado en animales con afecciones hepáticas.",
     price: "S/ 90.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2024/01/Ursovet-x-60ml-Suspension-oral.jpg",
+    image: "https://dojiw2m9tvv09.cloudfront.net/27184/product/ursovet0745.jpg",
     category: "Medicamentos",
   },
   {
@@ -834,16 +893,8 @@ export const pharmacyData = [
       "Clamovet es un antibiótico de amplio espectro para mascotas, eficaz en el tratamiento de infecciones bacterianas, incluyendo aquellas resistentes a la amoxicilina sola, gracias al ácido clavulánico.",
     price: "S/ 2.50",
     image:
-      "https://www.miau.pe/cdn/shop/files/CLAMOVET-250_grande.jpg?v=1689720374",
+      "https://pharmivet.pe/10563-large_default/clamovet-250-mg-x-40-tab.jpg",
     category: "Antibióticos",
-  },
-  {
-    id: 493,
-    name: "Inmunol",
-    description:
-      "Inmunol es un inmunoestimulante para mascotas, que ayuda a fortalecer el sistema inmunitario, aumentando la resistencia a infecciones y mejorando la vitalidad general, especialmente en periodos de convalecencia.",
-    price: "S/ 53.50",
-    category: "Suplementos",
   },
   {
     id: 494,
@@ -881,8 +932,7 @@ export const pharmacyData = [
     description:
       "Micopet Tab (Ketoconazol) 200 Gr es un antifúngico oral para mascotas, eficaz en el tratamiento de infecciones fúngicas de la piel, pelo y uñas, así como sistémicas causadas por hongos sensibles.",
     price: "S/ 2.00",
-    image:
-      "https://gezanipe.vtexassets.com/arquivos/ids/161999/66196898763060.jpg?v=638556344390470000",
+    image: "https://mascota.pe/wp-content/uploads/2024/12/MICOPET-CAJA.jpg",
     category: "Medicamentos",
   },
   {
@@ -920,7 +970,7 @@ export const pharmacyData = [
       "Tramadol Gotas es un analgésico opioide para mascotas, indicado para el manejo del dolor moderado a severo, tanto agudo como crónico, proporcionando alivio eficaz y mejorando la calidad de vida.",
     price: "S/ 68.00",
     image:
-      "https://www.miau.pe/cdn/shop/files/Pack-TRAMADOL-gotas_1200x1200.jpg?v=1691800682",
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw25d407a0/images/john-martin-tramadol-gotas-x-10ml.jpg",
     category: "Medicamentos",
   },
   {
@@ -930,7 +980,7 @@ export const pharmacyData = [
       "Bactrina Tab es un antibiótico de amplio espectro en tabletas para mascotas, eficaz en el tratamiento de diversas infecciones bacterianas en el tracto respiratorio, urinario y gastrointestinal.",
     price: "S/ 2.50",
     image:
-      "https://gezanipe.vtexassets.com/arquivos/ids/161990-800-auto?v=638556339849930000&width=800&height=auto&aspect=true",
+      "https://media.falabella.com/falabellaPE/126706700_01/w=1500,h=1500,fit=pad",
     category: "Antibióticos",
   },
   {
@@ -944,29 +994,19 @@ export const pharmacyData = [
     category: "Medicamentos",
   },
   {
-    id: 326,
-    name: "Salaris 180Ml",
-    description:
-      "Aceite de Salmón Noruego premium para perros y gatos. Rico en Omega 3, 6 y 9 para piel sana, pelaje brillante, inmunidad fuerte y desarrollo cerebral óptimo.",
-    price: "S/ 49.50",
-    image:
-      "https://www.totalpet.pe/archivos/producto/290-salaris-180-ml-principal.webp",
-    category: "Suplementos",
-  },
-  {
     id: 548,
     name: "Shampoo para Mascotas",
     description:
       "Explora nuestra línea de shampoos especializados para el cuidado de tu mascota. Desde fórmulas medicadas hasta opciones 2 en 1 y antipulgas, encuentra la solución perfecta para mantener la piel y el pelaje de tu compañero saludable y brillante.",
-    price: "S/ 30.00", // Puedes establecer un precio base o el de la variante más económica
+    price: "S/ 30.00",
     image:
-      "https://dojiw2m9tvv09.cloudfront.net/27184/product/vetlinex-shampoo-triple-a-300-ml2170.png", // Imagen representativa de la categoría o el primer shampoo
+      "https://dojiw2m9tvv09.cloudfront.net/27184/product/vetlinex-shampoo-triple-a-300-ml2170.png",
     category: "Medicamentos",
     variants: [
       {
         id: "548-01",
         type: "Medicado Triple A",
-        volume: "300 ml", // Agregué un campo para el volumen, si aplica
+        volume: "300 ml",
         description:
           "Shampoo Medicado Triple A es un champú dermatológico completo para mascotas con una triple acción: antibacteriana, antifúngica y antiparasitaria. Formulado para tratar eficazmente diversas afecciones de la piel y el pelaje, aliviando irritaciones, picazón y ayudando a restaurar la salud dérmica de tu mascota. Ideal para condiciones cutáneas complejas.",
         price: "S/ 30.00",
@@ -1104,21 +1144,33 @@ export const pharmacyData = [
   },
   {
     id: 602,
-    name: "Ubresan 100 Gr",
+    name: "Ubresan Crema Tópica",
     description:
-      "Ubresan 100 Gr es una crema o ungüento para uso tópico en mascotas, diseñado para aliviar inflamaciones y dolores en la piel. Ideal para tratar irritaciones cutáneas o pequeñas heridas.",
+      "Ubresan es una crema o ungüento de uso tópico diseñado para aliviar eficazmente inflamaciones, dolores e irritaciones cutáneas en tus mascotas. Su fórmula contribuye a la recuperación de la piel en pequeñas heridas o afecciones cutáneas. Ideal para tener en el botiquín de tu hogar.",
     price: "S/ 11.50",
-    image: "https://fertisem.pe/wp-content/uploads/2023/03/Ubresan-cojin.webp",
+    image:
+      "https://montanaweb-bucket.s3.amazonaws.com/web/products/1081/20001148.jpg",
     category: "Medicamentos",
-  },
-  {
-    id: 603,
-    name: "Ubresan 200 Gr",
-    description:
-      "Ubresan 200 Gr es una crema o ungüento para uso tópico en mascotas, ideal para aliviar inflamaciones y dolores cutáneos en un formato de mayor tamaño. Proporciona alivio y cuidado para la piel.",
-    price: "S/ 30.00",
-    image: "https://fertisem.pe/wp-content/uploads/2023/03/Ubresan-cojin.webp",
-    category: "Medicamentos",
+    variants: [
+      {
+        id: "602-01",
+        weight: "100 Gr",
+        description:
+          "Ubresan 100 Gr es una crema o ungüento para uso tópico en mascotas, diseñado para aliviar inflamaciones y dolores en la piel. Ideal para tratar irritaciones cutáneas o pequeñas heridas, proporcionando un cuidado local efectivo.",
+        price: "S/ 11.50",
+        image:
+          "https://montanaweb-bucket.s3.amazonaws.com/web/products/1081/20001148.jpg",
+      },
+      {
+        id: "602-02",
+        weight: "200 Gr",
+        description:
+          "Ubresan 200 Gr es una crema o ungüento para uso tópico en mascotas, ideal para aliviar inflamaciones y dolores cutáneos en un formato de mayor tamaño. Proporciona alivio y cuidado para la piel, siendo una opción económica para un uso más frecuente.",
+        price: "S/ 30.00",
+        image:
+          "https://montanaweb-bucket.s3.amazonaws.com/web/products/1081/20001148.jpg",
+      },
+    ],
   },
   {
     id: 609,
@@ -1126,7 +1178,7 @@ export const pharmacyData = [
     description:
       "Prednovet Comprimido es un antiinflamatorio esteroideo para mascotas, indicado para el tratamiento de diversas condiciones inflamatorias y alérgicas. Ayuda a reducir el dolor y la hinchazón.",
     price: "S/ 3.50",
-    image: "https://www.petsland.pe/assets/img/store/149.webp",
+    image: "https://veterstore.com/wp-content/uploads/2023/03/MV000107_1.jpg",
     category: "Medicamentos",
   },
   {
@@ -1160,72 +1212,97 @@ export const pharmacyData = [
   },
   {
     id: 879,
-    name: "Nexgard 4kg-10Kg",
+    name: "Nexgard Tableta Masticable para Perros",
     description:
-      "Nexgard para perros de 4 a 10 kg es una tableta masticable mensual deliciosa que elimina eficazmente pulgas y garrapatas, brindando protección externa.",
+      "Nexgard es una tableta masticable mensual altamente palatable que protege a tu perro de pulgas y garrapatas de forma efectiva. Su acción rápida y duradera elimina estos parásitos, previniendo infestaciones y las enfermedades que transmiten. Disponible en diferentes presentaciones según el rango de peso de tu mascota.",
     price: "S/ 70.00",
-    image: "https://dojiw2m9tvv09.cloudfront.net/27184/product/nepe022948.jpg",
-    category: "Antipulgas",
-  },
-  {
-    id: 689,
-    name: "Nexgard 25kg - 50Kg",
-    description:
-      "Nexgard para perros de 25 a 50 kg es una tableta masticable que ofrece protección mensual contra pulgas y garrapatas. Fácil de administrar y altamente efectiva para mantener a tu mascota protegida.",
-    price: "S/ 85.00",
     image:
-      "https://gopet.vtexassets.com/arquivos/ids/172139/20201312_1.jpg?v=638947871465400000",
+      "https://aculi.pe/wp-content/uploads/2020/11/nexgard-acu-li-pet-shop-antiparasitario-desparasitante-externo-antipulgas-antigarrapatas.jpg",
     category: "Antipulgas",
+    variants: [
+      {
+        id: "879-01",
+        weightRange: "4 - 10 Kg",
+        description:
+          "Nexgard para perros de 4 a 10 kg es una tableta masticable mensual deliciosa que elimina eficazmente pulgas y garrapatas, brindando protección externa continua y fácil de administrar.",
+        price: "S/ 70.00",
+        image:
+          "https://gopet.vtexassets.com/arquivos/ids/172143/20201310_1.jpg?v=638947871756800000",
+      },
+      {
+        id: "879-02",
+        weightRange: "25 - 50 Kg",
+        description:
+          "Nexgard para perros de 25 a 50 kg es una tableta masticable mensual que ofrece protección robusta contra pulgas y garrapatas. Fácil de administrar y altamente efectiva para mantener a tu mascota protegida de forma integral.",
+        price: "S/ 85.00",
+        image:
+          "https://gopet.vtexassets.com/arquivos/ids/172139/20201312_1.jpg?v=638947871465400000",
+      },
+    ],
   },
   {
     id: 696,
-    name: "Seresto Hasta 8 Kg",
+    name: "Collar Seresto para Perros y Gatos",
     description:
-      "Seresto para perros y gatos de hasta 8 kg es un collar antiparasitario de larga duración (hasta 8 meses) que protege eficazmente contra pulgas y garrapatas, ideal para una protección continua.",
+      "El collar Seresto ofrece hasta 8 meses de protección continua y eficaz contra pulgas y garrapatas para tu mascota. Su tecnología innovadora libera los principios activos de forma controlada, garantizando un escudo protector duradero y seguro. Ideal para una prevención prolongada y sin preocupaciones.",
     price: "S/ 220.00",
     image:
-      "https://mascotify.pe/wp-content/uploads/2021/05/Bayer-Seresto-Collar-antipulgas-antigarrapatas-perros-y-gatos-hasta-8kg.png",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn_cD1PYDZ8pp7I7KBv2LlvC8i4H6AutKghg&s",
     category: "Antipulgas",
-  },
-  {
-    id: 339,
-    name: "Floraviva 12 Cepas",
-    description:
-      "Probiótico con 12 cepas beneficiosas para perros y gatos. Promueve la salud intestinal, fortalece el sistema inmunológico y ayuda en periodos de estrés o cambios dietéticos.",
-    price: "S/ 38.00",
-    image:
-      "https://www.agrovetmarket.com/uploads/producto_ficha_view/floraviva-12-cepas-pasta.jpg",
-    category: "Suplementos",
-  },
-  {
-    id: 697,
-    name: "Seresto Mas De 8 Kg",
-    description:
-      "Seresto para perros de más de 8 kg es un collar antiparasitario que ofrece hasta 8 meses de protección continua contra pulgas y garrapatas, manteniendo a tu perro grande seguro y libre de parásitos.",
-    price: "S/ 250.00",
-    image:
-      "https://mascotify.pe/wp-content/uploads/2021/05/Bayer-Seresto-Collar-antipulgas-antigarrapatas-perros-de-mas-de-8kg.png",
-    category: "Antipulgas",
+    variants: [
+      {
+        id: "696-01",
+        type: "Perros y Gatos",
+        weightRange: "Hasta 8 Kg",
+        description:
+          "Seresto para perros y gatos de hasta 8 kg es un collar antiparasitario de larga duración (hasta 8 meses) que protege eficazmente contra pulgas y garrapatas. Proporciona una protección continua y es resistente al agua, ideal para mantener a tu mascota pequeña segura y libre de parásitos.",
+        price: "S/ 220.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2021/05/Bayer-Seresto-Collar-antipulgas-antigarrapatas-perros-y-gatos-hasta-8kg.png",
+      },
+      {
+        id: "696-02",
+        type: "Perros",
+        weightRange: "Más de 8 Kg",
+        description:
+          "Seresto para perros de más de 8 kg es un collar antiparasitario que ofrece hasta 8 meses de protección continua contra pulgas y garrapatas. Mantiene a tu perro grande seguro y libre de parásitos, con una fórmula resistente al agua que no pierde eficacia.",
+        price: "S/ 250.00",
+        image:
+          "https://mascotify.pe/wp-content/uploads/2021/05/Bayer-Seresto-Collar-antipulgas-antigarrapatas-perros-de-mas-de-8kg.png",
+      },
+    ],
   },
   {
     id: 699,
-    name: "Credelio 0,5 Kg - 2 Kg",
+    name: "Credelio Antipulgas Felino",
     description:
-      "Credelio para gatos de 0,5 a 2 kg es una tableta masticable mensual que combate eficazmente pulgas y garrapatas, ofreciendo una protección confiable para gatitos y gatos pequeños.",
+      "Credelio es una tableta masticable mensual altamente efectiva que protege a tu gato contra pulgas y garrapatas. Su acción rápida y prolongada asegura que tu felino esté libre de estos parásitos, contribuyendo a su salud y bienestar. Disponible en presentaciones adecuadas para diferentes rangos de peso.",
     price: "S/ 45.00",
     image:
-      "https://www.provetsa.com/storage/media/2599/conversions/2798-detail.jpg",
+      "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/3effb21d-d612-4b48-8ab4-4f5aa4c285c2/MEX_PET_Credelio_Group_850_850_MiMascota_Gatos.png",
     category: "Antipulgas",
-  },
-  {
-    id: 698,
-    name: "Credelio 2Kg - 8Kg",
-    description:
-      "Credelio para gatos de 2 a 8 kg es una tableta masticable mensual que elimina pulgas y garrapatas de forma rápida y efectiva, brindando una protección segura y prolongada para tu felino de tamaño mediano a grande.",
-    price: "S/ 50.00",
-    image:
-      "https://gezanipe.vtexassets.com/arquivos/ids/168814/76063731613198.jpg?v=638967487237300000",
-    category: "Antipulgas",
+    variants: [
+      {
+        id: "699-01",
+        weightRange: "0.5 - 2 Kg",
+        type: "Gatos Pequeños",
+        description:
+          "Credelio para gatos de 0.5 a 2 kg es una tableta masticable mensual que combate eficazmente pulgas y garrapatas, ofreciendo una protección confiable para gatitos y gatos pequeños. De fácil administración y acción rápida.",
+        price: "S/ 45.00",
+        image:
+          "https://www.provetsa.com/storage/media/2599/conversions/2798-detail.jpg",
+      },
+      {
+        id: "699-02",
+        weightRange: "2 - 8 Kg",
+        type: "Gatos Medianos a Grandes",
+        description:
+          "Credelio para gatos de 2 a 8 kg es una tableta masticable mensual que elimina pulgas y garrapatas de forma rápida y efectiva, brindando una protección segura y prolongada para tu felino de tamaño mediano a grande.",
+        price: "S/ 50.00",
+        image:
+          "https://gezanipe.vtexassets.com/arquivos/ids/168814/76063731613198.jpg?v=638967487237300000",
+      },
+    ],
   },
   {
     id: 714,
@@ -1234,7 +1311,7 @@ export const pharmacyData = [
       "Cefavet Flow Jga X10Ml es un antibiótico de amplio espectro para mascotas, presentado en jeringa para una fácil administración. Ideal para el tratamiento de infecciones bacterianas en diversas partes del cuerpo.",
     price: "S/ 25.00",
     image:
-      "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_019769/tienda_019769_e35493f16cd644ca941a2598951f165835e8c2ef_producto_large_90.jpg",
+      "https://maskotas.pe/485-large_default/cefavet-flow-jeringa-10ml.jpg",
     category: "Antibióticos",
   },
   {
@@ -1273,7 +1350,8 @@ export const pharmacyData = [
     description:
       "Bioline (Flea y Tick) es una solución efectiva para el control de pulgas y garrapatas en mascotas. Este producto ayuda a eliminar los parásitos y prevenir reinfestaciones, manteniendo a tu animal protegido.",
     price: "S/ 22.50",
-    image: "https://m.media-amazon.com/images/I/51-Z5BsFLbL.jpg",
+    image:
+      "https://onepetrix.com/cdn/shop/products/64_aa5beb22-ae9e-46e0-a4f8-2459ee639801_780x825_crop_center.png?v=1651226989",
     category: "Antipulgas",
   },
   {
@@ -1303,7 +1381,7 @@ export const pharmacyData = [
       "Atrevia One Mini es una tableta masticable de una sola dosis para perros pequeños, que ofrece protección rápida y efectiva contra pulgas y garrapatas. Conveniente y fácil de administrar.",
     price: "S/ 40.00",
     image:
-      "https://images.rappi.pe/products/1730758230755_1730758228082_1730758227481.png",
+      "https://mascotify.pe/wp-content/uploads/2022/12/ATREVIA-ONE-Mini-50mg-Perros-de-2-5-a-5kg.png",
     category: "Antipulgas",
   },
   {
@@ -1313,36 +1391,38 @@ export const pharmacyData = [
       "Crema 6A es un tratamiento tópico para mascotas, ideal para afecciones dermatológicas como inflamación, picazón y dermatitis, con acción antibacteriana y antimicótica.",
     price: "S/ 36.50",
     image:
-      "https://static.wixstatic.com/media/39d263_d53ad465a3cf4e6991993a4000d448a9~mv2.png/v1/fill/w_560,h_560,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/39d263_d53ad465a3cf4e6991993a4000d448a9~mv2.png",
+      "https://dojiw2m9tvv09.cloudfront.net/59803/product/crema-6a3288.jpg",
     category: "Medicamentos",
   },
   {
     id: 765,
-    name: "Ketovet 10Mg x Unidad",
+    name: "Ketovet (Ketoprofeno)",
     description:
-      "Ketovet 10mg es un antiinflamatorio no esteroideo (AINE) para mascotas, ideal para aliviar el dolor, la inflamación y la fiebre en diversas condiciones musculoesqueléticas y postoperatorias.",
+      "Ketovet es un antiinflamatorio no esteroideo (AINE) a base de Ketoprofeno, indicado para aliviar el dolor, la inflamación y la fiebre en perros y gatos. Es útil en diversas condiciones musculoesqueléticas, postoperatorias y traumas. Siempre debe ser administrado bajo prescripción y supervisión veterinaria.",
     price: "S/ 1.50",
     image:
       "https://mascota.pe/wp-content/uploads/2025/01/Ketovet-10-Blister.jpg",
     category: "Medicamentos",
-  },
-  {
-    id: 766,
-    name: "Ketovet 20Mg x Unidad",
-    description:
-      "Ketovet 20mg es un antiinflamatorio no esteroideo (AINE) de mayor concentración para mascotas, proporcionando un alivio eficaz del dolor y la inflamación en casos más severos o en animales de mayor tamaño.",
-    price: "S/ 2.50",
-    image:
-      "https://mascota.pe/wp-content/uploads/2025/01/Ketovet-20-Blister.jpg",
-    category: "Medicamentos",
-  },
-  {
-    id: 767,
-    name: "Ectomethrin 20Ml",
-    description:
-      "Ectomethrin 20ml es un potente ectoparasiticida para mascotas, formulado para eliminar y controlar pulgas, garrapatas y ácaros. Protege a tu animal de infestaciones externas de forma efectiva.",
-    price: "S/ 13.00",
-    category: "Antipulgas",
+    variants: [
+      {
+        id: "765-01",
+        dose: "10 Mg",
+        description:
+          "Ketovet 10 Mg es un antiinflamatorio no esteroideo (AINE) para mascotas, ideal para aliviar el dolor leve a moderado, la inflamación y la fiebre en diversas condiciones musculoesqueléticas y postoperatorias. Adecuado para animales de menor peso o según indicación veterinaria.",
+        price: "S/ 1.50",
+        image:
+          "https://mascota.pe/wp-content/uploads/2025/01/Ketovet-10-Blister.jpg",
+      },
+      {
+        id: "765-02",
+        dose: "20 Mg",
+        description:
+          "Ketovet 20 Mg es un antiinflamatorio no esteroideo (AINE) de mayor concentración, proporcionando un alivio eficaz del dolor y la inflamación en casos más severos, condiciones crónicas o en animales de mayor tamaño. Su uso debe ser siempre bajo prescripción y seguimiento veterinario.",
+        price: "S/ 2.50",
+        image:
+          "https://mascota.pe/wp-content/uploads/2025/01/Ketovet-20-Blister.jpg",
+      },
+    ],
   },
   {
     id: 768,
@@ -1353,36 +1433,6 @@ export const pharmacyData = [
     image: "https://www.petsland.pe/assets/img/store/424.webp?1729705140",
     category: "Suplementos",
   },
-  // {
-  //   id: 773,
-  //   name: "Test/ Snap (Pet Care ) Pif Felino",
-  //   description:
-  //     "El Test/Snap (Pet Care) PIF Felino es una prueba rápida para detectar el Virus de la Peritonitis Infecciosa Felina, una herramienta crucial para el diagnóstico temprano y el manejo de esta enfermedad en gatos.",
-  //   price: "S/ 120.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
-  // {
-  //   id: 774,
-  //   name: "Test / Snart (Pet Care) Distemprer",
-  //   description:
-  //     "El Test/Snap (Pet Care) Distemper es una prueba rápida para la detección del virus del moquillo canino, permitiendo un diagnóstico temprano y fundamental para el tratamiento y control de esta enfermedad grave en perros.",
-  //   price: "S/ 130.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
-  // {
-  //   id: 775,
-  //   name: "Test / Snap (Pet Care )Leptospira",
-  //   description:
-  //     "El Test/Snap (Pet Care) Leptospira es una prueba rápida para la detección de la bacteria Leptospira en mascotas, crucial para un diagnóstico temprano y el tratamiento de la leptospirosis, una enfermedad zoonótica importante.",
-  //   price: "S/ 110.00",
-  //   image:
-  //     "https://images.unsplash.com/photo-1596272875729-ed2ff7d6d9c5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-  //   category: "Medicamentos",
-  // },
   {
     id: 878,
     name: "Atrevia Trio Cats Spot On Medium (2.6-6.25Kg)",
@@ -1401,7 +1451,7 @@ export const pharmacyData = [
       "Relay C Comprimido es un medicamento para mascotas diseñado para el apoyo de la función renal y cardiovascular. Ayuda a mejorar la circulación y a reducir la retención de líquidos en animales con problemas cardíacos.",
     price: "S/ 18.00",
     image:
-      "https://gezanipe.vtexassets.com/arquivos/ids/162694/68486309688720.jpg?v=638594220664000000",
+      "https://doctorpet.co/wp-content/uploads/2025/03/3125-thickbox_default-Relay-C-x-Tab.jpg",
     category: "Medicamentos",
   },
   {
@@ -1411,7 +1461,7 @@ export const pharmacyData = [
       "Artrin Comprimidos es un condroprotector para mascotas, formulado para proteger y regenerar el cartílago articular. Ideal para animales con artrosis, problemas articulares o en recuperación de lesiones.",
     price: "S/ 3.50",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrOJNUThDjYXBLFIOvdEhj6uJW0_TT1FaOsg&s",
+      "https://clinicaveterinariasantodomingomala.com/wp-content/uploads/2024/03/artrin.png",
     category: "Suplementos",
   },
   {
@@ -1441,7 +1491,7 @@ export const pharmacyData = [
       "Labyderm Premium Cover Spot On es una loción dérmica para mascotas que restaura la barrera cutánea, hidrata la piel y reduce la irritación, ideal para pieles sensibles o con problemas dermatológicos.",
     price: "S/ 55.00",
     image:
-      "https://petsplaceperu.com/wp-content/uploads/2021/07/LABYDERM-premiun-cover-scaled.jpg",
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw0ccb8f64/images/labyes-labyderm-premium-cover-x4ml.jpg",
     category: "Medicamentos",
   },
   {
@@ -1451,7 +1501,7 @@ export const pharmacyData = [
       "Felovite II es un suplemento vitamínico y mineral en pasta para gatos, que proporciona nutrientes esenciales para la energía, el apetito y un pelaje saludable, ideal para gatos exigentes o convalecientes.",
     price: "S/ 55.00",
     image:
-      "https://petsplaceperu.com/wp-content/uploads/2021/07/FELOVITE-scaled.jpg",
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw9190cb9c/images/vetoquinol-felovite-ii-with-taurine-x-25-oz.jpg",
     category: "Suplementos",
   },
   {
@@ -1461,7 +1511,7 @@ export const pharmacyData = [
       "Cefavet Flow 20ml es un antibiótico de amplio espectro en suspensión oral, ideal para el tratamiento de diversas infecciones bacterianas en mascotas. Su presentación líquida facilita la dosificación y administración.",
     price: "S/ 30.00",
     image:
-      "https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_019769/tienda_019769_1007e7b3e54c883302e7dcbfe9c34a2bca30f1e1_producto_large_90.jpg",
+      "https://maskotas.pe/485-large_default/cefavet-flow-jeringa-10ml.jpg",
     category: "Antibioticos",
   },
   {
@@ -1474,13 +1524,41 @@ export const pharmacyData = [
     category: "Antipulgas",
   },
   {
-    id: 962,
-    name: "Salaris Fco 350Ml",
+    id: 326,
+    name: "Aceite Salaris",
     description:
-      "Salaris Frasco 350ml es una solución electrolítica o nutricional, diseñada para rehidratar y reponer sales minerales en mascotas. Ideal para casos de deshidratación, diarrea o convalecencia.",
-    price: "S/ 85.00",
-    image:
-      "https://farmaciaveterinaria.pe/wp-content/uploads/2024/07/image-460120c18950450b98ca8e23f92f979b.webp",
+      "Descubre la línea de productos Salaris, que ofrece soluciones nutricionales y de bienestar para perros y gatos. Desde rehidratantes esenciales hasta suplementos ricos en Omega, Salaris apoya la salud integral de tu mascota.",
+    price: "S/ 49.50",
+    image: "https://maskotas.pe/1042-home_default/salaris-ad3e-180ml.jpg",
+    category: "Suplementos",
+    variants: [
+      {
+        id: "326-01",
+        type: "Aceite de Salmón",
+        volume: "180 ml",
+        description:
+          "Aceite de Salmón Noruego premium Salaris de 180ml, rico en Omega 3, 6 y 9 para piel sana, pelaje brillante, inmunidad fuerte y desarrollo cerebral óptimo.",
+        price: "S/ 49.50",
+        image: "https://maskotas.pe/1042-home_default/salaris-ad3e-180ml.jpg",
+      },
+      {
+        id: "326-02",
+        type: "Aceite de Salmón",
+        volume: "350 ml",
+        description:
+          "Aceite de Salmón Noruego premium Salaris de 350ml, rico en Omega 3, 6 y 9 para piel sana, pelaje brillante, inmunidad fuerte y desarrollo cerebral óptimo.",
+        price: "S/ 85.00",
+        image: "https://maskotas.pe/1042-home_default/salaris-ad3e-180ml.jpg",
+      },
+    ],
+  },
+  {
+    id: 339,
+    name: "Floraviva 12 Cepas",
+    description:
+      "Probiótico con 12 cepas beneficiosas para perros y gatos. Promueve la salud intestinal, fortalece el sistema inmunológico y ayuda en periodos de estrés o cambios dietéticos.",
+    price: "S/ 38.00",
+    image: "https://shop.agrovetmarket.com/4864/floraviva12-cepas-pasta.jpg",
     category: "Suplementos",
   },
 ];
