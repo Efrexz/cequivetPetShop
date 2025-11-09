@@ -37,7 +37,7 @@ export const pharmacyData = [
           "Pipeta antiparasitaria Vantaggio para perros de 2 a 4 kg. Proporciona un tratamiento y control efectivo de infestaciones por pulgas, piojos y garrapatas. Posee acción repelente contra garrapatas, moscas, mosquitos y flebótomos, ayudando a prevenir enfermedades transmitidas por vectores. Es también un componente útil en el manejo de la dermatitis alérgica por picadura de pulgas (DAPP).",
         price: "S/ 18.00",
         image:
-          "https://mascotify.pe/wp-content/uploads/2023/10/Vantaggio-2-a-4-kg-0-5ml-Pipeta-antipulgas-para-perros.jpg",
+          "https://gopet.vtexassets.com/arquivos/ids/169038/Vantaggio-2-4-kg-go-pet.jpg.jpg?v=638815659003030000",
       },
       {
         id: "330-02",
@@ -750,7 +750,7 @@ export const pharmacyData = [
           "Tableta Proteggo para perros de 4.5 a 10 kg, brindando 3 meses de protección contra pulgas, garrapatas y acaros. Su fórmula de amplio espectro asegura el bienestar y la salud de tu mascota a largo plazo.",
         price: "S/ 120.00",
         image:
-          "https://dojiw2m9tvv09.cloudfront.net/27184/product/4-5-10-kg8146.jpg",
+          "https://promart.vteximg.com.br/arquivos/ids/8522040/image-3e4bd8f62b724aafb651742cb5ef429b.jpg?v=638709254588600000",
       },
       {
         id: "928-03",
@@ -912,7 +912,8 @@ export const pharmacyData = [
     description:
       "Xelamec Spot On para perros de hasta 2.5 kg es un antiparasitario externo de aplicación tópica, que protege contra pulgas, garrapatas, ácaros y parásitos internos como gusanos del corazón.",
     price: "S/ 28.00",
-    image: "https://shop.agrovetmarket.com/2920/xelamec-combi-spot-on.jpg",
+    image:
+      "https://gatuario.com/wp-content/uploads/2021/04/XELAMEC-HASTA-2.5KG.jpg",
     category: "Antipulgas",
   },
   {
@@ -1391,7 +1392,7 @@ export const pharmacyData = [
       "Crema 6A es un tratamiento tópico para mascotas, ideal para afecciones dermatológicas como inflamación, picazón y dermatitis, con acción antibacteriana y antimicótica.",
     price: "S/ 36.50",
     image:
-      "https://dojiw2m9tvv09.cloudfront.net/59803/product/crema-6a3288.jpg",
+      "https://dojiw2m9tvv09.cloudfront.net/27184/product/crema-6a-30-g2221.jpg",
     category: "Medicamentos",
   },
   {
@@ -1520,7 +1521,7 @@ export const pharmacyData = [
     description:
       "Xelamec Spot On para mascotas de 2.6 a 5 kg es una pipeta de aplicación tópica que protege eficazmente contra parásitos externos como pulgas, garrapatas y ácaros, así como algunos internos. Fácil y cómoda de usar.",
     price: "S/ 32.00",
-    image: "https://shop.agrovetmarket.com/2924/xelamec-spot-on.jpg",
+    image: "https://shop.agrovetmarket.com/2919/xelamec-combi-spot-on.jpg",
     category: "Antipulgas",
   },
   {

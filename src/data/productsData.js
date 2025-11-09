@@ -65,7 +65,7 @@ export const foodProducts = [
           "Alimento húmedo Hills Prescription Diet Gastro Biome con pollo y vegetales, diseñado para perros con trastornos gastrointestinales, promueve un microbioma intestinal saludable y ayuda a la regularidad digestiva.",
         price: "S/ 27.10",
         image:
-          "https://static-shop.vivapets.com/media/catalog/product/cache/11fc96e7318a291175a0004e054be56e/5/2/52742037950_1.png",
+          "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw433a2cc3/images/AP001494-1.webp",
       },
       {
         id: "556-07",
@@ -105,7 +105,7 @@ export const foodProducts = [
           "Lata Hill's Science Diet Puppy con pollo, un alimento húmedo para cachorros que favorece su crecimiento y desarrollo saludable con proteínas de alta calidad y nutrientes esenciales.",
         price: "S/ 20.00",
         image:
-          "https://images.rappi.pe/products/1692998311387_1692998308526_1692998319194.jpg",
+          "https://mascotaveloz.pe/wp-content/uploads/2020/02/MV000580_1.jpg",
       },
     ],
   },
@@ -128,7 +128,7 @@ export const foodProducts = [
           "Alimento de recuperación altamente energético y digestible Hills Prescription Diet A/D, ideal para perros y gatos convalecientes, anoréxicos o con bajo peso. Diseñado para apoyar la recuperación nutricional de tu mascota.",
         price: "S/ 24.00",
         image:
-          "https://naricitas.pet/wp-content/uploads/2023/07/Hills-PD-Lata-Canine-Feline-ad-Cuidados-Urgentes-156Gr-scaled-1.jpeg",
+          "https://gatuario.com/wp-content/uploads/2020/02/PD-CANINEFELINE-AD-LATA.png",
       },
       {
         id: "424-02",
@@ -138,7 +138,7 @@ export const foodProducts = [
           "Lata Hills Prescription Diet i/d Low Fat, formulada específicamente para perros con trastornos digestivos que requieren una dieta baja en grasas y de fácil digestión. Ayuda a controlar la pancreatitis y otras sensibilidades gastrointestinales.",
         price: "S/ 16.00",
         image:
-          "https://petlover.pe/cdn/shop/products/PHL-LFAT.png?v=1654795271",
+          "https://perupets.com/757-large_default/hills-prescription-diet-id-low-fat-canine-55-oz-estofado.jpg",
       },
     ],
   },
@@ -154,16 +154,6 @@ export const foodProducts = [
     weight: "156 Gr",
     variants: [
       {
-        id: "425-01",
-        type: "Digestión",
-        weight: "156 Gr",
-        description:
-          "Alimento húmedo Hills Prescription Diet I/D para gatos con problemas digestivos. Formulada para una fácil digestión y contribuye a la salud gastrointestinal de tu felino, ayudando en casos de diarrea o vómitos.",
-        price: "S/ 24.00",
-        image:
-          "https://petshopdelivery.pe/4280-large_default/hills-lata-id-feline-156-gramos.jpg",
-      },
-      {
         id: "425-02",
         type: "Cuidado Renal",
         weight: "156 Gr",
@@ -171,17 +161,7 @@ export const foodProducts = [
           "Alimento húmedo Hills Prescription Diet K/D para gatos con enfermedad renal. Ayuda a proteger la función renal de tu felino, reduce la carga sobre los riñones y mejora su calidad de vida.",
         price: "S/ 24.00",
         image:
-          "https://naricitas.pet/wp-content/uploads/2023/07/hills-lata-feline-cuidado-renal-156gr-1.jpg",
-      },
-      {
-        id: "425-03",
-        type: "Cuidado Urinario",
-        weight: "156 Gr",
-        description:
-          "Alimento húmedo Hills Prescription Diet C/D para gatos con afecciones urinarias. Ayuda a mantener la salud de la vejiga, previene la formación de cristales urinarios y reduce la recurrencia de problemas del tracto urinario inferior felino.",
-        price: "S/ 24.50",
-        image:
-          "https://dojiw2m9tvv09.cloudfront.net/27184/product/hills-pd-feline-cd-multicare-con-pescado-de-mar-156-gr5091.png",
+          "https://gatuario.com/wp-content/uploads/2020/02/PD-FELINE-KD-LATA.png",
       },
       {
         id: "425-04",
@@ -192,7 +172,7 @@ export const foodProducts = [
           "Lata Hills Science Diet Adulto de salmón para gatos, una opción deliciosa y nutritiva para el mantenimiento diario. Aporta ácidos grasos Omega para una piel sana y un pelaje brillante, y proteínas de alta calidad.",
         price: "S/ 22.00",
         image:
-          "https://mascotify.pe/wp-content/uploads/2022/12/Hills-SD-Feline-Adult-Salmon-x-156gr-Alimento-humedo-para-gatos-adultos.png",
+          "https://i5.walmartimages.com/seo/Hill-s-Science-Diet-Savory-Salmon-Wet-Cat-Food-5-5oz-Can-24pk_a321f3f6-6953-4bdd-b952-262c9fcdefbf.c195ebe6285e5a327514295c90d0e646.jpeg",
       },
       {
         id: "425-05",
@@ -203,7 +183,7 @@ export const foodProducts = [
           "Lata Hills Science Diet Kitten con pavo para gatitos. Un alimento húmedo formulado para el crecimiento y desarrollo saludable de los más pequeños, con nutrientes esenciales para huesos, músculos y energía.",
         price: "S/ 22.00",
         image:
-          "https://mascotify.pe/wp-content/uploads/2025/03/Hills-SD-Kitten-Turkey-Savory-x-156gr-alimento-para-gatitos.jpg",
+          "https://www.miau.pe/cdn/shop/files/HILLSPAVOLATAKITTEN_grande.png?v=1752093207",
       },
       {
         id: "425-06",
@@ -213,7 +193,27 @@ export const foodProducts = [
           "Alimento de recuperación altamente energético y digestible Hills Prescription Diet A/D, ideal para perros y gatos convalecientes, anoréxicos o con bajo peso. Diseñado para apoyar la recuperación nutricional de tu mascota.",
         price: "S/ 24.00",
         image:
-          "https://naricitas.pet/wp-content/uploads/2023/07/Hills-PD-Lata-Canine-Feline-ad-Cuidados-Urgentes-156Gr-scaled-1.jpeg",
+          "https://gatuario.com/wp-content/uploads/2020/02/PD-CANINEFELINE-AD-LATA.png",
+      },
+      {
+        id: "425-03",
+        type: "Cuidado Urinario",
+        weight: "156 Gr",
+        description:
+          "Alimento húmedo Hills Prescription Diet C/D para gatos con afecciones urinarias. Ayuda a mantener la salud de la vejiga, previene la formación de cristales urinarios y reduce la recurrencia de problemas del tracto urinario",
+        price: "S/ 24.50",
+        image:
+          "https://www.farmaciaveterinaria.com/5759-large_default/hill-s-prescription-diet-cd-feline-lata.jpg",
+      },
+      {
+        id: "425-01",
+        type: "Digestión",
+        weight: "156 Gr",
+        description:
+          "Alimento húmedo Hills Prescription Diet I/D para gatos con problemas digestivos. Formulada para una fácil digestión y contribuye a la salud gastrointestinal de tu felino, ayudando en casos de diarrea o vómitos.",
+        price: "S/ 24.00",
+        image:
+          "https://www.veterinariaprovidencia.cl/298-large_default/hills-id-feline-lata-156-gr.jpg",
       },
     ],
   },
@@ -291,7 +291,7 @@ export const foodProducts = [
       "Delicioso pouch de salmón para gatos, un complemento húmedo que les encanta y es ideal para hidratarlos y variar su dieta.",
     price: "S/ 3.50",
     image:
-      "https://plazavea.vteximg.com.br/arquivos/ids/347689-450-450/20191503.jpg?v=637292458878970000",
+      "https://media.falabella.com/sodimacPE/3854299_01/w=1500,h=1500,fit=pad",
     category: "Ricocan",
   },
   {
@@ -316,17 +316,6 @@ export const foodProducts = [
           "https://wongfood.vtexassets.com/arquivos/ids/693032-800-auto?v=638449005729600000&width=800&height=auto&aspect=true",
       },
       {
-        id: "480-02",
-        type: "Paté Adulto",
-        flavor: "Carne",
-        weight: "180 Gr",
-        description:
-          "Sabroso paté Ricocat con sabor a carne para gatos adultos, una opción irresistible que les aporta proteínas de alta calidad y nutrientes esenciales para su vitalidad.",
-        price: "S/ 6.50",
-        image:
-          "https://plazavea.vteximg.com.br/arquivos/ids/27013808-418-418/20356998.jpg",
-      },
-      {
         id: "480-03",
         type: "Paté Adulto",
         flavor: "Atún y Pescado",
@@ -335,7 +324,18 @@ export const foodProducts = [
           "Paté Ricocat con atún y pescado para gatos adultos, una combinación deliciosa rica en Omega 3 para una piel sana, un pelaje brillante y el soporte de la función cardíaca.",
         price: "S/ 4.50",
         image:
-          "https://promart.vteximg.com.br/arquivos/ids/8946450/imageUrl_1.jpg?v=638863435756830000",
+          "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw622a7385/images/ricocat-atun-y-pescado-adulto-pate-lta-564-oz.jpg",
+      },
+      {
+        id: "480-02",
+        type: "Paté Adulto",
+        flavor: "Carne",
+        weight: "180 Gr",
+        description:
+          "Sabroso paté Ricocat con sabor a carne para gatos adultos, una opción irresistible que les aporta proteínas de alta calidad y nutrientes esenciales para su vitalidad.",
+        price: "S/ 6.50",
+        image:
+          "https://gopet.vtexassets.com/arquivos/ids/164598/Ricocat-gatitos-pate-pollo-carne-180-gr-go-pet.jpg?v=638490782854600000",
       },
       {
         id: "480-04",
@@ -379,7 +379,7 @@ export const foodProducts = [
           "Paté de hígado y pollo para gatos adultos, una fuente rica en vitaminas y minerales para mantener la vitalidad y salud de tu gato.",
         price: "S/ 6.90",
         image:
-          "https://plazavea.vteximg.com.br/arquivos/ids/347625-450-450/20189032.jpg?v=637292453931770000",
+          "https://goodpet.pe/cdn/shop/products/ADULTOS-HIGADO-Y-POLLO02.jpg?v=1604501470",
       },
     ],
   },
@@ -412,7 +412,7 @@ export const foodProducts = [
           "Alimento húmedo de Canbo para perros con Óptima Digestión, ideal para mascotas con estómagos sensibles o para complementar la dieta con una hidratación extra y nutrientes de fácil asimilación.",
         price: "S/ 12.90",
         image:
-          "https://plazavea.vteximg.com.br/arquivos/ids/31058182-450-450/imageUrl_1.jpg?v=638784812561300000",
+          "https://media.falabella.com/falabellaPE/129435479_01/w=800,h=800,fit=pad",
       },
       {
         id: "466-02",
@@ -425,16 +425,6 @@ export const foodProducts = [
           "https://gezanipe.vtexassets.com/arquivos/ids/166140/68184432274405.jpg?v=638864822879900000",
       },
       {
-        id: "466-03",
-        type: "Crecimiento y Desarrollo",
-        weight: "330 Gr",
-        description:
-          "Alimento húmedo completo Canbo para cachorros en etapa de Crecimiento y Desarrollo, con nutrientes esenciales para un desarrollo saludable de huesos, músculos y un sistema inmune fuerte.",
-        price: "S/ 12.90",
-        image:
-          "https://pharmivet.pe/5427-large_default/canbo-dog-pate-crecimiento-y-desarrollo-cach-lta-330-gr.jpg",
-      },
-      {
         id: "466-06",
         type: "Hipoalergenico Adulto",
         weight: "330 Gr",
@@ -443,6 +433,16 @@ export const foodProducts = [
         price: "S/ 13.90",
         image:
           "https://aculi.pe/wp-content/uploads/2020/11/canbo-hypoallergenic-acu-li-pet-shop-alimento-humedo-perro-adulto-hipoalergenico-1.png",
+      },
+      {
+        id: "466-03",
+        type: "Crecimiento y Desarrollo",
+        weight: "330 Gr",
+        description:
+          "Alimento húmedo completo Canbo para cachorros en etapa de Crecimiento y Desarrollo, con nutrientes esenciales para un desarrollo saludable de huesos, músculos y un sistema inmune fuerte.",
+        price: "S/ 12.90",
+        image:
+          "https://pharmivet.pe/5427-large_default/canbo-dog-pate-crecimiento-y-desarrollo-cach-lta-330-gr.jpg",
       },
       {
         id: "466-04",
@@ -462,7 +462,7 @@ export const foodProducts = [
           "Alimento húmedo de Canbo diseñado para la Recuperación y el Rendimiento en perros, aportando energía concentrada y nutrientes clave para una pronta mejora tras esfuerzos o para animales activos.",
         price: "S/ 13.90",
         image:
-          "https://oechsle.vteximg.com.br/arquivos/ids/20809507-1000-1000/imageUrl_1.jpg?v=638785824613000000",
+          "https://gopet.vtexassets.com/arquivos/ids/158955/CANBO-RECUPERACION-Y-RENDIMIENTO-GO-PET.jpg?v=638107755493130000",
       },
     ],
   },
@@ -483,7 +483,7 @@ export const foodProducts = [
       "Descubre la línea de alimentos húmedos Brit en latas de 400gr, diseñadas para perros con necesidades nutricionales específicas. Incluye opciones monoproteicas para sensibilidades alimentarias, fórmulas de soporte articular, y dietas veterinarias para condiciones hepáticas.",
     price: "S/ 19.00",
     image:
-      "https://zookaralyste.lt/hpeciai/99717a48612d415d16e39fc324ab706a/lit_pl_BRIT-MONO-PROTEIN-RABBIT-400g-37887_1.webp",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD55lX0GdJasNHLMQECjexUN7E-bwTUCknZg&s",
     category: "Brit",
     variants: [
       {
@@ -494,7 +494,7 @@ export const foodProducts = [
           "Alimento húmedo monoproteico de conejo Brit, ideal para perros con sensibilidades o alergias alimentarias. Es una dieta de fácil digestión, muy sabrosa y con una única fuente de proteína para minimizar reacciones adversas.",
         price: "S/ 19.00",
         image:
-          "https://zookaralyste.lt/hpeciai/99717a48612d415d16e39fc324ab706a/lit_pl_BRIT-MONO-PROTEIN-RABBIT-400g-37887_1.webp",
+          "https://pethappy.cl/cdn/shop/files/Brit-Care-Lata-Mono-Protein-Rabbit.jpg?v=1747318897",
       },
       {
         id: "519-02",
@@ -514,7 +514,7 @@ export const foodProducts = [
           "Alimento húmedo dietético Brit Grain Free Veterinary Diets Hepatic para perros con problemas hepáticos. Formulado para apoyar la función del hígado, reducir la carga de trabajo y el bienestar general en casos de insuficiencia hepática.",
         price: "S/ 19.00",
         image:
-          "https://familypets.pe/wp-content/uploads/2023/10/Diseno-sin-titulo-2023-10-01T175555.388.png",
+          "https://cdnx.jumpseller.com/club-entre-patitas/image/56762256/resize/540/540?1731290999",
       },
     ],
   },
@@ -559,7 +559,7 @@ export const foodProducts = [
       "Alimento húmedo gastroentérico para gatos, formulado para apoyar la salud digestiva y nutricional de felinos con trastornos gastrointestinales.",
     price: "S/ 19.00",
     image:
-      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw3fc56963/images/AG000701%20ProPlan%20Wet%20En%20156GR.jpg",
+      "https://gopet.vtexassets.com/arquivos/ids/163461-800-450?v=638436073474770000&width=800&height=450&aspect=true",
     category: "Purina",
   },
   {
@@ -594,16 +594,6 @@ export const foodProducts = [
           "https://mascotify.pe/wp-content/uploads/2021/06/Canbo-Sterilized-Care-Gatos-adultos-castrados-N.jpg",
       },
       {
-        id: "523-03",
-        type: "Gatos Adultos",
-        weight: "1 Kg",
-        description:
-          "Alimento seco Canbo Adulto Felino para gatos adultos, con una fórmula completa y equilibrada para mantener su vitalidad, energía, un pelaje brillante y una salud general óptima.",
-        price: "S/ 33.80",
-        image:
-          "https://farmascota.com.pe/wp-content/uploads/2024/09/CANBO-GATO-ADULTO.jpg",
-      },
-      {
         id: "523-04",
         type: "Urinary Care",
         weight: "1 Kg",
@@ -611,7 +601,7 @@ export const foodProducts = [
           "Alimento seco Canbo Urinary Care para gatos adultos con problemas urinarios. Contribuye a la salud del tracto urinario, ayuda a prevenir la formación de cálculos y promueve un pH urinario adecuado.",
         price: "S/ 35.80",
         image:
-          "https://media.falabella.com/falabellaPE/126998824_01/w=800,h=800,fit=pad",
+          "https://mascotify.pe/wp-content/uploads/2021/06/Canbo-Urinary-Health-Cuidado-urinario-para-gatos-adultos-N.jpg",
       },
       {
         id: "523-05",
@@ -621,7 +611,17 @@ export const foodProducts = [
           "Alimento seco Canbo Senior Care para gatos en etapa senior. Formulado para las necesidades específicas de gatos mayores, apoyando la función renal, la salud articular, el control de peso y la vitalidad.",
         price: "S/ 35.00",
         image:
-          "https://mercury.vtexassets.com/arquivos/ids/21983505-800-800?v=638963197004930000&width=800&height=800&aspect=true",
+          "https://nuspet.pe/wp-content/uploads/2024/02/CANBO-GATO-SENIOR.webp",
+      },
+      {
+        id: "523-03",
+        type: "Gatos Adultos",
+        weight: "1 Kg",
+        description:
+          "Alimento seco Canbo Adulto Felino para gatos adultos, con una fórmula completa y equilibrada para mantener su vitalidad, energía, un pelaje brillante y una salud general óptima.",
+        price: "S/ 33.80",
+        image:
+          "https://farmascota.com.pe/wp-content/uploads/2024/09/CANBO-GATO-ADULTO.jpg",
       },
     ],
   },
@@ -637,17 +637,6 @@ export const foodProducts = [
     weight: "100 Gr",
     variants: [
       {
-        id: "526-01",
-        flavor: "Cordero",
-        type: "Cachorro",
-        weight: "100 Gr",
-        description:
-          "Pouch de trocitos de cordero para cachorros Canbo, una comida húmeda deliciosa y nutritiva, formulada para favorecer su crecimiento saludable y desarrollo óptimo. Ideal para complementar su dieta diaria.",
-        price: "S/ 7.00",
-        image:
-          "https://dojiw2m9tvv09.cloudfront.net/85502/product/pouch-cordero-cachorros4900.png",
-      },
-      {
         id: "526-02",
         flavor: "Pavo",
         type: "Cachorro",
@@ -656,7 +645,7 @@ export const foodProducts = [
           "Pouch de trocitos de pavo para cachorros Canbo, ideal para complementar su dieta y ofrecerles un alimento húmedo de fácil digestión, rico en proteínas y muy palatable para los más pequeños.",
         price: "S/ 7.00",
         image:
-          "https://dojiw2m9tvv09.cloudfront.net/85502/product/pouch-pavo-cachorro8386.png",
+          "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw8fba6393/images/AP001551-1.webp",
       },
       {
         id: "526-03",
@@ -667,7 +656,18 @@ export const foodProducts = [
           "Pouch de trocitos de cordero para perros adultos Canbo, una opción húmeda y deliciosa para mantener su hidratación, ofrecerles una comida variada y aportar nutrientes esenciales para su vitalidad.",
         price: "S/ 7.00",
         image:
-          "https://dojiw2m9tvv09.cloudfront.net/85502/product/pouch-cordero-adultos7996.png",
+          "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw189606b8/images/AP001548-1.webp",
+      },
+      {
+        id: "526-01",
+        flavor: "Cordero",
+        type: "Cachorro",
+        weight: "100 Gr",
+        description:
+          "Pouch de trocitos de cordero para cachorros Canbo, una comida húmeda deliciosa y nutritiva, formulada para favorecer su crecimiento saludable y desarrollo óptimo. Ideal para complementar su dieta diaria.",
+        price: "S/ 7.00",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfioeHkFYAmcerEKaLvnTkYWndx3Jr4g79Ag&s",
       },
     ],
   },
@@ -688,7 +688,7 @@ export const foodProducts = [
       "Alimento húmedo de cuidado crítico para perros y gatos, diseñado para dar soporte nutricional en periodos de enfermedad, recuperación o inapetencia.",
     price: "S/ 18.00",
     image:
-      "https://gezanipe.vtexassets.com/arquivos/ids/162124-800-auto?v=638560731144970000&width=800&height=auto&aspect=true",
+      "https://gopet.vtexassets.com/arquivos/ids/163457/Proplan-veterinary-convalescence-canine-feline-wet-food-go-pet.jpg?v=638436071330800000",
     category: "Purina",
   },
   {
@@ -711,7 +711,7 @@ export const foodProducts = [
           "Alimento seco Ricocan con cordero y cereales para perros adultos de razas pequeñas, proporciona una nutrición balanceada adaptada a sus necesidades específicas de energía y tamaño.",
         price: "S/ 12.50",
         image:
-          "https://metroio.vtexassets.com/arquivos/ids/310183/Ricocan-Alimento-para-Perros-Adultos-Raza-Peque-a-Cordero-y-Cereales-Bolsa-1-Kg-1-34829196.jpg?v=638179491762400000",
+          "https://media.falabella.com/tottusPE/41896780_2/w=800,h=800,fit=pad",
       },
       {
         id: "536-02",
@@ -722,7 +722,7 @@ export const foodProducts = [
           "Alimento seco Ricocan con cordero y cereales para perros adultos de razas medianas y grandes, diseñado para cubrir sus necesidades energéticas y nutricionales, manteniendo su vitalidad y fuerza.",
         price: "S/ 12.50",
         image:
-          "https://media.falabella.com/tottusPE/41876522_1/w=800,h=800,fit=pad",
+          "https://yarangapet.com/wp-content/uploads/2025/04/Comida-Perro-Adulto-Mediano-y-Grande-Ricocan-Cordero-1kg-yarangapet.jpg",
       },
       {
         id: "536-03",
@@ -733,7 +733,7 @@ export const foodProducts = [
           "Alimento seco Ricocan para cachorros de razas medianas y grandes, con carne y leche para un desarrollo muscular y óseo óptimo en esta etapa crucial de crecimiento.",
         price: "S/ 12.50",
         image:
-          "https://metroio.vtexassets.com/arquivos/ids/310175/Ricocan-Alimento-para-Perros-Cachorros-Raza-Mediana-Grande-Carne-y-Leche-Bolsa-1-Kg-1-34829194.jpg?v=638179491745870000",
+          "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dwfc203da6/images/ricocan-carne-y-leche-cachorros-razas-medianas-y-grandes-x-01-kg.jpg",
       },
       {
         id: "536-04",
@@ -744,7 +744,7 @@ export const foodProducts = [
           "Alimento seco Ricocan especialmente diseñado para cachorros de razas pequeñas, con la combinación ideal de carne y leche para su rápido crecimiento y la energía que necesitan.",
         price: "S/ 12.50",
         image:
-          "https://metroio.vtexassets.com/arquivos/ids/310193/Ricocan-Alimento-para-Perros-Cachorros-Raza-Peque-a-Carne-y-Leche-Bolsa-1-Kg-1-34829199.jpg?v=638179491789900000",
+          "https://oechsle.vteximg.com.br/arquivos/ids/1210960-1000-1000/image-9f66327ba36b43ae86009ae33701fe41.jpg?v=637494289763270000",
       },
       {
         id: "536-05",
@@ -754,8 +754,7 @@ export const foodProducts = [
         description:
           "Alimento seco Ricocan balanceado para perros adultos de razas medianas y grandes, con la fórmula original de Ricocan para un mantenimiento saludable y una nutrición completa.",
         price: "S/ 12.50",
-        image:
-          "https://wongfood.vtexassets.com/arquivos/ids/371258-800-auto?v=637312320596530000&width=800&height=auto&aspect=true",
+        image: "https://dojiw2m9tvv09.cloudfront.net/64646/product/285407.jpg",
       },
     ],
   },
@@ -779,7 +778,7 @@ export const foodProducts = [
           "Formato de 3 kg de alimento seco Ricocan con cordero y cereales para perros adultos de razas pequeñas, ideal para una alimentación prolongada, económica y nutritiva.",
         price: "S/ 33.00",
         image:
-          "https://plazavea.vteximg.com.br/arquivos/ids/347560-450-450/20172002.jpg?v=637292447763800000",
+          "https://media.falabella.com/tottusPE/41896780_2/w=800,h=800,fit=pad",
       },
       {
         id: "537-02",
@@ -790,7 +789,7 @@ export const foodProducts = [
           "Alimento seco Ricocan de 3 kg con cordero y cereales para perros adultos de razas medianas y grandes, una opción económica y nutritiva para su alimentación diaria y bienestar.",
         price: "S/ 33.00",
         image:
-          "https://plazavea.vteximg.com.br/arquivos/ids/347500-450-450/20171980.jpg?v=637292442680200000",
+          "https://yarangapet.com/wp-content/uploads/2025/04/Comida-Perro-Adulto-Mediano-y-Grande-Ricocan-Cordero-1kg-yarangapet.jpg",
       },
     ],
   },
@@ -809,7 +808,8 @@ export const foodProducts = [
     description:
       "Alimento seco Pro Plan formulado para gatos con problemas urinarios, ayuda a disolver los cálculos de estruvita y reduce el riesgo de recurrencia.",
     price: "S/ 97.00",
-    image: "https://tiendanestle.pe/cdn/shop/files/12537301.jpg?v=1689616301",
+    image:
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw52e338e3/images/AG000693_m.jpg",
     category: "Purina",
   },
   {
@@ -823,34 +823,25 @@ export const foodProducts = [
     category: "Otros",
   },
   {
-    id: 649,
-    name: "Pro Plan Cachorro , Rq 1 Kg",
-    description:
-      "Alimento seco Pro Plan para cachorros, con fórmula de alta calidad para un desarrollo óptimo, huesos fuertes y un sistema inmune saludable.",
-    price: "S/ 38.50",
-    image:
-      "https://petsplaceperu.com/wp-content/uploads/2021/03/MKP-787-139-PP-FLAGSHIP-PERROS-PUPPY-PEQUENOS-POLLO_ESP_3KG_04_AF.png",
-    category: "Purina",
-  },
-  {
     id: 659,
     name: "Ricocrak Original (Cachorros) 200 Gr",
     description:
       "Bocaditos crujientes Ricocrak Original para cachorros, ideales como premio o complemento, con un sabor que les encantará y que ayuda a su desarrollo.",
     price: "S/ 8.00",
     image:
-      "https://wongfood.vtexassets.com/arquivos/ids/565318/Galletas-Ricocrack-Original-Cachorros-200g-1-5763530.jpg?v=637939482464300000",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSgRzXoU2FVsDrR3qT-8vzQST7Yvb8qvXKIw&s",
     category: "Ricocan",
   },
-  {
-    id: 663,
-    name: "Pro Plan Lt En Gastroenteric 380 Gr",
-    description:
-      "Alimento húmedo Pro Plan En Gastroenteric para perros, ideal para el manejo nutricional de trastornos gastrointestinales y para una recuperación digestiva.",
-    price: "S/ 19.00",
-    image: "https://mascotaveloz.pe/wp-content/uploads/2023/09/MV002579.png",
-    category: "Purina",
-  },
+  // {
+  //   id: 663,
+  //   name: "Pro Plan Lt EN Gastroenteric 380 Gr",
+  //   description:
+  //     "Alimento húmedo Pro Plan En Gastroenteric para perros, ideal para el manejo nutricional de trastornos gastrointestinales y para una recuperación digestiva.",
+  //   price: "S/ 19.00",
+  //   image:
+  //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnRunM6midZhbhbuLMPwbbljAbSBN2Yh_szA&s",
+  //   category: "Purina",
+  // },
   {
     id: 664,
     name: "Brit Premium Sensitive 3 Kg",
@@ -937,16 +928,16 @@ export const foodProducts = [
       "https://mascotify.pe/wp-content/uploads/2023/05/Beaphar-Care-Junior-Rabbit-250gr-Conejos-pequenos.jpg",
     category: "Otros",
   },
-  {
-    id: 692,
-    name: "Pro Plan Lt En Gastroenteric 156 Gr",
-    description:
-      "Alimento húmedo Pro Plan gastroentérico de 156 gr para perros, apoya la recuperación de trastornos digestivos y es altamente digestible.",
-    price: "S/ 18.50",
-    image:
-      "https://www.tierradegatos.com/terrcontenido/uploads/2022/04/Pro-Plan-EN-Gastroenteric-Lata-156-GR-1.png",
-    category: "Purina",
-  },
+  // {
+  //   id: 692,
+  //   name: "Pro Plan Lt En Gastroenteric 156 Gr",
+  //   description:
+  //     "Alimento húmedo Pro Plan gastroentérico de 156 gr para perros, apoya la recuperación de trastornos digestivos y es altamente digestible.",
+  //   price: "S/ 18.50",
+  //   image:
+  //     "https://gopet.vtexassets.com/arquivos/ids/163461-800-450?v=638436073474770000&width=800&height=450&aspect=true",
+  //   category: "Purina",
+  // },
   {
     id: 695,
     name: "Pro Plan Lt Ur Urinary St/Ox 156 Gr",
@@ -964,7 +955,7 @@ export const foodProducts = [
       "Deliciosos pouches Felix Classic de 85 gr, una comida húmeda variada y apetitosa para gatos, con trocitos en salsa que les encantará.",
     price: "S/ 4.50",
     image:
-      "https://plazavea.vteximg.com.br/arquivos/ids/28627026-418-418/20138795.jpg",
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dwe8fe10af/images/AG000233.jpg",
     category: "Purina",
   },
   {
@@ -974,7 +965,7 @@ export const foodProducts = [
       "Alimento seco Pro Plan para perros adultos de razas pequeñas con estómago sensible, formulado con ingredientes de fácil digestión para su bienestar.",
     price: "S/ 113.50",
     image:
-      "https://tiendanestle.pe/cdn/shop/files/7613287033161-6.jpg?v=1742482989",
+      "https://gopet.vtexassets.com/arquivos/ids/171296-800-450?v=638935687650630000&width=800&height=450&aspect=true",
     category: "Purina",
   },
   {
@@ -1038,7 +1029,7 @@ export const foodProducts = [
           "Paté húmedo Canbo para gatitos con Pollo e Hígado, ideal para su Crecimiento y Desarrollo. Aporta proteínas de alta calidad, es de fácil digestión y contribuye a una hidratación adecuada para los más pequeños.",
         price: "S/ 6.50",
         image:
-          "https://plazavea.vteximg.com.br/arquivos/ids/29194284-418-418/image-5115698c4ada4499ac9ae2c57a68bcae.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNawtv3YK_Sqh8rfUxd4sSSKsBrr1wRU7koQ&s",
       },
     ],
   },
@@ -1186,7 +1177,7 @@ export const foodProducts = [
           "Lata Hill's Science Diet Adult Healthy Cuisine para gatos, un alimento húmedo delicioso y nutritivo que favorece la salud y vitalidad de tu felino adulto con una nutrición balanceada.",
         price: "S/ 16.00",
         image:
-          "https://mipet.pe/wp-content/uploads/2025/04/Hills-PD-Feline-ONC-Care-82-g.jpg",
+          "https://www.miau.pe/cdn/shop/files/678bec_9c8ab07a29a745d690e741aa00663fb9_mv2.webp?v=1697232556",
       },
       {
         id: "800-02",
@@ -1217,7 +1208,7 @@ export const foodProducts = [
       "Alimento seco Pro Plan para gatos esterilizados de 3 kg, formulado para ayudar a mantener el peso ideal y la salud del tracto urinario de tu felino.",
     price: "S/ 169.00",
     image:
-      "https://dojiw2m9tvv09.cloudfront.net/27184/product/sterilizedpollo_esp3263.jpg",
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw900d4aa2/images/proplan-sterelized-cat.jpg",
     category: "Purina",
   },
   {
@@ -1227,7 +1218,7 @@ export const foodProducts = [
       "Lata Pro Plan Veterinary Diets NF Kidney Function para gatos, un alimento húmedo de apoyo nutricional para felinos con enfermedad renal.",
     price: "S/ 18.50",
     image:
-      "https://dojiw2m9tvv09.cloudfront.net/32548/product/imagen-de-whatsapp-2025-09-20-a-las-14-13-54-a8ef130f-removebg-preview2504.png",
+      "https://gopet.vtexassets.com/arquivos/ids/163459/Proplan-veterinary-renal-advanced-care-wet-food-go-pet.jpg?v=638436072334330000",
     category: "Purina",
   },
   {
@@ -1246,18 +1237,39 @@ export const foodProducts = [
     description:
       "Alimento seco Friskies de pollo para gatitos, diseñado para un crecimiento sano y energía para jugar, con los nutrientes esenciales que necesitan.",
     price: "S/ 25.50",
-    image: "https://tiendanestle.pe/cdn/shop/files/12535598.jpg?v=1700857443",
+    image:
+      "https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw51dd79a4/images/AG000711_m.jpg",
     category: "Purina",
   },
   {
-    id: 935,
-    name: "Pro Plan Cachorro. Pq. Pollo  3Kg",
+    id: 649,
+    name: "Pro Plan Cachorro Pollo",
     description:
-      "Alimento seco Pro Plan para cachorros de razas pequeñas con sabor a pollo, promueve un desarrollo óptimo, huesos fuertes y defensas naturales.",
-    price: "S/ 103.00",
+      "La línea Pro Plan Cachorro ofrece una nutrición avanzada y de alta calidad, formulada para satisfacer las necesidades específicas de tu cachorro en crecimiento. Con ingredientes seleccionados para un desarrollo óptimo, huesos fuertes y un sistema inmunológico saludable, Pro Plan ayuda a sentar las bases para una vida adulta plena. Disponible en diferentes tamaños y adaptaciones a razas.",
+    price: "S/ 38.50",
     image:
-      "https://lolasfood.com.pe/wp-content/uploads/2025/03/Pro-Plan-Cachorro-raza-Pequena.png",
+      "https://petsplaceperu.com/wp-content/uploads/2021/03/MKP-787-139-PP-FLAGSHIP-PERROS-PUPPY-PEQUENOS-POLLO_ESP_3KG_04_AF.png",
     category: "Purina",
+    variants: [
+      {
+        id: "649-01",
+        weight: "1 Kg",
+        description:
+          "Alimento seco Pro Plan para cachorros, con fórmula de alta calidad para un desarrollo óptimo, huesos fuertes y un sistema inmune saludable. Presentación ideal para probar o para cachorros pequeños.",
+        price: "S/ 38.50",
+        image:
+          "https://petsplaceperu.com/wp-content/uploads/2021/03/MKP-787-139-PP-FLAGSHIP-PERROS-PUPPY-PEQUENOS-POLLO_ESP_3KG_04_AF.png",
+      },
+      {
+        id: "649-02",
+        weight: "3 Kg",
+        description:
+          "Alimento seco Pro Plan para cachorros de razas pequeñas con sabor a pollo, promueve un desarrollo óptimo, huesos fuertes y defensas naturales. Su tamaño de croqueta es ideal para mandíbulas pequeñas.",
+        price: "S/ 103.00",
+        image:
+          "https://lolasfood.com.pe/wp-content/uploads/2025/03/Pro-Plan-Cachorro-raza-Pequena.png",
+      },
+    ],
   },
   {
     id: 936,
