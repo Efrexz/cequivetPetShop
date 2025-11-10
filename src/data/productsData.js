@@ -217,7 +217,6 @@ export const foodProducts = [
       },
     ],
   },
-
   {
     id: 428,
     name: "Canbo Canino (1 Kg)",
