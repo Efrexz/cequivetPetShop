@@ -1230,8 +1230,7 @@ export const pharmacyData = [
     description:
       "Tableta masticable mensual altamente palatable que protege a tu perro de pulgas y garrapatas de forma efectiva. Su acción rápida y duradera elimina estos parásitos, previniendo infestaciones y las enfermedades que transmiten. Disponible en diferentes presentaciones según el rango de peso de tu mascota.",
     price: "S/ 70.00",
-    image:
-      "https://aculi.pe/wp-content/uploads/2020/11/nexgard-acu-li-pet-shop-antiparasitario-desparasitante-externo-antipulgas-antigarrapatas.jpg",
+    image: "https://nexgard.com.co/sites/default/files/2023-07/NXG_cajas.png",
     category: "Antipulgas",
     variants: [
       {

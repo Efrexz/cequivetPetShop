@@ -913,8 +913,7 @@ export const foodProducts = [
     description:
       "Alimento seco dietético sin cereales para gatos, formulado para la gestión de problemas de estruvita, ayudando a mantener un sistema urinario sano.",
     price: "S/ 82.00",
-    image:
-      "https://perupets.com/797-large_default/brit-gf-vet-diets-cat-struvite-2kg.jpg",
+    image: "https://www.petsland.pe/assets/img/store/593.webp?1729707461",
     category: "Brit",
   },
   {
